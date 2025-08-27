@@ -1,6 +1,5 @@
 export const privacyPage = {
   el: {
-    privacyPage: {
     pageTitle: "Πολιτική Απορρήτου",
     updatedOn: "Τελευταία ενημέρωση",
     intro: {
@@ -56,10 +55,8 @@ export const privacyPage = {
         body: `Για θέματα απορρήτου, επικοινωνήστε μαζί μας μέσω των στοιχείων στο υποσέλιδο.`
     },
     disclaimer: "Η σελίδα είναι ενημερωτική και δεν αποτελεί νομική συμβουλή."
-    }
   },
   en: {
-    privacyPage: {
     pageTitle: "Privacy Policy",
     updatedOn: "Last updated",
     intro: {
@@ -115,6 +112,6 @@ export const privacyPage = {
         body: `For privacy requests, contact us at the details in the footer.`
     },
     disclaimer: "This page is informational and not legal advice."
-    }
   }
 } as const;
+export default privacyPage;

@@ -22,6 +22,10 @@ const STATIC_ROUTES = [
   { loc: "/sessions", changefreq: "monthly", priority: 0.8 },
   { loc: "/articles", changefreq: "weekly", priority: 0.9 },
   { loc: "/about", changefreq: "yearly", priority: 0.5 },
+  { loc: "/privacy", changefreq: "yearly", priority: 0.3 },
+  { loc: "/terms", changefreq: "yearly", priority: 0.2 },
+  { loc: "/cookies", changefreq: "yearly", priority: 0.2 },
+  { loc: "/accessibility", changefreq: "yearly", priority: 0.2 },
 ];
 
 // Where to look for articles (en/el versions)

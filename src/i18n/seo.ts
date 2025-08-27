@@ -46,3 +46,4 @@ export const seoText = {
     },
   },
 } as const;
+export default seoText;

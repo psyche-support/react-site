@@ -24,8 +24,11 @@ export const common = {
         { label: "Υπηρεσίες", href: "/services" },
         { label: "Συνεδρίες", href: "/sessions" },
         { label: "Άρθρα", href: "/articles" },
-        { label: "Πληροφορίες", href: "/about" },
         { label: "Πολιτική Απορρήτου", href: "/privacy" },
+        { label: "Cookies", href: "/cookies" },
+        { label: "Όροι Χρήσης", href: "/terms" },
+        { label: "Προσβασιμότητα", href: "/accessibility" },
+        { label: "Επικοινωνία", href: "/contact" },
       ],
     },
     consent: {
@@ -45,7 +48,6 @@ export const common = {
       { label: 'Sessions', href: '/sessions' },
       { label: 'Articles', href: '/articles' },
       { label: 'About', href: '/about' },
-      { label: "Privacy Policy", href: "/privacy" },
     ],
     cta: { label: 'Reach out now', href: 'tel:+306940340777' },
     floatingCta: {
@@ -63,7 +65,11 @@ export const common = {
         { label: "Services", href: "/services" },
         { label: "Sessions", href: "/sessions" },
         { label: "Articles", href: "/articles" },
-        { label: "About", href: "/about" },
+        { label: "Privacy Policy", href: "/privacy" },
+        { label: "Cookies", href: "/cookies" },
+        { label: "Terms of Service", href: "/terms" },
+        { label: "Accessibility", href: "/accessibility" },
+        { label: "Contact us", href: "/contact" },
       ],
     },
     consent: {
@@ -77,18 +83,4 @@ export const common = {
     langToggle: ['GR', 'EN']
   }
 } as const;
-
-export const articles = {
-  el: {
-    articles: {
-      title: "Άρθρα",
-      intro: "Τελευταίες δημοσιεύσεις, σκέψεις και πόροι."
-    }
-  },
-  en: {
-    articles: {
-      title: "Articles",
-      intro: "Latest posts, thoughts, and resources."
-    }
-  }
-} as const;
+export default common;

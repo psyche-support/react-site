@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, X, Mail, MapPin } from "lucide-react";
 import PsycheLogo from "./Logo";
 import { translations, type LangCode } from "../i18n/translations";
 
@@ -47,15 +47,7 @@ const Footer: React.FC<FooterProps> = ({
   const tagline = taglineOverride ?? (t.footer?.tagline || "");
 
   // If caller didn’t pass links, fall back to translated defaults
-  const navLinks: FooterLink[] =
-    links ??
-    (t.footer?.links || [
-      { label: lang === "el" ? "Υπηρεσίες" : "Services", href: "/#services" },
-      { label: lang === "el" ? "Συνεδρίες" : "Sessions", href: "/sessions" },
-      { label: lang === "el" ? "Άρθρα" : "Articles", href: "/#articles" },
-      { label: lang === "el" ? "Πληροφορίες" : "About", href: "/#about" },
-      { label: lang === "el" ? "Επικοινωνία" : "Contact", href: "/#contact" },
-    ]);
+  const navLinks: FooterLink[] = t.footer?.links 
 
   return (
     <footer className="site-footer" aria-label={lang === "el" ? "Υποσέλιδο" : "Footer"}>
@@ -100,6 +92,11 @@ const Footer: React.FC<FooterProps> = ({
             {socials.linkedin && (
               <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin size={20} />
+              </a>
+            )}
+            {socials.x && (
+              <a href={socials.x} target="_blank" rel="noopener noreferrer" aria-label="X">
+                <X size={20} />
               </a>
             )}
             {socials.email && (

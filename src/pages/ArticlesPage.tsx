@@ -14,7 +14,7 @@ function normalizeTag(val: string) {
 }
 
 const ArticlesPage: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang];
+  const t = translations[lang].articlesPage;
   const s = seoText[lang].articles;
   const [params, setParams] = useSearchParams();
 

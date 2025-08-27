@@ -159,6 +159,13 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
             </div>
           </div>
 
+          {/* Informational disclaimer */}
+          <p className="muted" style={{ marginTop: "1rem", fontSize: "0.95rem" }}>
+            {lang === "el"
+              ? "Το περιεχόμενο είναι ενημερωτικό και δεν αντικαθιστά την ψυχοθεραπεία ή ιατρική συμβουλή. Αν βρίσκεστε σε κρίση, αναζητήστε άμεσα επαγγελματική βοήθεια."
+              : "Content is informational and not a substitute for therapy or medical advice. If you are in crisis, please seek immediate professional help."}
+          </p>
+
           {/* References */}
           {fm.references?.length ? (
             <section className="article-refs">

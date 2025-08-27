@@ -181,3 +181,4 @@ export const homePage = {
     }
   }
 } as const;
+export default homePage;

@@ -1,6 +1,5 @@
 export const sessionsPage = {
   el: {
-    sessionsPage: {
       title: "Συνεδρίες",
       lead: {
         title: "Κλείσε την πρώτη θεραπευτική συνεδρία",
@@ -76,10 +75,8 @@ export const sessionsPage = {
             }
         ]
     },
-    },
   },
   en: {
-    sessionsPage: {
       title: "Sessions",
       lead: {
         title: "Book your first therapy session",
@@ -154,7 +151,7 @@ export const sessionsPage = {
             a: "We can begin with a brief introductory session to discuss your goals and expectations."
             }
         ]
-      }
     },
   }
 } as const;
+export default sessionsPage;

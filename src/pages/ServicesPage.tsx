@@ -11,6 +11,7 @@ type Props = { lang: LangCode };
 const ServicesPage: React.FC<Props> = ({ lang }) => {
   const t = translations[lang];
   const sp = t.servicesPage;
+  console.log(sp)
   const { openBooking } = useBooking();
   const s = seoText[lang].services;
 

@@ -43,6 +43,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Full-height flex layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.layout {
+  min-height: 100vh;        /* full viewport height */
+  display: flex;
+  flex-direction: column;   /* header -> main -> footer vertical stack */
+}
+
+/* Make main grow to push footer down */
+.site-main {
+  flex: 1 0 auto;
+  display: block;           /* or grid if you prefer */
+}
+
+/* Normal footer styling (no fixed/absolute needed) */
+footer {
+  flex-shrink: 0;           /* don't let flex compress the footer */
+}
+
 a { color: var(--color-accent); text-decoration: none; }
 a:hover { color: var(--color-accent-hover); text-decoration: underline; }
 
