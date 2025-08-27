@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Props = {
   lang: LangCode;
@@ -21,7 +22,7 @@ const Hero: React.FC<Props> = ({
   photoCreditHref = "https://unsplash.com/",
   minHeight = "70vh",
 }) => {
-  const t = translations[lang];
+  const { dict: t } = useI18n("homePage", lang);
 
   return (
     <section

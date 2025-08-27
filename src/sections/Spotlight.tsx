@@ -1,5 +1,6 @@
 import React from "react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Props = {
   lang: LangCode;
@@ -26,9 +27,7 @@ const Spotlight: React.FC<Props> = ({
   photoAlt,
   reverse = false,
 }) => {
-  const t = translations[lang];
-
-  // fallbacks from i18n if props not supplied
+  const { dict: t } = useI18n("homePage", lang);
   const i18n = {
     title: (t.spotlight?.title),
     text: (t.spotlight?.text),

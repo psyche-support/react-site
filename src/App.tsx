@@ -1,4 +1,5 @@
 import React from "react";
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useLanguage } from "./hooks/useLanguage";
 import NavHeader from "./components/NavHeader";
@@ -9,25 +10,28 @@ import Articles from "./sections/Articles";
 import Spotlight from "./sections/Spotlight";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
-import SessionsPage from "./pages/SessionsPage";
-import ServicesPage from "./pages/ServicesPage";
-import AboutPage from "./pages/AboutPage";
-import type { LangCode } from "./i18n/translations";
+import type { LangCode } from "../i18n/types";
 import Footer from "./components/Footer";
 import FloatingBookButton from "./components/FloatingBookButton";
 import { BookingModalProvider } from "./components/BookingModalProvider";
 import ScrollManager from "./components/ScrollManager";
 import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
-import ArticlesPage from "./pages/ArticlesPage";
-import ArticlePage from "./pages/ArticlePage";
-import PrivacyPage from "./pages/PrivacyPage";
-import TermsPage from "./pages/TermsPage";
-import CookiePolicyPage from "./pages/CookiePolicyPage";
-import AccessibilityPage from "./pages/AccessibilityPage";
-import ContactPage from "./pages/ContactPage";
 import Seo from "./helpers/Seo";
 import { seoText } from "./i18n/seo";
+
+const SessionsPage = lazy(() => import("./pages/SessionsPage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
+const ArticlePage = lazy(() => import("./pages/ArticlePage"));
+const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
+const TermsPage = lazy(() => import("./pages/TermsPage"));
+const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage"));
+const AccessibilityPage = lazy(() => import("./pages/AccessibilityPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+
+
 const GA_ID = import.meta.env.VITE_GA_ID as string;
 const INSTAGRAM = import.meta.env.VITE_INSTAGRAM as string;
 const LINKEDIN = import.meta.env.VITE_LINKEDIN as string;
@@ -46,34 +50,35 @@ const App: React.FC = () => {
           <ScrollManager /> 
           <NavHeader lang={lang} onChangeLang={setLang} />
           <FloatingBookButton lang={lang} />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <main className="site-main">
-                  <Hero lang={lang} />
-                  <Spotlight
-                    lang={lang}
-                    photoSrc="/profile.jpeg"
-                    photoAlt="Portrait of the counselor"
-                  />
-                  <Services lang={lang} />
-                  <Sessions lang={lang} />
-                </main>
-              }
-            />
-            <Route path="/services" element={<main className="site-main"><ServicesPage lang={lang} /></main>} />
-            <Route path="/sessions" element={<main className="site-main"><SessionsPage lang={lang} showOnlineIcons={false} /></main>} />
-            <Route path="/articles" element={<main className="site-main"><ArticlesPage lang={lang} /></main>} />
-            <Route path="/articles/:slug" element={<main className="site-main"><ArticlePage lang={lang} /></main>} />
-            <Route path="/about" element={<main className="site-main"><AboutPage lang={lang} /></main>} />
-            <Route path="/privacy" element={<main className="site-main"><PrivacyPage lang={lang} /></main>} />
-            <Route path="/terms" element={<main className="site-main"><TermsPage lang={lang} /></main>} />
-            <Route path="/cookies" element={<main className="site-main"><CookiePolicyPage lang={lang} /></main>} />
-            <Route path="/accessibility" element={<main className="site-main"><AccessibilityPage lang={lang} /></main>} />
-            <Route path="/contact" element={<main className="site-main"><ContactPage lang={lang} /></main>} />
-          </Routes>
-
+          <Suspense fallback={<div style={{padding: '2rem'}}>Loading…</div>}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <main className="site-main">
+                    <Hero lang={lang} />
+                    <Spotlight
+                      lang={lang}
+                      photoSrc="/profile.jpeg"
+                      photoAlt="Portrait of the counselor"
+                    />
+                    <Services lang={lang} />
+                    <Sessions lang={lang} />
+                  </main>
+                }
+              />
+              <Route path="/services" element={<main className="site-main"><ServicesPage lang={lang} /></main>} />
+              <Route path="/sessions" element={<main className="site-main"><SessionsPage lang={lang} showOnlineIcons={false} /></main>} />
+              <Route path="/articles" element={<main className="site-main"><ArticlesPage lang={lang} /></main>} />
+              <Route path="/articles/:slug" element={<main className="site-main"><ArticlePage lang={lang} /></main>} />
+              <Route path="/about" element={<main className="site-main"><AboutPage lang={lang} /></main>} />
+              <Route path="/privacy" element={<main className="site-main"><PrivacyPage lang={lang} /></main>} />
+              <Route path="/terms" element={<main className="site-main"><TermsPage lang={lang} /></main>} />
+              <Route path="/cookies" element={<main className="site-main"><CookiePolicyPage lang={lang} /></main>} />
+              <Route path="/accessibility" element={<main className="site-main"><AccessibilityPage lang={lang} /></main>} />
+              <Route path="/contact" element={<main className="site-main"><ContactPage lang={lang} /></main>} />
+            </Routes>
+          </Suspense>
           <Footer
             lang={lang}
             brand="Psyche Support"

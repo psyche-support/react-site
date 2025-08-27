@@ -4,7 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import PsycheLogo from "./Logo"; // adjust path if needed
 import ThemeToggle from "./ThemeToggle";
 import "./nav-header.css";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 interface Props {
   lang: LangCode;
@@ -12,9 +13,9 @@ interface Props {
 }
 
 const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
+  const { dict: t } = useI18n("common", lang);
   const [open, setOpen] = React.useState(false);
   const [elevated, setElevated] = React.useState(false);
-  const t = translations[lang];
   const location = useLocation();
 
   React.useEffect(() => {

@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 import { track } from "../helpers/events";
 import { useBooking } from "../components/BookingModalProvider";
 import Seo from "../helpers/Seo";
@@ -13,8 +14,9 @@ type Props = {
 };
 
 const SessionsPage: React.FC<Props> = ({ lang, showOnlineIcons = true }) => {
-  const dict = translations[lang];
-  const t = dict.sessionsPage;
+  const { dict: t } = useI18n("sessionsPage", lang);
+  if (loading) return null; // or skeleton
+  if (error || !t) return <main className="container">Error loading translations.</main>;
   const { openBooking } = useBooking();
 
   // Guard if translations not merged yet

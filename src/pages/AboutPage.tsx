@@ -1,10 +1,11 @@
 import React from "react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Props = { lang: LangCode };
 
 const AboutPage: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang].aboutPage;
+  const { dict: t } = useI18n("aboutPage", lang);
 
   return (
     <main className="container about-page" style={{ padding: "2rem 1rem" }}>

@@ -1,11 +1,12 @@
 import React from "react";
 import Seo from "../helpers/Seo";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Props = { lang: LangCode; lastUpdated?: string };
 
 const CookiePolicyPage: React.FC<Props> = ({ lang, lastUpdated = "2025-08-27" }) => {
-  const t = translations[lang].cookiesPage;
+  const { dict: t } = useI18n("cookiesPage", lang);
   return (
     <>
       <Seo

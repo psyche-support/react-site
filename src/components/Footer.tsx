@@ -1,7 +1,8 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin, X, Mail, MapPin } from "lucide-react";
 import PsycheLogo from "./Logo";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Badge = {
   img: string;
@@ -39,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({
   badges = [],
   showLogo = true,
 }) => {
-  const t = translations[lang];
+  const { dict: t } = useI18n("common", lang);
   const year = new Date().getFullYear();
 
   // Defaults come from i18n (can be overridden via props)

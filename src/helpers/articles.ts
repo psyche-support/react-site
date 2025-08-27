@@ -1,96 +1,104 @@
 // src/lib/articles.ts
-import DOMPurify from "dompurify";
-import { marked } from "marked";
-
-/**
- * Content structure expected:
- * src/content/articles/<slug>/{en.md,el.md,banner.*}
- *
- * Example frontmatter in each .md:
- * ---
- * slug: feeling-unfairness
- * title: When Life Feels Unfair
- * date: 2025-02-10
- * tags: [workplace, emotions, reciprocity]
- * banner: /src/content/articles/feeling-unfairness/banner.jpg
- * summary: Short summary...
- * author: Psyche Support
- * references:
- *   - "Smith, J. (2022). ..."
- * photoCreditText: "Photo: Unsplash"
- * photoCreditHref: "https://unsplash.com/photos/xxxx"
- * ---
- * (markdown content...)
- */
-
-// Load all .md as raw strings so we can parse frontmatter.
-const files = import.meta.glob("/src/content/articles/**/**/*.md", { as: "raw", eager: true });
-// Also import media so Vite includes them in the build (no direct usage needed here).
-import.meta.glob("/src/content/articles/**/**/*.{png,jpg,jpeg,gif,webp,avif}", { eager: true });
-
 export type Lang = "el" | "en";
 
 export type ArticleFrontmatter = {
   slug: string;
   title: string;
-  date: string;                   // ISO date
+  date: string | null;
   tags?: string[];
-  banner?: string;                // path to banner image
+  banner?: string;
   summary?: string;
   author?: string;
   references?: string[];
-  photoCreditText?: string;
-  photoCreditHref?: string;
+  photoCreditText?: string | null;
+  photoCreditHref?: string | null;
+  sourcePath: string;  // still in manifest
+  contentUrl: string;  // <-- fetch from here
 };
 
 export type Article = {
   lang: Lang;
   frontmatter: ArticleFrontmatter;
-  html: string;                   // sanitized HTML
-  plain: string;                  // plain text (for read/min + search)
+  html: string;
+  plain: string;
   readMinutes: number;
-  searchIndex: string;            // normalized index for robust search
 };
 
-// ---------- Utilities ----------
+let manifestCache: ArticleFrontmatter[] | null = null;
+let indexCache: Record<string, string[]> | null = null;
 
-function stripDiacritics(s: string): string {
-  // Remove Greek tonos/diacritics and general combining marks
-  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+async function loadManifest() {
+  if (!manifestCache) {
+    const [m, idx] = await Promise.all([
+      fetch("/search/articles-manifest.json").then(r => r.json()),
+      fetch("/search/articles-index.json").then(r => r.json()),
+    ]);
+    manifestCache = m;
+    indexCache = idx;
+  }
+  return { manifest: manifestCache!, index: indexCache! };
 }
 
-function normalizeForSearch(s: string): string {
-  return stripDiacritics(s.toLowerCase())
-    // Keep letters, numbers, whitespace and # (for tags); drop the rest
+export async function listArticlesByLang(lang: Lang) {
+  const { manifest } = await loadManifest();
+  return manifest.filter(m => m.lang === lang);
+}
+
+export async function uniqueTags(lang: Lang): Promise<string[]> {
+  const list = await listArticlesByLang(lang);
+  const set = new Set<string>();
+  list.forEach(m => (m.tags || []).forEach(t => set.add(t)));
+  return Array.from(set).sort((a, b) => a.localeCompare(b));
+}
+
+export type SearchOptions = {
+  lang: Lang;
+  query?: string;
+  tag?: string;
+  page?: number;
+  perPage?: number;
+};
+
+function normalize(s = "") {
+  return s.toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^\p{L}\p{N}\s#]/gu, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function toPlain(html: string): string {
-  const tmp = document.createElement("div");
-  tmp.innerHTML = html;
-  return (tmp.textContent || tmp.innerText || "").replace(/\s+/g, " ").trim();
+export async function searchArticles(opts: SearchOptions) {
+  const { manifest, index } = await loadManifest();
+  const { lang, query = "", tag = "", page = 1, perPage = 9 } = opts;
+
+  let results = manifest.filter(m => m.lang === lang);
+
+  if (tag) {
+    const t = normalize(tag);
+    results = results.filter(m => (m.tags || []).some(x => normalize(x) === t));
+  }
+
+  const toks = normalize(query).split(/\s+/).filter(Boolean);
+  if (toks.length) {
+    let slugs: Set<string> | null = null;
+    for (const tok of toks) {
+      const list: string[] = index[tok] || [];
+      const set = new Set(list);
+      slugs = slugs ? new Set([...slugs].filter(s => set.has(s))) : set;
+      if (slugs.size === 0) break;
+    }
+    if (slugs) results = results.filter(m => slugs!.has(m.slug));
+  }
+
+  const total = results.length;
+  const start = (page - 1) * perPage;
+  return { total, items: results.slice(start, start + perPage) };
 }
 
-function calcReadMinutes(text: string, wpm = 200): number {
-  const words = text.split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.round(words / wpm));
-}
-
-function detectLangFromPath(path: string): Lang {
-  return path.endsWith("/el.md") || path.includes("/el.md") ? "el" : "en";
-}
-
-// ---------- Minimal robust frontmatter parser (YAML-ish) ----------
-
-type FrontParse = { data: ArticleFrontmatter; content: string };
-
+type FrontParse = { data: Record<string, any>, content: string };
 function parseFrontmatter(md: string): FrontParse {
-  const fm = /^---\s*([\s\S]*?)\s*---\s*/;
-  const m = md.match(fm);
-  if (!m) return { data: { slug: "", title: "", date: "" }, content: md };
-
+  const m = md.match(/^---\s*([\s\S]*?)\s*---\s*/);
+  if (!m) return { data: {}, content: md };
   const yaml = m[1];
   const content = md.slice(m[0].length);
   const data: any = {};
@@ -101,14 +109,12 @@ function parseFrontmatter(md: string): FrontParse {
     const trimmed = line.trim();
     if (!trimmed) continue;
 
-    // Inside a block array:
     if (currentArrayKey && trimmed.startsWith("-")) {
       const item = trimmed.replace(/^-+\s*/, "").trim().replace(/^["']|["']$/g, "");
       (data[currentArrayKey] ||= []).push(item);
       continue;
     }
 
-    // Inline array: key: [a, b, "c"]
     const inlineArr = trimmed.match(/^(\w+):\s*\[(.*)\]\s*$/);
     if (inlineArr) {
       const key = inlineArr[1];
@@ -121,143 +127,57 @@ function parseFrontmatter(md: string): FrontParse {
       continue;
     }
 
-    // Key with value or start of block array
     const kv = trimmed.match(/^(\w+):\s*(.*)$/);
     if (kv) {
       const key = kv[1];
       let val = kv[2]?.trim() ?? "";
-
-      // Start of a block array
       if (val === "") {
         currentArrayKey = key;
         data[key] = [];
         continue;
       }
-
       currentArrayKey = null;
       data[key] = val.replace(/^["']|["']$/g, "");
-      continue;
     }
   }
 
   return { data, content };
 }
 
-// ---------- Loader & Indexer ----------
+export async function getArticle(lang: Lang, slug: string): Promise<Article | undefined> {
+  const { manifest } = await loadManifest();
+  const fm = manifest.find(m => m.lang === lang && m.slug === slug);
+  if (!fm) return undefined;
 
-let _cache: Article[] | null = null;
+  // Fetch markdown from public URL (no dynamic import)
+  const res = await fetch(fm.contentUrl);
+  if (!res.ok) return undefined;
+  const raw = await res.text();
 
-export function loadAllArticles(): Article[] {
-  if (_cache) return _cache;
+  const { content } = parseFrontmatter(raw);
 
-  const list: Article[] = [];
+  // Load heavy libs only here
+  const [{ marked }, DOMPurifyModule] = await Promise.all([
+    import("marked"),
+    import("dompurify"),
+  ]);
+  const DOMPurify = (DOMPurifyModule as any).default || DOMPurifyModule;
 
-  for (const path in files) {
-    const raw = files[path] as string;
-    const { data, content } = parseFrontmatter(raw);
-    const lang = detectLangFromPath(path);
+  const htmlUnsafe = marked.parse(content) as string;
+  const html = DOMPurify.sanitize(htmlUnsafe);
 
-    // Render Markdown → sanitize HTML
-    const htmlUnsafe = marked.parse(content) as string;
-    const html = DOMPurify.sanitize(htmlUnsafe);
+  // derive plain + read time
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  const plain = (tmp.textContent || tmp.innerText || "").replace(/\s+/g, " ").trim();
+  const words = plain.split(/\s+/).filter(Boolean).length;
+  const readMinutes = Math.max(1, Math.round(words / 200));
 
-    const plain = toPlain(html);
-    const readMinutes = calcReadMinutes(plain);
-
-    // Build search index: title + summary + content + tags
-    const title = data.title || "";
-    const summary = data.summary || "";
-    const tags = (data.tags || []).join(" ");
-    const searchIndex = normalizeForSearch([title, summary, plain, tags].join(" "));
-
-    // Keep banner as provided (Vite will include via glob import)
-    const article: Article = {
-      lang,
-      frontmatter: {
-        slug: data.slug || "",
-        title: data.title || "",
-        date: data.date || "",
-        tags: data.tags || [],
-        banner: data.banner,
-        summary: data.summary,
-        author: data.author,
-        references: data.references || [],
-        photoCreditText: data.photoCreditText,
-        photoCreditHref: data.photoCreditHref,
-      },
-      html,
-      plain,
-      readMinutes,
-      searchIndex,
-    };
-
-    // Filter incomplete items (must have slug/title/date)
-    if (article.frontmatter.slug && article.frontmatter.title && article.frontmatter.date) {
-      list.push(article);
-    }
-  }
-
-  // Sort by date desc
-  list.sort((a, b) => (a.frontmatter.date < b.frontmatter.date ? 1 : -1));
-  _cache = list;
-  return list;
-}
-
-export function getArticlesByLang(lang: Lang): Article[] {
-  return loadAllArticles().filter((a) => a.lang === lang);
-}
-
-export function getArticle(lang: Lang, slug: string): Article | undefined {
-  return getArticlesByLang(lang).find((a) => a.frontmatter.slug === slug);
-}
-
-export function uniqueTags(lang: Lang): string[] {
-  const set = new Set<string>();
-  getArticlesByLang(lang).forEach((a) => (a.frontmatter.tags || []).forEach((t) => set.add(t)));
-  return Array.from(set).sort((a, b) => a.localeCompare(b));
-}
-
-// ---------- Robust search (tokenized AND + diacritics-insensitive) ----------
-
-export type SearchOptions = {
-  query?: string; // supports words and "quoted phrases"
-  tag?: string;   // optional exact tag filter (case-insensitive)
-};
-
-/**
- * Search articles by language with robust normalization:
- * - strips diacritics (EL/EN)
- * - lowercases
- * - removes punctuation (keeps # for tags)
- * - tokenizes query into words + "quoted phrases"
- * - AND match across tokens
- * - filters by exact tag (case-insensitive) if provided
- */
-export function searchArticles(lang: Lang, opts: SearchOptions = {}): Article[] {
-  const all = getArticlesByLang(lang);
-  const q = (opts.query || "").trim();
-  const activeTag = (opts.tag || "").trim();
-
-  if (!q && !activeTag) return all;
-
-  // Tokenize: words + quoted phrases
-  const tokens: string[] = [];
-  q.replace(/"([^"]+)"|(\S+)/g, (_, phrase, word) => {
-    tokens.push(phrase ? phrase : word);
-    return "";
-  });
-
-  return all.filter((a) => {
-    // Tag filter (exact, case-insensitive)
-    const tagOk = !activeTag
-      ? true
-      : (a.frontmatter.tags || []).some((tg) => tg.toLowerCase() === activeTag.toLowerCase());
-    if (!tagOk) return false;
-
-    if (!tokens.length) return true;
-
-    const hay = a.searchIndex;
-    // AND match
-    return tokens.every((tok) => hay.includes(normalizeForSearch(tok)));
-  });
+  return {
+    lang,
+    frontmatter: fm,
+    html,
+    plain,
+    readMinutes,
+  };
 }

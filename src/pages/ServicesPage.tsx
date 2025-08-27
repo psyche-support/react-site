@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 import { track } from "../helpers/events";
 import { useBooking } from "../components/BookingModalProvider";
 import Seo from "../helpers/Seo";
@@ -9,14 +10,13 @@ import { seoText } from "../i18n/seo";
 type Props = { lang: LangCode };
 
 const ServicesPage: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang];
-  const sp = t.servicesPage;
+  const { dict: t } = useI18n("servicesPage", lang);
   const { openBooking } = useBooking();
   const s = seoText[lang].services;
 
   // ---- Accordion state (multi-open) ----
   const [open, setOpen] = React.useState<Set<number>>(() => new Set());
-  const items = sp.helpWith.items as { title: string; text: string }[];
+  const items = t.helpWith.items as { title: string; text: string }[];
   const isOpen = (i: number) => open.has(i);
   const toggle = (i: number) =>
     setOpen(prev => {
@@ -55,15 +55,15 @@ const ServicesPage: React.FC<Props> = ({ lang }) => {
       <main className="services-page container" id="services">
         {/* Title + Intro */}
         <header className="services__header">
-          <h1 className="services__title">{sp.title}</h1>
-          <p className="services__intro muted">{sp.intro}</p>
-          {sp.intro2 ? <p className="services__intro muted">{sp.intro2}</p> : null}
+          <h1 className="services__title">{t.title}</h1>
+          <p className="services__intro muted">{t.intro}</p>
+          {t.intro2 ? <p className="services__intro muted">{t.intro2}</p> : null}
         </header>
 
         {/* How I can help (Accordion, multi-open + Expand/Collapse all) */}
         <section className="services__section">
           <div className="services__headline">
-            <h2 className="services__subtitle">{sp.helpWith.title}</h2>
+            <h2 className="services__subtitle">{t.helpWith.title}</h2>
             <button
               type="button"
               className="btn btn-ghost services__toggleAll"
@@ -113,30 +113,30 @@ const ServicesPage: React.FC<Props> = ({ lang }) => {
 
         {/* Audience */}
         <section className="services__section">
-          <h2 className="services__subtitle">{sp.audience.title}</h2>
-          <p className="services__text">{sp.audience.text}</p>
+          <h2 className="services__subtitle">{t.audience.title}</h2>
+          <p className="services__text">{t.audience.text}</p>
         </section>
 
         {/* Session details */}
         <section className="services__section">
-          <h2 className="services__subtitle">{sp.details.title}</h2>
+          <h2 className="services__subtitle">{t.details.title}</h2>
           <div className="card services__details">
             <ul className="services__list">
               <li>
-                <strong>{sp.details.formLabel}</strong> {sp.details.form}
+                <strong>{t.details.formLabel}</strong> {t.details.form}
               </li>
               <li>
-                <strong>{sp.details.languageLabel}</strong> {sp.details.language}
+                <strong>{t.details.languageLabel}</strong> {t.details.language}
               </li>
               <li>
-                <strong>{sp.details.durationLabel}</strong> {sp.details.duration}
+                <strong>{t.details.durationLabel}</strong> {t.details.duration}
               </li>
               <li>
-                <strong>{sp.details.frequencyLabel}</strong> {sp.details.frequency}
+                <strong>{t.details.frequencyLabel}</strong> {t.details.frequency}
               </li>
             </ul>
-            {sp.details.footnote ? (
-              <p className="services__footnote muted">{sp.details.footnote}</p>
+            {t.details.footnote ? (
+              <p className="services__footnote muted">{t.details.footnote}</p>
             ) : null}
 
             <div className="services__actions">
@@ -145,23 +145,23 @@ const ServicesPage: React.FC<Props> = ({ lang }) => {
                 className="ps-btn ps-btn--primary"
                 onClick={(e) => {
                   e.preventDefault();
-                  openBooking(sp.details.bookHref);
-                  track.cta("sessions_book_first_modal", sp.details.bookHref);
+                  openBooking(t.details.bookHref);
+                  track.cta("sessions_book_first_modal", t.details.bookHref);
                 }}
               >
-                {sp.details.bookCta}
+                {t.details.bookCta}
               </Button>
-              {sp.firstStep?.ctaHref && (
+              {t.firstStep?.ctaHref && (
                 <Button
                   href="#"
                   variant="outline"
                   onClick={(e) => {
                     e.preventDefault();
-                    openBooking(sp.firstStep.ctaHref);
-                    track.cta("sessions_book_first_modal", sp.firstStep.ctaHref);
+                    openBooking(t.firstStep.ctaHref);
+                    track.cta("sessions_book_first_modal", t.firstStep.ctaHref);
                   }}
                 >
-                  {sp.firstStep.ctaLabel}
+                  {t.firstStep.ctaLabel}
                 </Button>
               )}
             </div>
@@ -169,10 +169,10 @@ const ServicesPage: React.FC<Props> = ({ lang }) => {
         </section>
 
         {/* First step (optional blurb) */}
-        {sp.firstStep?.title && (
+        {t.firstStep?.title && (
           <section className="services__section">
-            <h2 className="services__subtitle">{sp.firstStep.title}</h2>
-            <p className="services__text">{sp.firstStep.text}</p>
+            <h2 className="services__subtitle">{t.firstStep.title}</h2>
+            <p className="services__text">{t.firstStep.text}</p>
           </section>
         )}
       </main>

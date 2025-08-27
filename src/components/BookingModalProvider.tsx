@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useMemo, useState, ReactNode } from "react";
 import { X } from "lucide-react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Ctx = {
   openBooking: (href?: string) => void;
@@ -31,11 +32,9 @@ type ProviderProps = {
 };
 
 export const BookingModalProvider: React.FC<ProviderProps> = ({ lang, defaultHref, children }) => {
+  const { dict: t } = useI18n("common", lang);
   const [open, setOpen] = useState(false);
   const [href, setHref] = useState<string | undefined>(defaultHref);
-
-  const t = translations[lang];
-
   const value = useMemo<Ctx>(
     () => ({
       openBooking: (h?: string) => {

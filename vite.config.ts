@@ -4,7 +4,20 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  // base: '/', // for custom domain root. If deploying under /<repo>/, set base accordingly.
+  base: '/', // for custom domain root. If deploying under /<repo>/, set base accordingly.
+  build: {
+    target: 'es2020', 
+    modulePreload: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          helmet: ['react-helmet-async'],
+        }
+      }
+    }
+  },
   plugins: [
     react(),
     VitePWA({

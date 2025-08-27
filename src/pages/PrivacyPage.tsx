@@ -1,13 +1,13 @@
 // src/pages/PrivacyPage.tsx
 import React from "react";
-import { type LangCode, translations } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 import Seo from "../helpers/Seo";
 
 type Props = { lang: LangCode; lastUpdated?: string };
 
 const PrivacyPage: React.FC<Props> = ({ lang, lastUpdated = "2025-08-27" }) => {
-  const t = translations[lang].privacyPage;
-
+  const { dict: t } = useI18n("privacyPage", lang);
   return (
     <>
       <Seo

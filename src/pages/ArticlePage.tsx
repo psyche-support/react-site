@@ -2,9 +2,10 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { getArticle } from "../helpers/articles";
-import { type LangCode, translations } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 import Seo from "../helpers/Seo";
-import { getTopTermsForArticle } from "../helpers/seoKeywords"; // extracted terms for SEO only
+import { getTopTermsForArticle } from "../helpers/seoKeywords"; // SEO-only extracted terms
 
 type Props = { lang: LangCode };
 
@@ -19,19 +20,38 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
   const { slug = "" } = useParams<{ slug: string }>();
   const lang = useQueryLang(fallbackLang);
 
-  const article = React.useMemo(() => getArticle(lang as any, slug), [lang, slug]);
+  // Load article async (no eager bundle of marked/DOMPurify)
+  const [article, setArticle] = React.useState<Awaited<ReturnType<typeof getArticle>> | null>(null);
+  const [loading, setLoading] = React.useState(true);
 
-  // Load extracted keywords for SEO ONLY (not shown in UI)
+  React.useEffect(() => {
+    let alive = true;
+    setLoading(true);
+    getArticle(lang as any, slug).then((a) => {
+      if (!alive) return;
+      setArticle(a || null);
+      setLoading(false);
+    });
+    return () => { alive = false; };
+  }, [lang, slug]);
+
+  // SEO-only keywords (don’t render them in UI)
   const [extractedTerms, setExtractedTerms] = React.useState<string[]>([]);
   React.useEffect(() => {
     let alive = true;
     getTopTermsForArticle(slug, (lang as "el" | "en") || "el", 8).then((terms) => {
       if (alive) setExtractedTerms(terms);
     });
-    return () => {
-      alive = false;
-    };
+    return () => { alive = false; };
   }, [slug, lang]);
+
+  if (loading) {
+    return (
+      <main className="container" style={{ padding: "2rem 0" }}>
+        <p className="muted">{lang === "el" ? "Φόρτωση άρθρου…" : "Loading article…"}</p>
+      </main>
+    );
+  }
 
   if (!article) {
     return (
@@ -48,7 +68,7 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
   const desc = fm.summary || (article.plain.slice(0, 180) + "…");
   const image = fm.banner;
 
-  // Build SEO-only tags: merge fm.tags + extracted terms, but DO NOT show them in UI
+  // SEO-only tags: merge fm.tags + extractedTerms (not shown in hero chip list)
   const seoTags = React.useMemo(() => {
     const seen = new Set<string>();
     const out: string[] = [];
@@ -93,7 +113,7 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
           publishedTime: fm.date,
           author: fm.author,
           section: fm.tags?.[0],
-          tags: seoTags, // SEO only (article:tag). UI tags remain fm.tags below.
+          tags: seoTags, // SEO-only
         }}
         jsonLd={jsonLd}
       />
@@ -129,7 +149,7 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
             </div>
             <h1 className="article-hero__title">{fm.title}</h1>
 
-            {/* Visible tag chips = ONLY what you set in the MD file */}
+            {/* Visible tags: ONLY the ones from the MD file */}
             <div className="article-hero__tags">
               {(fm.tags || []).map((tag) => (
                 <span key={tag} className="tag">#{tag}</span>
@@ -159,14 +179,14 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
             </div>
           </div>
 
-          {/* Informational disclaimer */}
+          {/* Disclaimer */}
           <p className="muted" style={{ marginTop: "1rem", fontSize: "0.95rem" }}>
             {lang === "el"
               ? "Το περιεχόμενο είναι ενημερωτικό και δεν αντικαθιστά την ψυχοθεραπεία ή ιατρική συμβουλή. Αν βρίσκεστε σε κρίση, αναζητήστε άμεσα επαγγελματική βοήθεια."
               : "Content is informational and not a substitute for therapy or medical advice. If you are in crisis, please seek immediate professional help."}
           </p>
 
-          {/* References */}
+          {/* References (from MD only) */}
           {fm.references?.length ? (
             <section className="article-refs">
               <h3>{lang === "el" ? "Βιβλιογραφία" : "References"}</h3>

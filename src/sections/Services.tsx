@@ -1,11 +1,12 @@
 import React from "react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 interface Props { lang: LangCode; }
 type Item = { title: string; text: string };
 
 const Services: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang];
+  const { dict: t } = useI18n("homePage", lang);
   const items: Item[] = t.services.list || [];
 
   // Multi-open accordion + Expand/Collapse all

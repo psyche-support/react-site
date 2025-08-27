@@ -1,5 +1,6 @@
 import React from "react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 import { track } from "../helpers/events";
 
 type Props = {
@@ -8,8 +9,7 @@ type Props = {
 };
 
 const Sessions: React.FC<Props> = ({ lang, id = "sessions" }) => {
-  const t = translations[lang];
-
+  const { dict: t } = useI18n("homePage", lang);
   const online = t.sessions.online;
   const inPerson = t.sessions.inPerson;
   const duration = t.sessions.duration;

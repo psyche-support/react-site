@@ -1,13 +1,14 @@
 // src/components/ConsentBanner.tsx
 import React from "react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Props = {
   lang: LangCode;
 };
 
 const ConsentBanner: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang];
+  const { dict: t } = useI18n("common", lang);
   const barRef = React.useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = React.useState<boolean>(() => {
     try {

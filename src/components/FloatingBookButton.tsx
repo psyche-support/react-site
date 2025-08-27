@@ -1,5 +1,6 @@
 import React from "react";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 import { useBooking } from "../components/BookingModalProvider";
 import { track } from "../helpers/events";
 
@@ -8,7 +9,7 @@ interface FloatingBookButtonProps {
 }
 
 const FloatingBookButton: React.FC<FloatingBookButtonProps> = ({ lang }) => {
-  const t = translations[lang];
+  const { dict: t } = useI18n("common", lang);
   const { openBooking } = useBooking();
 
   const handleOpen = () => {

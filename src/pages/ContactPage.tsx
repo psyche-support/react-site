@@ -1,6 +1,7 @@
 import React from "react";
 import Seo from "../helpers/Seo";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string;
 const PHONE_E164 = import.meta.env.VITE_PHONE_E164 as string;
@@ -43,7 +44,7 @@ const PhoneIcon = () => (
 );
 
 const ContactPage: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang].contactPage;
+  const { dict: t } = useI18n("contactPage", lang);
   const [status, setStatus] = React.useState<"idle" | "sending" | "success" | "error">("idle");
 
   // Simple client validation + honeypot

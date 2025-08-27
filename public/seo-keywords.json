@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-27T16:10:52.901Z",
+  "generatedAt": "2025-08-27T17:14:13.460Z",
   "perDoc": [
     {
       "lang": "el",
@@ -181,188 +181,6 @@
         },
         {
           "term": "responses influence way",
-          "score": 6.16
-        }
-      ]
-    },
-    {
-      "lang": "el",
-      "slug": "relationship-patterns",
-      "title": "Τα μοτίβα σχέσεων ως μία “καταναγκαστική επανάληψη”",
-      "tags": [
-        "σχέσεις",
-        "καταναγκασμός"
-      ],
-      "keywords": [
-        {
-          "term": "μοτιβα σχεσεων",
-          "score": 16.02
-        },
-        {
-          "term": "μοτιβα σχεσεων καταναγκαστικη",
-          "score": 14.79
-        },
-        {
-          "term": "σχεσεων καταναγκαστικη επαναληψη",
-          "score": 14.79
-        },
-        {
-          "term": "μοτιβα",
-          "score": 12.32
-        },
-        {
-          "term": "σχεσεων",
-          "score": 12.32
-        },
-        {
-          "term": "σχεσεων καταναγκαστικη",
-          "score": 12.02
-        },
-        {
-          "term": "καταναγκαστικη επαναληψη",
-          "score": 12.02
-        },
-        {
-          "term": "καταναγκαστικη",
-          "score": 9.24
-        },
-        {
-          "term": "επαναληψη",
-          "score": 8.24
-        },
-        {
-          "term": "ελευθεροι",
-          "score": 7.7
-        },
-        {
-          "term": "καταναγκασμος",
-          "score": 6.16
-        },
-        {
-          "term": "μυθος της αγαπης",
-          "score": 6.16
-        },
-        {
-          "term": "της αγαπης αποτελει",
-          "score": 6.16
-        },
-        {
-          "term": "αγαπης αποτελει πεποιθηση",
-          "score": 6.16
-        },
-        {
-          "term": "αποτελει πεποιθηση οτι",
-          "score": 6.16
-        },
-        {
-          "term": "πεποιθηση οτι ειμαστε",
-          "score": 6.16
-        },
-        {
-          "term": "οτι ειμαστε ελευθεροι",
-          "score": 6.16
-        },
-        {
-          "term": "ειμαστε ελευθεροι αγαπησουμε",
-          "score": 6.16
-        },
-        {
-          "term": "ελευθεροι αγαπησουμε οποιον",
-          "score": 6.16
-        },
-        {
-          "term": "αγαπησουμε οποιον επιθυμουμε",
-          "score": 6.16
-        }
-      ]
-    },
-    {
-      "lang": "en",
-      "slug": "relationship-patterns",
-      "title": "“Relationship patterns as a ‘compulsive repetition’”",
-      "tags": [
-        "relationships",
-        "compulsion"
-      ],
-      "keywords": [
-        {
-          "term": "relationship patterns",
-          "score": 16.02
-        },
-        {
-          "term": "relationship patterns compulsive",
-          "score": 14.79
-        },
-        {
-          "term": "patterns compulsive repetition",
-          "score": 14.79
-        },
-        {
-          "term": "patterns",
-          "score": 13.86
-        },
-        {
-          "term": "repetition",
-          "score": 13.86
-        },
-        {
-          "term": "patterns compulsive",
-          "score": 12.02
-        },
-        {
-          "term": "compulsive repetition",
-          "score": 12.02
-        },
-        {
-          "term": "love",
-          "score": 10.78
-        },
-        {
-          "term": "compulsive",
-          "score": 9.24
-        },
-        {
-          "term": "compulsion",
-          "score": 7.7
-        },
-        {
-          "term": "free",
-          "score": 7.7
-        },
-        {
-          "term": "relationship",
-          "score": 6.24
-        },
-        {
-          "term": "myth love belief",
-          "score": 6.16
-        },
-        {
-          "term": "love belief free",
-          "score": 6.16
-        },
-        {
-          "term": "belief free love",
-          "score": 6.16
-        },
-        {
-          "term": "free love whomever",
-          "score": 6.16
-        },
-        {
-          "term": "love whomever wish",
-          "score": 6.16
-        },
-        {
-          "term": "whomever wish question",
-          "score": 6.16
-        },
-        {
-          "term": "wish question arises",
-          "score": 6.16
-        },
-        {
-          "term": "question arises article",
           "score": 6.16
         }
       ]
@@ -737,182 +555,182 @@
     },
     {
       "lang": "el",
-      "slug": "sexual-abuse-medusa",
-      "title": "Η ερμηνεια της σεξουαλικής κακοποίησης μέσα από \"το βλέμμα της Μέδουσας\"",
+      "slug": "relationship-patterns",
+      "title": "Τα μοτίβα σχέσεων ως μία “καταναγκαστική επανάληψη”",
       "tags": [
         "σχέσεις",
-        "κακοποίηση"
+        "καταναγκασμός"
       ],
       "keywords": [
         {
-          "term": "της μεδουσας",
-          "score": 18.02
+          "term": "μοτιβα σχεσεων",
+          "score": 16.02
         },
         {
-          "term": "κακοποιησης",
-          "score": 16.17
-        },
-        {
-          "term": "ερμηνεια της σεξουαλικης",
+          "term": "μοτιβα σχεσεων καταναγκαστικη",
           "score": 14.79
         },
         {
-          "term": "της σεξουαλικης κακοποιησης",
+          "term": "σχεσεων καταναγκαστικη επαναληψη",
           "score": 14.79
         },
         {
-          "term": "σεξουαλικης κακοποιησης μεσα",
-          "score": 14.79
+          "term": "μοτιβα",
+          "score": 12.32
         },
         {
-          "term": "κακοποιησης μεσα βλεμμα",
-          "score": 14.79
+          "term": "σχεσεων",
+          "score": 12.32
         },
         {
-          "term": "μεσα βλεμμα της",
-          "score": 14.79
-        },
-        {
-          "term": "βλεμμα της μεδουσας",
-          "score": 14.79
-        },
-        {
-          "term": "σεξουαλικης κακοποιησης",
-          "score": 14.02
-        },
-        {
-          "term": "μεδουσας",
-          "score": 13.86
-        },
-        {
-          "term": "ερμηνεια της",
+          "term": "σχεσεων καταναγκαστικη",
           "score": 12.02
         },
         {
-          "term": "της σεξουαλικης",
+          "term": "καταναγκαστικη επαναληψη",
           "score": 12.02
         },
         {
-          "term": "κακοποιησης μεσα",
-          "score": 12.02
-        },
-        {
-          "term": "μεσα βλεμμα",
-          "score": 12.02
-        },
-        {
-          "term": "βλεμμα της",
-          "score": 12.02
-        },
-        {
-          "term": "κακοποιηση",
-          "score": 11.55
-        },
-        {
-          "term": "σεξουαλικης",
-          "score": 10.78
-        },
-        {
-          "term": "ερμηνεια",
+          "term": "καταναγκαστικη",
           "score": 9.24
         },
         {
-          "term": "βλεμμα",
-          "score": 9.24
+          "term": "επαναληψη",
+          "score": 8.24
         },
         {
-          "term": "γυναικων",
+          "term": "ελευθεροι",
           "score": 7.7
+        },
+        {
+          "term": "καταναγκασμος",
+          "score": 6.16
+        },
+        {
+          "term": "μυθος της αγαπης",
+          "score": 6.16
+        },
+        {
+          "term": "της αγαπης αποτελει",
+          "score": 6.16
+        },
+        {
+          "term": "αγαπης αποτελει πεποιθηση",
+          "score": 6.16
+        },
+        {
+          "term": "αποτελει πεποιθηση οτι",
+          "score": 6.16
+        },
+        {
+          "term": "πεποιθηση οτι ειμαστε",
+          "score": 6.16
+        },
+        {
+          "term": "οτι ειμαστε ελευθεροι",
+          "score": 6.16
+        },
+        {
+          "term": "ειμαστε ελευθεροι αγαπησουμε",
+          "score": 6.16
+        },
+        {
+          "term": "ελευθεροι αγαπησουμε οποιον",
+          "score": 6.16
+        },
+        {
+          "term": "αγαπησουμε οποιον επιθυμουμε",
+          "score": 6.16
         }
       ]
     },
     {
       "lang": "en",
-      "slug": "sexual-abuse-medusa",
-      "title": "Interpreting sexual abuse through the \"Gaze of Medusa\"",
+      "slug": "relationship-patterns",
+      "title": "“Relationship patterns as a ‘compulsive repetition’”",
       "tags": [
         "relationships",
-        "abuse"
+        "compulsion"
       ],
       "keywords": [
         {
-          "term": "abuse",
-          "score": 20.8
+          "term": "relationship patterns",
+          "score": 16.02
         },
         {
-          "term": "sexual abuse",
-          "score": 19.02
-        },
-        {
-          "term": "sexual",
-          "score": 17.72
-        },
-        {
-          "term": "medusa",
-          "score": 15.4
-        },
-        {
-          "term": "interpreting sexual abuse",
+          "term": "relationship patterns compulsive",
           "score": 14.79
         },
         {
-          "term": "sexual abuse through",
+          "term": "patterns compulsive repetition",
           "score": 14.79
         },
         {
-          "term": "abuse through gaze",
-          "score": 14.79
+          "term": "patterns",
+          "score": 13.86
         },
         {
-          "term": "through gaze medusa",
-          "score": 14.79
+          "term": "repetition",
+          "score": 13.86
         },
         {
-          "term": "interpreting sexual",
+          "term": "patterns compulsive",
           "score": 12.02
         },
         {
-          "term": "abuse through",
+          "term": "compulsive repetition",
           "score": 12.02
         },
         {
-          "term": "through gaze",
-          "score": 12.02
-        },
-        {
-          "term": "gaze medusa",
-          "score": 12.02
-        },
-        {
-          "term": "gaze",
+          "term": "love",
           "score": 10.78
         },
         {
-          "term": "interpreting",
+          "term": "compulsive",
           "score": 9.24
         },
         {
-          "term": "violence",
-          "score": 9.24
-        },
-        {
-          "term": "social",
+          "term": "compulsion",
           "score": 7.7
         },
         {
-          "term": "women",
+          "term": "free",
           "score": 7.7
         },
         {
-          "term": "her",
-          "score": 7.7
+          "term": "relationship",
+          "score": 6.24
         },
         {
-          "term": "through",
-          "score": 7.21
+          "term": "myth love belief",
+          "score": 6.16
         },
         {
-          "term": "sexual abuse growing",
+          "term": "love belief free",
+          "score": 6.16
+        },
+        {
+          "term": "belief free love",
+          "score": 6.16
+        },
+        {
+          "term": "free love whomever",
+          "score": 6.16
+        },
+        {
+          "term": "love whomever wish",
+          "score": 6.16
+        },
+        {
+          "term": "whomever wish question",
+          "score": 6.16
+        },
+        {
+          "term": "wish question arises",
+          "score": 6.16
+        },
+        {
+          "term": "question arises article",
           "score": 6.16
         }
       ]
@@ -1098,6 +916,188 @@
           "score": 6.16
         }
       ]
+    },
+    {
+      "lang": "el",
+      "slug": "sexual-abuse-medusa",
+      "title": "Η ερμηνεια της σεξουαλικής κακοποίησης μέσα από \"το βλέμμα της Μέδουσας\"",
+      "tags": [
+        "σχέσεις",
+        "κακοποίηση"
+      ],
+      "keywords": [
+        {
+          "term": "της μεδουσας",
+          "score": 18.02
+        },
+        {
+          "term": "κακοποιησης",
+          "score": 16.17
+        },
+        {
+          "term": "ερμηνεια της σεξουαλικης",
+          "score": 14.79
+        },
+        {
+          "term": "της σεξουαλικης κακοποιησης",
+          "score": 14.79
+        },
+        {
+          "term": "σεξουαλικης κακοποιησης μεσα",
+          "score": 14.79
+        },
+        {
+          "term": "κακοποιησης μεσα βλεμμα",
+          "score": 14.79
+        },
+        {
+          "term": "μεσα βλεμμα της",
+          "score": 14.79
+        },
+        {
+          "term": "βλεμμα της μεδουσας",
+          "score": 14.79
+        },
+        {
+          "term": "σεξουαλικης κακοποιησης",
+          "score": 14.02
+        },
+        {
+          "term": "μεδουσας",
+          "score": 13.86
+        },
+        {
+          "term": "ερμηνεια της",
+          "score": 12.02
+        },
+        {
+          "term": "της σεξουαλικης",
+          "score": 12.02
+        },
+        {
+          "term": "κακοποιησης μεσα",
+          "score": 12.02
+        },
+        {
+          "term": "μεσα βλεμμα",
+          "score": 12.02
+        },
+        {
+          "term": "βλεμμα της",
+          "score": 12.02
+        },
+        {
+          "term": "κακοποιηση",
+          "score": 11.55
+        },
+        {
+          "term": "σεξουαλικης",
+          "score": 10.78
+        },
+        {
+          "term": "ερμηνεια",
+          "score": 9.24
+        },
+        {
+          "term": "βλεμμα",
+          "score": 9.24
+        },
+        {
+          "term": "γυναικων",
+          "score": 7.7
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "sexual-abuse-medusa",
+      "title": "Interpreting sexual abuse through the \"Gaze of Medusa\"",
+      "tags": [
+        "relationships",
+        "abuse"
+      ],
+      "keywords": [
+        {
+          "term": "abuse",
+          "score": 20.8
+        },
+        {
+          "term": "sexual abuse",
+          "score": 19.02
+        },
+        {
+          "term": "sexual",
+          "score": 17.72
+        },
+        {
+          "term": "medusa",
+          "score": 15.4
+        },
+        {
+          "term": "interpreting sexual abuse",
+          "score": 14.79
+        },
+        {
+          "term": "sexual abuse through",
+          "score": 14.79
+        },
+        {
+          "term": "abuse through gaze",
+          "score": 14.79
+        },
+        {
+          "term": "through gaze medusa",
+          "score": 14.79
+        },
+        {
+          "term": "interpreting sexual",
+          "score": 12.02
+        },
+        {
+          "term": "abuse through",
+          "score": 12.02
+        },
+        {
+          "term": "through gaze",
+          "score": 12.02
+        },
+        {
+          "term": "gaze medusa",
+          "score": 12.02
+        },
+        {
+          "term": "gaze",
+          "score": 10.78
+        },
+        {
+          "term": "interpreting",
+          "score": 9.24
+        },
+        {
+          "term": "violence",
+          "score": 9.24
+        },
+        {
+          "term": "social",
+          "score": 7.7
+        },
+        {
+          "term": "women",
+          "score": 7.7
+        },
+        {
+          "term": "her",
+          "score": 7.7
+        },
+        {
+          "term": "through",
+          "score": 7.21
+        },
+        {
+          "term": "sexual abuse growing",
+          "score": 6.16
+        }
+      ]
     }
   ],
   "globalTop": {
@@ -1159,14 +1159,6 @@
         "score": 14.79
       },
       {
-        "term": "μοτιβα σχεσεων καταναγκαστικη",
-        "score": 14.79
-      },
-      {
-        "term": "σχεσεων καταναγκαστικη επαναληψη",
-        "score": 14.79
-      },
-      {
         "term": "κριση πανικου ποια",
         "score": 14.79
       },
@@ -1195,6 +1187,30 @@
         "score": 14.79
       },
       {
+        "term": "μοτιβα σχεσεων καταναγκαστικη",
+        "score": 14.79
+      },
+      {
+        "term": "σχεσεων καταναγκαστικη επαναληψη",
+        "score": 14.79
+      },
+      {
+        "term": "κατανοηση του αγχους",
+        "score": 14.79
+      },
+      {
+        "term": "του αγχους επιδρασεις",
+        "score": 14.79
+      },
+      {
+        "term": "αγχους επιδρασεις σκεψεων",
+        "score": 14.79
+      },
+      {
+        "term": "επιδρασεις σκεψεων μας",
+        "score": 14.79
+      },
+      {
         "term": "ερμηνεια της σεξουαλικης",
         "score": 14.79
       },
@@ -1219,22 +1235,6 @@
         "score": 14.79
       },
       {
-        "term": "κατανοηση του αγχους",
-        "score": 14.79
-      },
-      {
-        "term": "του αγχους επιδρασεις",
-        "score": 14.79
-      },
-      {
-        "term": "αγχους επιδρασεις σκεψεων",
-        "score": 14.79
-      },
-      {
-        "term": "επιδρασεις σκεψεων μας",
-        "score": 14.79
-      },
-      {
         "term": "της αυτοεκτιμησης",
         "score": 14.02
       },
@@ -1247,11 +1247,11 @@
         "score": 13.86
       },
       {
-        "term": "μεδουσας",
+        "term": "αγχους",
         "score": 13.86
       },
       {
-        "term": "αγχους",
+        "term": "μεδουσας",
         "score": 13.86
       },
       {
@@ -1287,14 +1287,6 @@
         "score": 12.02
       },
       {
-        "term": "σχεσεων καταναγκαστικη",
-        "score": 12.02
-      },
-      {
-        "term": "καταναγκαστικη επαναληψη",
-        "score": 12.02
-      },
-      {
         "term": "πανικου ποια",
         "score": 12.02
       },
@@ -1319,27 +1311,35 @@
         "score": 12.02
       },
       {
+        "term": "σχεσεων καταναγκαστικη",
+        "score": 12.02
+      },
+      {
+        "term": "καταναγκαστικη επαναληψη",
+        "score": 12.02
+      },
+      {
+        "term": "κατανοηση του",
+        "score": 12.02
+      },
+      {
+        "term": "αγχους επιδρασεις",
+        "score": 12.02
+      },
+      {
+        "term": "επιδρασεις σκεψεων",
+        "score": 12.02
+      },
+      {
+        "term": "σκεψεων μας",
+        "score": 12.02
+      },
+      {
         "term": "ερμηνεια της",
         "score": 12.02
       },
       {
         "term": "της σεξουαλικης",
-        "score": 12.02
-      },
-      {
-        "term": "κακοποιησης μεσα",
-        "score": 12.02
-      },
-      {
-        "term": "μεσα βλεμμα",
-        "score": 12.02
-      },
-      {
-        "term": "βλεμμα της",
-        "score": 12.02
-      },
-      {
-        "term": "κατανοηση του",
         "score": 12.02
       }
     ],
@@ -1409,14 +1409,6 @@
         "score": 14.79
       },
       {
-        "term": "relationship patterns compulsive",
-        "score": 14.79
-      },
-      {
-        "term": "patterns compulsive repetition",
-        "score": 14.79
-      },
-      {
         "term": "what panic attack",
         "score": 14.79
       },
@@ -1437,6 +1429,22 @@
         "score": 14.79
       },
       {
+        "term": "relationship patterns compulsive",
+        "score": 14.79
+      },
+      {
+        "term": "patterns compulsive repetition",
+        "score": 14.79
+      },
+      {
+        "term": "understanding anxiety effects",
+        "score": 14.79
+      },
+      {
+        "term": "anxiety effects thoughts",
+        "score": 14.79
+      },
+      {
         "term": "interpreting sexual abuse",
         "score": 14.79
       },
@@ -1450,14 +1458,6 @@
       },
       {
         "term": "through gaze medusa",
-        "score": 14.79
-      },
-      {
-        "term": "understanding anxiety effects",
-        "score": 14.79
-      },
-      {
-        "term": "anxiety effects thoughts",
         "score": 14.79
       },
       {
@@ -1489,14 +1489,6 @@
         "score": 12.02
       },
       {
-        "term": "patterns compulsive",
-        "score": 12.02
-      },
-      {
-        "term": "compulsive repetition",
-        "score": 12.02
-      },
-      {
         "term": "what panic",
         "score": 12.02
       },
@@ -1517,6 +1509,26 @@
         "score": 12.02
       },
       {
+        "term": "patterns compulsive",
+        "score": 12.02
+      },
+      {
+        "term": "compulsive repetition",
+        "score": 12.02
+      },
+      {
+        "term": "understanding anxiety",
+        "score": 12.02
+      },
+      {
+        "term": "anxiety effects",
+        "score": 12.02
+      },
+      {
+        "term": "effects thoughts",
+        "score": 12.02
+      },
+      {
         "term": "interpreting sexual",
         "score": 12.02
       },
@@ -1530,18 +1542,6 @@
       },
       {
         "term": "gaze medusa",
-        "score": 12.02
-      },
-      {
-        "term": "understanding anxiety",
-        "score": 12.02
-      },
-      {
-        "term": "anxiety effects",
-        "score": 12.02
-      },
-      {
-        "term": "effects thoughts",
         "score": 12.02
       },
       {
@@ -1561,15 +1561,15 @@
         "score": 10.78
       },
       {
-        "term": "gaze",
-        "score": 10.78
-      },
-      {
         "term": "understanding",
         "score": 10.78
       },
       {
         "term": "effects",
+        "score": 10.78
+      },
+      {
+        "term": "gaze",
         "score": 10.78
       },
       {

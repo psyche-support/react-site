@@ -1,11 +1,12 @@
 import React from "react";
 import Seo from "../helpers/Seo";
-import { translations, type LangCode } from "../i18n/translations";
+import { useI18n } from "../i18n/useI18n";
+import type { LangCode } from "../i18n/types";
 
 type Props = { lang: LangCode };
 
 const AccessibilityPage: React.FC<Props> = ({ lang }) => {
-  const t = translations[lang].accessibilityPage;
+  const { dict: t } = useI18n("accessibilityPage", lang);
   return (
     <>
       <Seo
