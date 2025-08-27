@@ -3,6 +3,7 @@ import { homePage } from "./homePage";
 import { servicesPage } from "./servicesPage";
 import { aboutPage } from "./aboutPage";
 import { sessionsPage } from "./sessionsPage";
+import { privacyPage } from "./privacyPage";
 
 /** Minimal deep merge for plain objects/arrays (no class instances). */
 function deepMerge<T extends Record<string, any>>(...objs: T[]): T {
@@ -23,8 +24,8 @@ function deepMerge<T extends Record<string, any>>(...objs: T[]): T {
 }
 
 // Merge per language
-const el = deepMerge({}, common.el, homePage.el, servicesPage.el, aboutPage.el, sessionsPage.el);
-const en = deepMerge({}, common.en, homePage.en, servicesPage.en, aboutPage.en, sessionsPage.en);
+const el = deepMerge({}, common.el, homePage.el, servicesPage.el, aboutPage.el, sessionsPage.el, privacyPage.el);
+const en = deepMerge({}, common.en, homePage.en, servicesPage.en, aboutPage.en, sessionsPage.en, privacyPage.en);
 
 // Final export (same shape/name as before)
 export const translations = { el, en } as const;

@@ -20,6 +20,7 @@ import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
 import ArticlesPage from "./pages/ArticlesPage";
 import ArticlePage from "./pages/ArticlePage";
+import PrivacyPage from "./pages/PrivacyPage";
 import Seo from "./helpers/Seo";
 import { seoText } from "./i18n/seo";
 
@@ -58,6 +59,7 @@ const App: React.FC = () => {
         <Route path="/articles" element={<ArticlesPage lang={lang} />} />
         <Route path="/articles/:slug" element={<ArticlePage lang={lang} />} />
         <Route path="/about" element={<AboutPage lang={lang} />} />
+        <Route path="/privacy" element={<PrivacyPage lang={lang} />} />
       </Routes>
       <Footer
         lang={lang}

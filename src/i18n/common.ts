@@ -25,6 +25,7 @@ export const common = {
         { label: "Συνεδρίες", href: "/sessions" },
         { label: "Άρθρα", href: "/articles" },
         { label: "Πληροφορίες", href: "/about" },
+        { label: "Πολιτική Απορρήτου", href: "/privacy" },
       ],
     },
     consent: {
@@ -44,6 +45,7 @@ export const common = {
       { label: 'Sessions', href: '/sessions' },
       { label: 'Articles', href: '/articles' },
       { label: 'About', href: '/about' },
+      { label: "Privacy Policy", href: "/privacy" },
     ],
     cta: { label: 'Reach out now', href: 'tel:+306940340777' },
     floatingCta: {
