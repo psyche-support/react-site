@@ -53,9 +53,9 @@ const Hero: React.FC<Props> = ({
           />
         </picture>
       </div>
-
+      
       <div className="container hero__inner">
-        <div className="hero__content">
+        <div className="hero__content hero__content--overlay">
           <p className="hero__overtitle">{t.hero.title}</p>
           <h1 className="hero__title">{t.hero.subtitle}</h1>
           <p className="hero__note">{t.hero.note}</p>

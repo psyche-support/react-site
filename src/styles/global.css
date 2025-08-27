@@ -232,6 +232,16 @@ form input:focus, form textarea:focus {
   text-decoration: underline;
 }
 
+.hero__content--overlay {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.hero__content--overlay * {
+  color: white;
+}
+
 /* Small-screen min-height guard */
 @media (max-width: 960px) {
   .hero { min-height: 60vh; }
