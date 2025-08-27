@@ -1,0 +1,226 @@
+/* Container utility */
+.ps-container { width: min(1100px, 92%); margin-inline: auto; }
+
+/* Header */
+.ps-header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(1.05) blur(8px);
+  background: var(--color-header-footer);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+.ps-header--elevated { box-shadow: 0 10px 24px rgba(21,27,38,0.18); }
+.ps-header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .7rem 0;
+}
+
+/* Brand */
+.ps-brand { display: flex; align-items: center; gap: .6rem; color: inherit; text-decoration: none; }
+.ps-logo { width: 28px; height: 28px; }
+.ps-brand__name { font-weight: 700; letter-spacing: .2px; }
+
+/* Nav */
+.ps-nav__list {
+  display: flex; align-items: center; gap: .6rem;
+  list-style: none; margin: 0; padding: 0;
+}
+.ps-nav__item {}
+.ps-nav__link {
+  display: inline-block; padding: .45rem .65rem;
+  border-radius: .6rem; color: #FFFFFF; text-decoration: none;
+}
+.ps-nav__link:hover { background: rgba(255,255,255,.12); text-decoration: none; }
+
+/* CTA uses .ps-btn from global.css */
+.ps-nav__cta .ps-btn { box-shadow: 0 10px 24px rgba(21,27,38,0.18); }
+
+/* Language toggle */
+.ps-nav__lang { display: flex; gap: .35rem; margin-left: .25rem; }
+.ps-lang {
+  padding: .35rem .6rem; border-radius: .55rem;
+  border: 1px solid rgba(255,255,255,.22);
+  background: transparent; color: #FFFFFF; cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.ps-lang.is-active { background: rgba(255,255,255,.16); }
+
+/* Burger (mobile) */
+.ps-burger {
+  display: none;
+  width: 40px; height: 40px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: transparent; color: #FFFFFF;
+  border-radius: .7rem;
+  align-items: center; justify-content: center; gap: 4px;
+  cursor: pointer;
+}
+.ps-burger span[aria-hidden="true"] { display: block; width: 18px; height: 2px; background: currentColor; }
+
+/* Responsive */
+@media (max-width: 880px) {
+  .ps-burger { display: inline-flex; }
+  .ps-nav__list {
+    position: fixed; left: 0; right: 0; top: 58px;
+    display: none; flex-direction: column; align-items: stretch; gap: .25rem;
+    padding: .75rem;
+    background: var(--color-header-footer);
+    border-bottom: 1px solid rgba(255,255,255,.14);
+  }
+  .ps-nav__list.is-open { display: flex; }
+  .ps-nav__link { padding: .75rem .9rem; border-radius: .65rem; }
+  .ps-nav__cta { margin-top: .25rem; }
+}
+
+.ps-lang-select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Light mode styling override if needed */
+:root:not(.dark-theme) .ps-lang-select {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+  background: #fff;
+}
+
+/* Base header layout */
+.ps-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-header-footer);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Inner: space brand and right side */
+.ps-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-h, 64px);
+  gap: 12px;
+}
+
+/* Brand */
+.ps-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  text-decoration: none;
+  color: #fff;
+  min-width: 0;
+}
+.ps-logo { width: 28px; height: 28px; flex: 0 0 28px; }
+.ps-brand__name {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Desktop nav row (hidden on mobile) */
+.ps-nav__row {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ps-nav__link { color: #fff; text-decoration: none; opacity: .92; }
+.ps-nav__link:hover { opacity: 1; text-decoration: underline; }
+.ps-nav__cta .ps-btn { padding: .55rem .9rem; }
+
+/* Burger button */
+.ps-burger {
+  display: none;
+  position: relative;
+  width: 42px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+.ps-burger span {
+  position: absolute;
+  left: 9px; right: 9px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.ps-burger span:nth-child(1) { top: 10px; }
+.ps-burger span:nth-child(2) { top: 17px; }
+.ps-burger span:nth-child(3) { top: 24px; }
+
+/* Mobile panel (hidden by default) */
+.ps-nav-panel {
+  position: fixed;
+  top: var(--header-h, 64px);
+  left: 0; right: 0;
+  background: var(--color-header-footer);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .18s ease, opacity .18s ease;
+  z-index: 49; /* under header (50) so it drops from beneath */
+}
+.ps-nav-panel.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ps-nav-panel__list {
+  list-style: none;
+  margin: 0;
+  padding: .6rem .9rem .9rem;
+  display: grid;
+  gap: .4rem;
+}
+.ps-nav-panel__link {
+  display: block;
+  padding: .6rem .4rem;
+  color: #fff;
+  text-decoration: none;
+}
+.ps-nav-panel__link:hover { text-decoration: underline; }
+.ps-nav-panel__cta { width: 100%; text-align: center; margin-top: .3rem; }
+
+/* Language select */
+.ps-lang-select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+}
+:root:not(.dark-theme) .ps-lang-select {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+  background: #fff;
+}
+.ps-lang-select--panel { width: 100%; }
+
+/* Breakpoints */
+@media (max-width: 960px) {
+  /* Show burger, hide desktop row */
+  .ps-burger { display: inline-block; }
+  .ps-nav { display: none; }
+
+  /* Keep brand from colliding (space on the right for burger) */
+  .ps-header__inner { gap: .5rem; }
+  .ps-brand__name { max-width: min(48vw, 220px); }
+}
+
+/* Optional: avoid content being hidden behind fixed panel when scrolled to the top link */
+.ps-nav-panel__list a { scroll-margin-top: calc(var(--header-h, 64px) + 10px); }

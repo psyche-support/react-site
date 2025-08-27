@@ -1,0 +1,134 @@
+// src/components/NavHeader.tsx
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import PsycheLogo from "./Logo"; // adjust path if needed
+import ThemeToggle from "./ThemeToggle";
+import "./nav-header.css";
+import { translations, type LangCode } from "../i18n/translations";
+
+interface Props {
+  lang: LangCode;
+  onChangeLang: (code: LangCode) => void;
+}
+
+const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
+  const [open, setOpen] = React.useState(false);
+  const [elevated, setElevated] = React.useState(false);
+  const t = translations[lang];
+  const location = useLocation();
+
+  React.useEffect(() => {
+    const onScroll = () => setElevated(window.scrollY > 6);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  React.useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const node = document.getElementById(id);
+    if (node) node.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [location.pathname, location.hash]);
+
+  const handleLangChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selected = e.target.value as LangCode;
+    onChangeLang(selected);
+    try { localStorage.setItem("lang", selected); } catch {}
+  };
+
+  const resolveTo = (href: string) =>
+    href.startsWith("#") ? ({ pathname: "/", hash: href }) : href;
+
+  return (
+    <header
+      className={`ps-header ${elevated ? "ps-header--elevated" : ""}`}
+      style={{ ["--header-h" as any]: "64px" }}   // <— give CSS a reference height
+    >
+      <div className="ps-container ps-header__inner">
+        {/* Brand */}
+        <Link className="ps-brand" to="/" onClick={() => setOpen(false)} aria-label={t.brand}>
+          <PsycheLogo size={80} />
+          <span className="ps-brand__name">{t.brand}</span>
+        </Link>
+
+        {/* Burger (mobile) */}
+        <button
+          className="ps-burger"
+          aria-controls="primary-nav"
+          aria-expanded={open ? "true" : "false"}
+          aria-label={lang === "el" ? "Άνοιγμα μενού" : "Toggle menu"}
+          onClick={() => setOpen(v => !v)}
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
+
+        {/* Desktop nav row */}
+        <nav className="ps-nav" aria-label={lang === "el" ? "Κύρια πλοήγηση" : "Primary navigation"}>
+          <ul className="ps-nav__row">
+            {t.nav.map((item) => (
+              <li key={item.href} className="ps-nav__item">
+                <Link className="ps-nav__link" to={resolveTo(item.href) as any}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li className="ps-nav__item">
+              <select
+                value={lang}
+                onChange={handleLangChange}
+                className="ps-lang-select"
+                aria-label={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
+              >
+                <option value="el">Ελληνικά</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+            <li className="ps-nav__item">
+              <ThemeToggle />
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      {/* Mobile panel */}
+      <nav
+        id="primary-nav"
+        className={`ps-nav-panel ${open ? "is-open" : ""}`}
+        aria-label={lang === "el" ? "Μενού κινητού" : "Mobile menu"}
+      >
+        <ul className="ps-nav-panel__list">
+          {t.nav.map((item) => (
+            <li key={item.href} className="ps-nav-panel__item">
+              <Link
+                to={resolveTo(item.href) as any}
+                className="ps-nav-panel__link"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          <li className="ps-nav-panel__item">
+            <select
+              value={lang}
+              onChange={(e) => { handleLangChange(e); setOpen(false); }}
+              className="ps-lang-select ps-lang-select--panel"
+              aria-label={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
+            >
+              <option value="el">Ελληνικά</option>
+              <option value="en">English</option>
+            </select>
+          </li>
+          <li className="ps-nav-panel__item">
+            <ThemeToggle />
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default NavHeader;
