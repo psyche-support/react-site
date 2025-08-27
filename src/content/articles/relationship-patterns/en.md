@@ -4,12 +4,12 @@ title: “Relationship patterns as a ‘compulsive repetition’”
 date: 2023-02-28
 tags: [relationships, compulsion]
 banner: /articles/photo-1579208995240-4c53b5535bad.jpg
-photoCreditText: Photo: Unsplash
+photoCreditText: "Photo: Unsplash"
 photoCreditHref: https://unsplash.com/photos/person-holding-white-notebook-3PIWCNyn-_U
 summary: The myth of freedom in love is challenged, as partner choices are often not truly free. People tend to repeat relationship patterns, gravitating toward partners with similar traits, even when those traits have proven unsuitable. This is linked to the idea of ‘repetitive compulsion,’ where we unconsciously seek familiar emotions and situations to ‘fix’ old wounds. The familiar feels safe, while the unknown can be frightening. Our relationships are shaped by early experiences with parents or caregivers, influencing how we connect with others. Recognizing these patterns and working through them in therapy helps achieve genuine freedom of choice.
 author: Dimitra Malaki
 references: 
-  - Freud, Sigmund. (1914g). Errinern, Wiederholen und Durcharbeiten (Weitere Ratschläge zur Technik der Psychoanalyse, II). Internationale Zeitschrift für ärtztliche Psychoanalyse, 2, 485-491; Remembering, repeating and working-through. SE, 12: 147-156.
+  - "Freud, Sigmund. (1914g). Errinern, Wiederholen und Durcharbeiten (Weitere Ratschläge zur Technik der Psychoanalyse, II). Internationale Zeitschrift für ärtztliche Psychoanalyse, 2, 485-491; Remembering, repeating and working-through. SE, 12: 147-156."
   - Park, Y., & MacDonald, G. (2019). Consistency between individuals’ past and current romantic partners’ own reports of their personalities. Proceedings of the National Academy of Sciences, 116, 12793-12797.
   - Rauer, A. J., Pettit, G. S., Lansford, J. E., Bates, J. E., & Dodge, K. A. (2013). Romantic relationship patterns in young adulthood and their developmental antecedents. Developmental Psychology, 49(11), 2159–2171. https://doi.org/10.1037/a0031845
 ---

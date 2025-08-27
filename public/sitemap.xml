@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+  <url>
+    <loc>https://psyche.support/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/services</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/services?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/services?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/services?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/sessions</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/sessions?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/sessions?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/sessions?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/about</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/about?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/about?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles/injustice-at-work</loc>
+    <lastmod>2022-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/injustice-at-work?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/injustice-at-work?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/injustice-at-work?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles/relationship-patterns</loc>
+    <lastmod>2023-02-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/relationship-patterns?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/relationship-patterns?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/relationship-patterns?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles/self-esteem-psychology</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/self-esteem-psychology?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/self-esteem-psychology?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/self-esteem-psychology?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles/sexual-abuse-medusa</loc>
+    <lastmod>2022-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/sexual-abuse-medusa?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/sexual-abuse-medusa?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/sexual-abuse-medusa?lang=en" />
+  </url>
+</urlset>

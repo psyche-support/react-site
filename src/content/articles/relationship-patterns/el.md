@@ -4,12 +4,12 @@ title: "Τα μοτίβα σχέσεων ως μία “καταναγκαστι
 date: 2023-02-28
 tags: [σχέσεις, καταναγκασμός]
 banner: /articles/photo-1579208995240-4c53b5535bad.jpg
-photoCreditText: Photo: Unsplash
+photoCreditText: "Photo: Unsplash"
 photoCreditHref: https://unsplash.com/photos/person-holding-white-notebook-3PIWCNyn-_U
 summary: Ο μύθος της ελευθερίας στην αγάπη αμφισβητείται, καθώς οι επιλογές συντρόφου συχνά δεν είναι πραγματικά ελεύθερες. Οι άνθρωποι τείνουν να επαναλαμβάνουν μοτίβα σχέσεων, έλκοντας συντρόφους με παρόμοια χαρακτηριστικά, ακόμη και αν έχουν αποδειχθεί ακατάλληλοι. Αυτό συνδέεται με τον “επαναλαμβανόμενο καταναγκασμό”, όπου αναζητούμε οικεία συναισθήματα και καταστάσεις για να “διορθώσουμε” παλιές πληγές, συχνά ασυνείδητα. Η αίσθηση του οικείου φαίνεται ασφαλής, ενώ το άγνωστο προκαλεί φόβο. Οι σχέσεις μας βασίζονται σε πρώιμες εμπειρίες με γονείς ή φροντιστές, διαμορφώνοντας τον τρόπο που σχετιζόμαστε. Η αναγνώριση αυτών των μοτίβων και η θεραπεία βοηθούν στην ουσιαστική ελευθερία επιλογής.
 author: Δήμητρα Μαλάκη
 references: 
-  - Freud, Sigmund. (1914g). Errinern, Wiederholen und Durcharbeiten (Weitere Ratschläge zur Technik der Psychoanalyse, II). Internationale Zeitschrift für ärtztliche Psychoanalyse, 2, 485-491; Remembering, repeating and working-through. SE, 12: 147-156.
+  - "Freud, Sigmund. (1914g). Errinern, Wiederholen und Durcharbeiten (Weitere Ratschläge zur Technik der Psychoanalyse, II). Internationale Zeitschrift für ärtztliche Psychoanalyse, 2, 485-491; Remembering, repeating and working-through. SE, 12: 147-156."
   - Park, Y., & MacDonald, G. (2019). Consistency between individuals’ past and current romantic partners’ own reports of their personalities. Proceedings of the National Academy of Sciences, 116, 12793-12797.
   - Rauer, A. J., Pettit, G. S., Lansford, J. E., Bates, J. E., & Dodge, K. A. (2013). Romantic relationship patterns in young adulthood and their developmental antecedents. Developmental Psychology, 49(11), 2159–2171. https://doi.org/10.1037/a0031845
 ---

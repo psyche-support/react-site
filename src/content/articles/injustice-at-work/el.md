@@ -1,16 +1,16 @@
 ---
 slug: injustice-at-work
 title: Η αλυσιδωτή εξάπλωση της αδικίας
-date: 2022-05-11
+date: "2022-05-11"
 tags: [εργασία, έρευνα, αδικία]
 banner: /articles/lesly-juarez-DFtjXYd5Pto-unsplash.jpg
-photoCreditText: Photo: Unsplash
+photoCreditText: "Photo: Unsplash"
 photoCreditHref: https://unsplash.com/photos/mindfulness-printed-paper-near-window-DFtjXYd5Pto
 summary: Το αίσθημα αδικίας προκαλεί αρνητικά συναισθήματα και μπορεί να επηρεάσει μελλοντικές αποφάσεις. Στο εργασιακό περιβάλλον, οι άνθρωποι συχνά εκφράζουν οργή όχι μόνο προς όσους τους αδίκησαν αλλά και προς άσχετους συναδέλφους, δημιουργώντας έναν φαύλο κύκλο που ονομάζεται «γενικευμένη αρνητική αμοιβαιότητα». Έρευνα του Καθηγητή Bernd Weber έδειξε ότι εργαζόμενοι που δέχονται αδικία από ανωτέρους τη μεταφέρουν σε υφισταμένους. Στο «Παιχνίδι του Δικτάτορα» το 83% μοίρασε άνισα χρήματα. Η συγγραφή επιστολής για την έκφραση θυμού αποδείχθηκε ο πιο αποτελεσματικός τρόπος διακοπής του κύκλου, ενώ μικρά διαλείμματα ή ουδέτερες σκέψεις βοήθησαν λιγότερο.
 author: Δήμητρα Μαλάκη
 references:
   - Strang, S., Grote, X., Kuss, K., Park, S. Q. & Weber, B. (2016). Generalized Negative Reciprocity in the Dictator Game - How to Interrupt the Chain of Unfairness. Scientific reports, 2016, Vol.6 (1), p.22316-22316
-  - Weib, M., Robrigues, J., Paelecke, M,. & Hewig, J. (2020). We, Them and It: Dictator Game Offers Depend on Hierarchical Social Status, Artificial Intelligence, and Social Dominance. Frontiers In Psychology, 11. Doi: 103389/fpsyg.2020.541756
+  - "Weib, M., Robrigues, J., Paelecke, M,. & Hewig, J. (2020). We, Them and It: Dictator Game Offers Depend on Hierarchical Social Status, Artificial Intelligence, and Social Dominance. Frontiers In Psychology, 11. Doi: 103389/fpsyg.2020.541756"
 ---
 
 Το αίσθημα της αδικίας προκαλεί αρνητικές συναισθηματικές αντιδράσεις, και επηρεάζει σε μεταγενέστερο στάδιο τη λήψη αποφάσεων. Οι άνθρωποι που νιώθουν αδικημένοι στο εργασιακό περιβάλλον, εκφράζουν την οργή τους όχι μόνο προς τα άτομα που τους έχουν αδικήσει, αλλά και σε άλλους που δεν ευθύνονται. Με τον τρόπο αυτό, δημιουργείται μία αλυσιδωτή, επανάληψη της αδικίας καθώς οι αδικημένοι υιοθετούν την συμπεριφορά των ανθρώπων που τους αδίκησαν. Το φαινόμενο αυτό είναι γνωστό ως “γενικευμένη αρνητική αμοιβαιότητα”.

@@ -4,14 +4,14 @@ title: The psychology of self-esteem
 date: 2024-12-12
 tags: [personality, self-esteem]
 banner: /articles/morgan-housel-cAQZuqdvba8-unsplash.jpg
-photoCreditText: Photo: Unsplash
+photoCreditText: "Photo: Unsplash"
 photoCreditHref: https://unsplash.com/@morganhousel
-summary: Self-esteem describes how we evaluate our personal worth and whether we feel we are deserving. It is subjective and may differ from reality: sometimes we underestimate ourselves, other times we overestimate. It develops from an early age, increases during adolescence, peaks around ages 50–60, and declines in older age. Low self-esteem leads to doubt, lack of assertiveness, and settling for less, creating a vicious cycle. It is linked to a lack of self-awareness. Psychotherapy helps identify the causes, accept oneself, and set new goals. Living the life we deserve is a right and can be achieved through change and effort.
+summary: "Self-esteem describes how we evaluate our personal worth and whether we feel we are deserving. It is subjective and may differ from reality: sometimes we underestimate ourselves, other times we overestimate. It develops from an early age, increases during adolescence, peaks around ages 50–60, and declines in older age. Low self-esteem leads to doubt, lack of assertiveness, and settling for less, creating a vicious cycle. It is linked to a lack of self-awareness. Psychotherapy helps identify the causes, accept oneself, and set new goals. Living the life we deserve is a right and can be achieved through change and effort."
 author: Δήμητρα Μαλάκη
 references: 
-  - Brown, J. D. (2014). Self-esteem and self-evaluation: Feeling is believing. Psychological perspectives on the self, 4(8), 27-58.
-  - Orth, U., & Robins, R. (2014). The Development of Self-Esteem. Current Directions In Psychological Science, 23(5), 381-387. Doi: 10.1177/0963721414547414
-  - Rosenberg, M., & Owens, T. J. (2001). Low self-esteem people: A collective portrait.
+  - "Brown, J. D. (2014). Self-esteem and self-evaluation: Feeling is believing. Psychological perspectives on the self, 4(8), 27-58."
+  - "Orth, U., & Robins, R. (2014). The Development of Self-Esteem. Current Directions In Psychological Science, 23(5), 381-387. Doi: 10.1177/0963721414547414"
+  - "Rosenberg, M., & Owens, T. J. (2001). Low self-esteem people: A collective portrait."
 ---
 
 The term “self-esteem” in psychology is used to describe a person’s subjective perception of their own worth. Simply put, it reflects how much someone values or is satisfied with themselves, whether they believe they are worthy, and how they form positive or negative judgments about themselves.

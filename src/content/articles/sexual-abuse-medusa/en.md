@@ -1,17 +1,17 @@
 ---
 slug: sexual-abuse-medusa
-title: Interpreting sexual abuse through the ‘Gaze of Medusa’
+title: "Interpreting sexual abuse through the \"Gaze of Medusa\""
 date: 2022-03-01
 tags: [relationships, abuse]
 banner: /articles/photo-1589572044842-c281528f8ce6.jpg
-photoCreditText: Photo: Unsplash
+photoCreditText: "Photo: Unsplash"
 photoCreditHref: https://unsplash.com/photos/gold-and-blue-head-bust-yANk47Q3P_8
 summary: Sexual abuse is an escalating social issue that has gained significant public attention, especially following recent reports from survivors. In just six months, the women’s helpline 15900 received more than 4,000 calls, with dozens of women forced to leave their homes for safety. This article draws a parallel between the myth of Medusa and sexual violence, exploring the roles of victim, perpetrator, and witness. In the myth, Poseidon rapes Medusa, while Athena punishes her, leaving the aggressor untouched. The allegory highlights how society often stigmatizes and blames victims, making disclosure harder. Listening to and supporting survivors is essential.
 author: Dimitra Malaki
 references: 
-  - Οβίδιος, 1966. ΜΕΤΑΜΟΡΦΏΣΕΙΣ ΤΟΥ ΟΒΙΔΊΟΥ. 1966: Διφρος
+  - "Οβίδιος, 1966. ΜΕΤΑΜΟΡΦΏΣΕΙΣ ΤΟΥ ΟΒΙΔΊΟΥ. 1966: Διφρος"
   - Ferenczi, S. (1949). Confusion of the Tongues Between the Adults and the Child— (The Language of Tenderness and of Passion) 1. Int. J. Psycho-Anal., 30, σσ. 225-230.
-  - Leys, R., 2010. Trauma. 1st ed. Chicago: The University of Chicago Press. Searles, P., 2019. Rape amd Society. 1 st ed. : Routledge
+  - "Leys, R., 2010. Trauma. 1st ed. Chicago: The University of Chicago Press. Searles, P., 2019. Rape amd Society. 1 st ed. : Routledge"
 ---
 
 Sexual abuse is a growing social issue that has captured public attention, especially after recent disclosures by survivors. Within the broader context of violence against women, the helpline 15900 reported receiving over 4,000 calls in just six months; more than 50 women endured such severe violence that they fled their homes, often with children, to emergency shelters, according to the Ministry of Labor and Social Affairs.
