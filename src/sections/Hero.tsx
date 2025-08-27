@@ -15,11 +15,11 @@ type Props = {
 
 const Hero: React.FC<Props> = ({
   lang,
-  imageSrc = "https://images.unsplash.com/photo-1524230572899-a752b3835840?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0",
+  imageSrc = "hero.jpg",
   imageAlt = "Counselling / therapy hero",
   photoCreditLabel = "Photo credit:",
   photoCreditText = "Unsplash",
-  photoCreditHref = "https://unsplash.com/",
+  photoCreditHref = "https://unsplash.com/photos/white-concrete-building-7y4858E8PfA",
   minHeight = "70vh",
 }) => {
   const { dict: t } = useI18n("homePage", lang);

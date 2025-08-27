@@ -5,9 +5,9 @@ import sharp from "sharp";
 import { glob } from "glob";
 
 /** CONFIG */
-const ARTICLES_DIR = path.resolve("public/articles");
+const ARTICLES_DIR = path.resolve("public");
 const MAX_WIDTH = parseInt(process.env.MAX_WIDTH || "1920", 10);       // px
-const MAX_SIZE_BYTES = parseInt(process.env.MAX_SIZE || `${300*1024}`, 10); // 300 KB
+const MAX_SIZE_BYTES = parseInt(process.env.MAX_SIZE || `${120*1024}`, 10); // 120 KB
 const JPEG_QUALITY = parseInt(process.env.JPEG_QUALITY || "80", 10);
 const WEBP_QUALITY = parseInt(process.env.WEBP_QUALITY || "80", 10);
 const PNG_COMPRESSION = parseInt(process.env.PNG_COMPRESSION || "9", 10);
