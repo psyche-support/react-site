@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Tell search engines where your sitemap is
+Sitemap: https://psyche.support/sitemap.xml
