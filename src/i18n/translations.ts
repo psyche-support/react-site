@@ -157,5 +157,5 @@ export function t<T = any>(lang: LangCode, path: string, fallback?: T): T | stri
   }
   return (cur ?? fallback ?? path) as T | string;
 }
-console.log(translations)
+
 export { translations };

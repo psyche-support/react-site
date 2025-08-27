@@ -7,8 +7,15 @@ import './styles/global.css'
 import { registerSW } from 'virtual:pwa-register';
 const basename = import.meta.env.BASE_URL || "/";
 
-// Register SW (auto-update)
-registerSW({ immediate: true })
+const updateSW = registerSW({
+  immediate: true,
+  onRegisteredSW(swUrl, registration) {
+    console.log('[PWA] SW registered:', swUrl, registration);
+  },
+  onRegisterError(error) {
+    console.error('[PWA] SW registration failed:', error);
+  },
+});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

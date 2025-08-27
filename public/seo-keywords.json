@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-27T02:53:23.557Z",
+  "generatedAt": "2025-08-27T16:10:52.901Z",
   "perDoc": [
     {
       "lang": "el",
@@ -13,83 +13,83 @@
       "keywords": [
         {
           "term": "της αδικιας",
-          "score": 18.78
+          "score": 24.03
         },
         {
           "term": "αδικιας",
-          "score": 14.45
+          "score": 18.49
         },
         {
           "term": "αλυσιδωτη εξαπλωση της",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "εξαπλωση της αδικιας",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "αλυσιδωτη",
-          "score": 10.23
+          "score": 13.09
         },
         {
           "term": "αδικια",
-          "score": 9.63
+          "score": 12.32
         },
         {
           "term": "αλυσιδωτη εξαπλωση",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "εξαπλωση της",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "μελη",
-          "score": 8.43
+          "score": 10.78
         },
         {
           "term": "του δικτατορα",
-          "score": 7.83
+          "score": 10.01
         },
         {
           "term": "εξαπλωση",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "αδικημενοι",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "δικτατορα",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "παιχνιδι του δικτατορα",
-          "score": 5.78
+          "score": 7.39
         },
         {
           "term": "μελη της ομαδας",
-          "score": 5.78
+          "score": 7.39
         },
         {
           "term": "εργασια",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "αισθημα της αδικιας",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "της αδικιας προκαλει",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "αδικιας προκαλει αρνητικες",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "προκαλει αρνητικες συναισθηματικες",
-          "score": 4.82
+          "score": 6.16
         }
       ]
     },
@@ -105,265 +105,83 @@
       "keywords": [
         {
           "term": "injustice",
-          "score": 16.25
+          "score": 20.8
         },
         {
           "term": "chain reaction",
-          "score": 13.3
+          "score": 17.02
         },
         {
           "term": "chain reaction injustice",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "chain",
-          "score": 10.23
-        },
-        {
-          "term": "reaction",
-          "score": 10.23
+          "score": 13.09
         },
         {
           "term": "reaction injustice",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "wronged",
-          "score": 8.43
+          "score": 10.78
+        },
+        {
+          "term": "reaction",
+          "score": 8.75
         },
         {
           "term": "generalized negative reciprocity",
-          "score": 6.74
-        },
-        {
-          "term": "generalized negative",
-          "score": 5.48
-        },
-        {
-          "term": "negative reciprocity",
-          "score": 5.48
-        },
-        {
-          "term": "negative",
-          "score": 4.85
+          "score": 8.63
         },
         {
           "term": "toward",
-          "score": 4.85
+          "score": 7.21
+        },
+        {
+          "term": "generalized negative",
+          "score": 7.01
+        },
+        {
+          "term": "negative reciprocity",
+          "score": 7.01
         },
         {
           "term": "work",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "sense injustice often",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "injustice often triggers",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "often triggers powerful",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "triggers powerful negative",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "powerful negative emotional",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "negative emotional responses",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "emotional responses influence",
-          "score": 4.82
-        }
-      ]
-    },
-    {
-      "lang": "el",
-      "slug": "self-esteem-psychology",
-      "title": "Η ψυχολογία της αυτοεκτίμησης",
-      "tags": [
-        "προσωπικότητα",
-        "αυτοεκτίμηση"
-      ],
-      "keywords": [
-        {
-          "term": "αυτοεκτιμηση",
-          "score": 15.05
+          "score": 6.16
         },
         {
-          "term": "ψυχολογια της αυτοεκτιμησης",
-          "score": 11.56
-        },
-        {
-          "term": "της αυτοεκτιμησης",
-          "score": 10.96
-        },
-        {
-          "term": "αυτοεκτιμησης",
-          "score": 10.84
-        },
-        {
-          "term": "ψυχολογια",
-          "score": 10.23
-        },
-        {
-          "term": "ψυχολογια της",
-          "score": 9.39
-        },
-        {
-          "term": "εαυτο μας",
-          "score": 7.83
-        },
-        {
-          "term": "εαυτο του",
-          "score": 7.04
-        },
-        {
-          "term": "οτι αξιζει",
-          "score": 7.04
-        },
-        {
-          "term": "πιστευει οτι αξιζει",
-          "score": 6.74
-        },
-        {
-          "term": "του εαυτου του",
-          "score": 6.74
-        },
-        {
-          "term": "αξιζει",
-          "score": 6.62
-        },
-        {
-          "term": "εαυτο",
-          "score": 6.58
-        },
-        {
-          "term": "πιστευει οτι",
-          "score": 5.48
-        },
-        {
-          "term": "του εαυτου",
-          "score": 5.48
-        },
-        {
-          "term": "εαυτου του",
-          "score": 5.48
-        },
-        {
-          "term": "προσωπικοτητα",
-          "score": 4.82
-        },
-        {
-          "term": "ορος αυτοεκτιμηση ψυχολογια",
-          "score": 4.82
-        },
-        {
-          "term": "αυτοεκτιμηση ψυχολογια χρησιμοποιειται",
-          "score": 4.82
-        },
-        {
-          "term": "ψυχολογια χρησιμοποιειται περιγραψει",
-          "score": 4.82
-        }
-      ]
-    },
-    {
-      "lang": "en",
-      "slug": "self-esteem-psychology",
-      "title": "The psychology of self-esteem",
-      "tags": [
-        "personality",
-        "self-esteem"
-      ],
-      "keywords": [
-        {
-          "term": "self-esteem",
-          "score": 24.68
-        },
-        {
-          "term": "psychology",
-          "score": 10.23
-        },
-        {
-          "term": "psychology self-esteem",
-          "score": 9.39
-        },
-        {
-          "term": "low self-esteem",
-          "score": 6.26
-        },
-        {
-          "term": "themselves",
-          "score": 6.24
-        },
-        {
-          "term": "personality",
-          "score": 4.82
-        },
-        {
-          "term": "term self-esteem psychology",
-          "score": 4.82
-        },
-        {
-          "term": "self-esteem psychology used",
-          "score": 4.82
-        },
-        {
-          "term": "psychology used describe",
-          "score": 4.82
-        },
-        {
-          "term": "used describe person",
-          "score": 4.82
-        },
-        {
-          "term": "describe person subjective",
-          "score": 4.82
-        },
-        {
-          "term": "person subjective perception",
-          "score": 4.82
-        },
-        {
-          "term": "subjective perception own",
-          "score": 4.82
-        },
-        {
-          "term": "perception own worth",
-          "score": 4.82
-        },
-        {
-          "term": "own worth simply",
-          "score": 4.82
-        },
-        {
-          "term": "worth simply put",
-          "score": 4.82
-        },
-        {
-          "term": "simply put reflects",
-          "score": 4.82
-        },
-        {
-          "term": "put reflects how",
-          "score": 4.82
-        },
-        {
-          "term": "reflects how much",
-          "score": 4.82
-        },
-        {
-          "term": "how much someone",
-          "score": 4.82
+          "term": "responses influence way",
+          "score": 6.16
         }
       ]
     },
@@ -378,83 +196,83 @@
       "keywords": [
         {
           "term": "μοτιβα σχεσεων",
-          "score": 12.52
+          "score": 16.02
         },
         {
           "term": "μοτιβα σχεσεων καταναγκαστικη",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "σχεσεων καταναγκαστικη επαναληψη",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "μοτιβα",
-          "score": 9.63
+          "score": 12.32
         },
         {
           "term": "σχεσεων",
-          "score": 9.63
+          "score": 12.32
         },
         {
           "term": "σχεσεων καταναγκαστικη",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "καταναγκαστικη επαναληψη",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "καταναγκαστικη",
-          "score": 7.22
-        },
-        {
-          "term": "ελευθεροι",
-          "score": 6.02
+          "score": 9.24
         },
         {
           "term": "επαναληψη",
-          "score": 5.55
+          "score": 8.24
+        },
+        {
+          "term": "ελευθεροι",
+          "score": 7.7
         },
         {
           "term": "καταναγκασμος",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "μυθος της αγαπης",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "της αγαπης αποτελει",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "αγαπης αποτελει πεποιθηση",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "αποτελει πεποιθηση οτι",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "πεποιθηση οτι ειμαστε",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "οτι ειμαστε ελευθεροι",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "ειμαστε ελευθεροι αγαπησουμε",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "ελευθεροι αγαπησουμε οποιον",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "αγαπησουμε οποιον επιθυμουμε",
-          "score": 4.82
+          "score": 6.16
         }
       ]
     },
@@ -469,83 +287,451 @@
       "keywords": [
         {
           "term": "relationship patterns",
-          "score": 12.52
+          "score": 16.02
         },
         {
           "term": "relationship patterns compulsive",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "patterns compulsive repetition",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "patterns",
-          "score": 10.84
+          "score": 13.86
         },
         {
           "term": "repetition",
-          "score": 10.84
+          "score": 13.86
         },
         {
           "term": "patterns compulsive",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "compulsive repetition",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "love",
-          "score": 8.43
+          "score": 10.78
         },
         {
           "term": "compulsive",
-          "score": 7.22
+          "score": 9.24
+        },
+        {
+          "term": "compulsion",
+          "score": 7.7
+        },
+        {
+          "term": "free",
+          "score": 7.7
         },
         {
           "term": "relationship",
           "score": 6.24
         },
         {
-          "term": "compulsion",
-          "score": 6.02
-        },
-        {
-          "term": "free",
-          "score": 6.02
-        },
-        {
-          "term": "what",
-          "score": 5.42
-        },
-        {
           "term": "myth love belief",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "love belief free",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "belief free love",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "free love whomever",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "love whomever wish",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "whomever wish question",
-          "score": 4.82
+          "score": 6.16
         },
         {
           "term": "wish question arises",
-          "score": 4.82
+          "score": 6.16
+        },
+        {
+          "term": "question arises article",
+          "score": 6.16
+        }
+      ]
+    },
+    {
+      "lang": "el",
+      "slug": "panic-attacks-vs-panic-disorder",
+      "title": "Τι είναι η κρίση πανικού και ποια η διαφορά της από τη διαταραχή πανικού",
+      "tags": [
+        "κρίσεις-πανικού",
+        "άγχος",
+        "αγχώδης-διαταραχή",
+        "διαταραχές"
+      ],
+      "keywords": [
+        {
+          "term": "πανικου",
+          "score": 33.12
+        },
+        {
+          "term": "διαταραχη πανικου",
+          "score": 22.03
+        },
+        {
+          "term": "κριση πανικου",
+          "score": 21.03
+        },
+        {
+          "term": "διαταραχη",
+          "score": 16.94
+        },
+        {
+          "term": "κριση πανικου ποια",
+          "score": 14.79
+        },
+        {
+          "term": "πανικου ποια διαφορα",
+          "score": 14.79
+        },
+        {
+          "term": "ποια διαφορα της",
+          "score": 14.79
+        },
+        {
+          "term": "διαφορα της τη",
+          "score": 14.79
+        },
+        {
+          "term": "της τη διαταραχη",
+          "score": 14.79
+        },
+        {
+          "term": "τη διαταραχη πανικου",
+          "score": 14.79
+        },
+        {
+          "term": "διαφορα",
+          "score": 13.09
+        },
+        {
+          "term": "πανικου ποια",
+          "score": 12.02
+        },
+        {
+          "term": "ποια διαφορα",
+          "score": 12.02
+        },
+        {
+          "term": "διαφορα της",
+          "score": 12.02
+        },
+        {
+          "term": "της τη",
+          "score": 12.02
+        },
+        {
+          "term": "τη διαταραχη",
+          "score": 12.02
+        },
+        {
+          "term": "κριση",
+          "score": 10.81
+        },
+        {
+          "term": "πανικος",
+          "score": 9.24
+        },
+        {
+          "term": "λογικη σκεψη",
+          "score": 7.01
+        },
+        {
+          "term": "άγχος",
+          "score": 6.69
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "panic-attacks-vs-panic-disorder",
+      "title": "“What is a panic attack and its distinction from the panic disorder”",
+      "tags": [
+        "panic-attack",
+        "anxiety",
+        "anxiety-disorder",
+        "disorders"
+      ],
+      "keywords": [
+        {
+          "term": "panic",
+          "score": 70.86
+        },
+        {
+          "term": "panic attack",
+          "score": 36.05
+        },
+        {
+          "term": "panic disorder",
+          "score": 32.04
+        },
+        {
+          "term": "attack",
+          "score": 27.73
+        },
+        {
+          "term": "disorder",
+          "score": 24.65
+        },
+        {
+          "term": "quot",
+          "score": 16.94
+        },
+        {
+          "term": "what panic attack",
+          "score": 14.79
+        },
+        {
+          "term": "panic attack its",
+          "score": 14.79
+        },
+        {
+          "term": "attack its distinction",
+          "score": 14.79
+        },
+        {
+          "term": "its distinction panic",
+          "score": 14.79
+        },
+        {
+          "term": "distinction panic disorder",
+          "score": 14.79
+        },
+        {
+          "term": "panic attack panic",
+          "score": 12.32
+        },
+        {
+          "term": "attack panic disorder",
+          "score": 12.32
+        },
+        {
+          "term": "what panic",
+          "score": 12.02
+        },
+        {
+          "term": "attack its",
+          "score": 12.02
+        },
+        {
+          "term": "its distinction",
+          "score": 12.02
+        },
+        {
+          "term": "distinction panic",
+          "score": 12.02
+        },
+        {
+          "term": "panic attacks",
+          "score": 12.02
+        },
+        {
+          "term": "blood",
+          "score": 11.55
+        },
+        {
+          "term": "fear",
+          "score": 10.3
+        }
+      ]
+    },
+    {
+      "lang": "el",
+      "slug": "self-esteem-psychology",
+      "title": "Η ψυχολογία της αυτοεκτίμησης",
+      "tags": [
+        "προσωπικότητα",
+        "αυτοεκτίμηση"
+      ],
+      "keywords": [
+        {
+          "term": "αυτοεκτιμηση",
+          "score": 19.26
+        },
+        {
+          "term": "ψυχολογια της αυτοεκτιμησης",
+          "score": 14.79
+        },
+        {
+          "term": "της αυτοεκτιμησης",
+          "score": 14.02
+        },
+        {
+          "term": "αυτοεκτιμησης",
+          "score": 13.86
+        },
+        {
+          "term": "ψυχολογια",
+          "score": 13.09
+        },
+        {
+          "term": "ψυχολογια της",
+          "score": 12.02
+        },
+        {
+          "term": "εαυτο μας",
+          "score": 10.01
+        },
+        {
+          "term": "εαυτο",
+          "score": 9.78
+        },
+        {
+          "term": "εαυτο του",
+          "score": 9.01
+        },
+        {
+          "term": "οτι αξιζει",
+          "score": 9.01
+        },
+        {
+          "term": "πιστευει οτι αξιζει",
+          "score": 8.63
+        },
+        {
+          "term": "του εαυτου του",
+          "score": 8.63
+        },
+        {
+          "term": "αξιζει",
+          "score": 8.47
+        },
+        {
+          "term": "πιστευει οτι",
+          "score": 7.01
+        },
+        {
+          "term": "του εαυτου",
+          "score": 7.01
+        },
+        {
+          "term": "εαυτου του",
+          "score": 7.01
+        },
+        {
+          "term": "προσωπικοτητα",
+          "score": 6.16
+        },
+        {
+          "term": "ορος αυτοεκτιμηση ψυχολογια",
+          "score": 6.16
+        },
+        {
+          "term": "αυτοεκτιμηση ψυχολογια χρησιμοποιειται",
+          "score": 6.16
+        },
+        {
+          "term": "ψυχολογια χρησιμοποιειται περιγραψει",
+          "score": 6.16
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "self-esteem-psychology",
+      "title": "The psychology of self-esteem",
+      "tags": [
+        "personality",
+        "self-esteem"
+      ],
+      "keywords": [
+        {
+          "term": "self-esteem",
+          "score": 31.58
+        },
+        {
+          "term": "psychology",
+          "score": 13.09
+        },
+        {
+          "term": "psychology self-esteem",
+          "score": 12.02
+        },
+        {
+          "term": "themselves",
+          "score": 9.27
+        },
+        {
+          "term": "low self-esteem",
+          "score": 8.01
+        },
+        {
+          "term": "personality",
+          "score": 6.16
+        },
+        {
+          "term": "term self-esteem psychology",
+          "score": 6.16
+        },
+        {
+          "term": "self-esteem psychology used",
+          "score": 6.16
+        },
+        {
+          "term": "psychology used describe",
+          "score": 6.16
+        },
+        {
+          "term": "used describe person",
+          "score": 6.16
+        },
+        {
+          "term": "describe person subjective",
+          "score": 6.16
+        },
+        {
+          "term": "person subjective perception",
+          "score": 6.16
+        },
+        {
+          "term": "subjective perception own",
+          "score": 6.16
+        },
+        {
+          "term": "perception own worth",
+          "score": 6.16
+        },
+        {
+          "term": "own worth simply",
+          "score": 6.16
+        },
+        {
+          "term": "worth simply put",
+          "score": 6.16
+        },
+        {
+          "term": "simply put reflects",
+          "score": 6.16
+        },
+        {
+          "term": "put reflects how",
+          "score": 6.16
+        },
+        {
+          "term": "reflects how much",
+          "score": 6.16
+        },
+        {
+          "term": "how much someone",
+          "score": 6.16
         }
       ]
     },
@@ -560,83 +746,83 @@
       "keywords": [
         {
           "term": "της μεδουσας",
-          "score": 14.09
+          "score": 18.02
         },
         {
           "term": "κακοποιησης",
-          "score": 12.64
+          "score": 16.17
         },
         {
           "term": "ερμηνεια της σεξουαλικης",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "της σεξουαλικης κακοποιησης",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "σεξουαλικης κακοποιησης μεσα",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "κακοποιησης μεσα βλεμμα",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "μεσα βλεμμα της",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "βλεμμα της μεδουσας",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "σεξουαλικης κακοποιησης",
-          "score": 10.96
+          "score": 14.02
         },
         {
           "term": "μεδουσας",
-          "score": 10.84
+          "score": 13.86
         },
         {
           "term": "ερμηνεια της",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "της σεξουαλικης",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "κακοποιησης μεσα",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "μεσα βλεμμα",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "βλεμμα της",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "κακοποιηση",
-          "score": 9.03
+          "score": 11.55
         },
         {
           "term": "σεξουαλικης",
-          "score": 8.43
+          "score": 10.78
         },
         {
           "term": "ερμηνεια",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "βλεμμα",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "γυναικων",
-          "score": 6.02
+          "score": 7.7
         }
       ]
     },
@@ -651,83 +837,265 @@
       "keywords": [
         {
           "term": "abuse",
-          "score": 16.25
+          "score": 20.8
         },
         {
           "term": "sexual abuse",
-          "score": 14.87
+          "score": 19.02
         },
         {
           "term": "sexual",
-          "score": 13.85
+          "score": 17.72
         },
         {
           "term": "medusa",
-          "score": 12.04
+          "score": 15.4
         },
         {
           "term": "interpreting sexual abuse",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "sexual abuse through",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "abuse through gaze",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "through gaze medusa",
-          "score": 11.56
+          "score": 14.79
         },
         {
           "term": "interpreting sexual",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "abuse through",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "through gaze",
-          "score": 9.39
+          "score": 12.02
         },
         {
           "term": "gaze medusa",
-          "score": 9.39
-        },
-        {
-          "term": "through",
-          "score": 8.43
+          "score": 12.02
         },
         {
           "term": "gaze",
-          "score": 8.43
+          "score": 10.78
         },
         {
           "term": "interpreting",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "violence",
-          "score": 7.22
+          "score": 9.24
         },
         {
           "term": "social",
-          "score": 6.02
+          "score": 7.7
         },
         {
           "term": "women",
-          "score": 6.02
+          "score": 7.7
         },
         {
           "term": "her",
-          "score": 6.02
+          "score": 7.7
+        },
+        {
+          "term": "through",
+          "score": 7.21
         },
         {
           "term": "sexual abuse growing",
-          "score": 4.82
+          "score": 6.16
+        }
+      ]
+    },
+    {
+      "lang": "el",
+      "slug": "understanding-anxiety",
+      "title": "Κατανόηση του άγχους: Οι επιδράσεις των σκέψεών μας.",
+      "tags": [
+        "άγχος",
+        "αγχώδης-διαταραχή"
+      ],
+      "keywords": [
+        {
+          "term": "του αγχους",
+          "score": 16.02
+        },
+        {
+          "term": "κατανοηση του αγχους",
+          "score": 14.79
+        },
+        {
+          "term": "του αγχους επιδρασεις",
+          "score": 14.79
+        },
+        {
+          "term": "αγχους επιδρασεις σκεψεων",
+          "score": 14.79
+        },
+        {
+          "term": "επιδρασεις σκεψεων μας",
+          "score": 14.79
+        },
+        {
+          "term": "αγχους",
+          "score": 13.86
+        },
+        {
+          "term": "κατανοηση του",
+          "score": 12.02
+        },
+        {
+          "term": "αγχους επιδρασεις",
+          "score": 12.02
+        },
+        {
+          "term": "επιδρασεις σκεψεων",
+          "score": 12.02
+        },
+        {
+          "term": "σκεψεων μας",
+          "score": 12.02
+        },
+        {
+          "term": "άγχος",
+          "score": 11.33
+        },
+        {
+          "term": "επιδρασεις",
+          "score": 10.78
+        },
+        {
+          "term": "κατανοηση",
+          "score": 9.24
+        },
+        {
+          "term": "σκεψεων",
+          "score": 9.24
+        },
+        {
+          "term": "άγχος μπορει οριστει",
+          "score": 6.16
+        },
+        {
+          "term": "μπορει οριστει ψυχολογικη",
+          "score": 6.16
+        },
+        {
+          "term": "οριστει ψυχολογικη κατασταση",
+          "score": 6.16
+        },
+        {
+          "term": "ψυχολογικη κατασταση αντιδραση",
+          "score": 6.16
+        },
+        {
+          "term": "κατασταση αντιδραση συγκεκριμενη",
+          "score": 6.16
+        },
+        {
+          "term": "αντιδραση συγκεκριμενη περισταση",
+          "score": 6.16
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "understanding-anxiety",
+      "title": "Understanding anxiety: The effects of our thoughts.",
+      "tags": [
+        "anxiety",
+        "anxiety-disorder"
+      ],
+      "keywords": [
+        {
+          "term": "anxiety",
+          "score": 20.59
+        },
+        {
+          "term": "understanding anxiety effects",
+          "score": 14.79
+        },
+        {
+          "term": "anxiety effects thoughts",
+          "score": 14.79
+        },
+        {
+          "term": "understanding anxiety",
+          "score": 12.02
+        },
+        {
+          "term": "anxiety effects",
+          "score": 12.02
+        },
+        {
+          "term": "effects thoughts",
+          "score": 12.02
+        },
+        {
+          "term": "understanding",
+          "score": 10.78
+        },
+        {
+          "term": "effects",
+          "score": 10.78
+        },
+        {
+          "term": "situation",
+          "score": 7.72
+        },
+        {
+          "term": "intense stress",
+          "score": 7.01
+        },
+        {
+          "term": "stress",
+          "score": 6.69
+        },
+        {
+          "term": "definition anxiety consider",
+          "score": 6.16
+        },
+        {
+          "term": "anxiety consider psychological",
+          "score": 6.16
+        },
+        {
+          "term": "consider psychological state",
+          "score": 6.16
+        },
+        {
+          "term": "psychological state reaction",
+          "score": 6.16
+        },
+        {
+          "term": "state reaction specific",
+          "score": 6.16
+        },
+        {
+          "term": "reaction specific situation",
+          "score": 6.16
+        },
+        {
+          "term": "specific situation individual",
+          "score": 6.16
+        },
+        {
+          "term": "situation individual life",
+          "score": 6.16
+        },
+        {
+          "term": "individual life anxiety",
+          "score": 6.16
         }
       ]
     }
@@ -735,486 +1103,486 @@
   "globalTop": {
     "el": [
       {
+        "term": "πανικου",
+        "score": 33.12
+      },
+      {
         "term": "της αδικιας",
-        "score": 18.78
+        "score": 24.03
+      },
+      {
+        "term": "διαταραχη πανικου",
+        "score": 22.03
+      },
+      {
+        "term": "κριση πανικου",
+        "score": 21.03
       },
       {
         "term": "αυτοεκτιμηση",
-        "score": 15.05
+        "score": 19.26
       },
       {
         "term": "αδικιας",
-        "score": 14.45
+        "score": 18.49
       },
       {
         "term": "της μεδουσας",
-        "score": 14.09
+        "score": 18.02
+      },
+      {
+        "term": "άγχος",
+        "score": 18.02
+      },
+      {
+        "term": "διαταραχη",
+        "score": 16.94
       },
       {
         "term": "κακοποιησης",
-        "score": 12.64
+        "score": 16.17
       },
       {
         "term": "μοτιβα σχεσεων",
-        "score": 12.52
+        "score": 16.02
+      },
+      {
+        "term": "του αγχους",
+        "score": 16.02
       },
       {
         "term": "αλυσιδωτη εξαπλωση της",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "εξαπλωση της αδικιας",
-        "score": 11.56
-      },
-      {
-        "term": "ψυχολογια της αυτοεκτιμησης",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "μοτιβα σχεσεων καταναγκαστικη",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "σχεσεων καταναγκαστικη επαναληψη",
-        "score": 11.56
+        "score": 14.79
+      },
+      {
+        "term": "κριση πανικου ποια",
+        "score": 14.79
+      },
+      {
+        "term": "πανικου ποια διαφορα",
+        "score": 14.79
+      },
+      {
+        "term": "ποια διαφορα της",
+        "score": 14.79
+      },
+      {
+        "term": "διαφορα της τη",
+        "score": 14.79
+      },
+      {
+        "term": "της τη διαταραχη",
+        "score": 14.79
+      },
+      {
+        "term": "τη διαταραχη πανικου",
+        "score": 14.79
+      },
+      {
+        "term": "ψυχολογια της αυτοεκτιμησης",
+        "score": 14.79
       },
       {
         "term": "ερμηνεια της σεξουαλικης",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "της σεξουαλικης κακοποιησης",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "σεξουαλικης κακοποιησης μεσα",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "κακοποιησης μεσα βλεμμα",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "μεσα βλεμμα της",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "βλεμμα της μεδουσας",
-        "score": 11.56
+        "score": 14.79
+      },
+      {
+        "term": "κατανοηση του αγχους",
+        "score": 14.79
+      },
+      {
+        "term": "του αγχους επιδρασεις",
+        "score": 14.79
+      },
+      {
+        "term": "αγχους επιδρασεις σκεψεων",
+        "score": 14.79
+      },
+      {
+        "term": "επιδρασεις σκεψεων μας",
+        "score": 14.79
       },
       {
         "term": "της αυτοεκτιμησης",
-        "score": 10.96
+        "score": 14.02
       },
       {
         "term": "σεξουαλικης κακοποιησης",
-        "score": 10.96
+        "score": 14.02
       },
       {
         "term": "αυτοεκτιμησης",
-        "score": 10.84
+        "score": 13.86
       },
       {
         "term": "μεδουσας",
-        "score": 10.84
+        "score": 13.86
+      },
+      {
+        "term": "αγχους",
+        "score": 13.86
       },
       {
         "term": "αλυσιδωτη",
-        "score": 10.23
+        "score": 13.09
+      },
+      {
+        "term": "διαφορα",
+        "score": 13.09
       },
       {
         "term": "ψυχολογια",
-        "score": 10.23
+        "score": 13.09
       },
       {
         "term": "αδικια",
-        "score": 9.63
+        "score": 12.32
       },
       {
         "term": "μοτιβα",
-        "score": 9.63
+        "score": 12.32
       },
       {
         "term": "σχεσεων",
-        "score": 9.63
+        "score": 12.32
       },
       {
         "term": "αλυσιδωτη εξαπλωση",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "εξαπλωση της",
-        "score": 9.39
-      },
-      {
-        "term": "ψυχολογια της",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "σχεσεων καταναγκαστικη",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "καταναγκαστικη επαναληψη",
-        "score": 9.39
+        "score": 12.02
+      },
+      {
+        "term": "πανικου ποια",
+        "score": 12.02
+      },
+      {
+        "term": "ποια διαφορα",
+        "score": 12.02
+      },
+      {
+        "term": "διαφορα της",
+        "score": 12.02
+      },
+      {
+        "term": "της τη",
+        "score": 12.02
+      },
+      {
+        "term": "τη διαταραχη",
+        "score": 12.02
+      },
+      {
+        "term": "ψυχολογια της",
+        "score": 12.02
       },
       {
         "term": "ερμηνεια της",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "της σεξουαλικης",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "κακοποιησης μεσα",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "μεσα βλεμμα",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "βλεμμα της",
-        "score": 9.39
+        "score": 12.02
       },
       {
-        "term": "κακοποιηση",
-        "score": 9.03
-      },
-      {
-        "term": "μελη",
-        "score": 8.43
-      },
-      {
-        "term": "σεξουαλικης",
-        "score": 8.43
-      },
-      {
-        "term": "του δικτατορα",
-        "score": 7.83
-      },
-      {
-        "term": "εαυτο μας",
-        "score": 7.83
-      },
-      {
-        "term": "εξαπλωση",
-        "score": 7.22
-      },
-      {
-        "term": "αδικημενοι",
-        "score": 7.22
-      },
-      {
-        "term": "δικτατορα",
-        "score": 7.22
-      },
-      {
-        "term": "καταναγκαστικη",
-        "score": 7.22
-      },
-      {
-        "term": "ερμηνεια",
-        "score": 7.22
-      },
-      {
-        "term": "βλεμμα",
-        "score": 7.22
-      },
-      {
-        "term": "εαυτο του",
-        "score": 7.04
-      },
-      {
-        "term": "οτι αξιζει",
-        "score": 7.04
-      },
-      {
-        "term": "πιστευει οτι αξιζει",
-        "score": 6.74
-      },
-      {
-        "term": "του εαυτου του",
-        "score": 6.74
-      },
-      {
-        "term": "αξιζει",
-        "score": 6.62
-      },
-      {
-        "term": "εαυτο",
-        "score": 6.58
-      },
-      {
-        "term": "ελευθεροι",
-        "score": 6.02
-      },
-      {
-        "term": "γυναικων",
-        "score": 6.02
-      },
-      {
-        "term": "παιχνιδι του δικτατορα",
-        "score": 5.78
-      },
-      {
-        "term": "μελη της ομαδας",
-        "score": 5.78
-      },
-      {
-        "term": "επαναληψη",
-        "score": 5.55
-      },
-      {
-        "term": "πιστευει οτι",
-        "score": 5.48
-      },
-      {
-        "term": "του εαυτου",
-        "score": 5.48
+        "term": "κατανοηση του",
+        "score": 12.02
       }
     ],
     "en": [
       {
+        "term": "panic",
+        "score": 70.86
+      },
+      {
+        "term": "panic attack",
+        "score": 36.05
+      },
+      {
+        "term": "panic disorder",
+        "score": 32.04
+      },
+      {
         "term": "self-esteem",
-        "score": 24.68
+        "score": 31.58
+      },
+      {
+        "term": "attack",
+        "score": 27.73
+      },
+      {
+        "term": "disorder",
+        "score": 24.65
       },
       {
         "term": "injustice",
-        "score": 16.25
+        "score": 20.8
       },
       {
         "term": "abuse",
-        "score": 16.25
+        "score": 20.8
+      },
+      {
+        "term": "anxiety",
+        "score": 20.59
       },
       {
         "term": "sexual abuse",
-        "score": 14.87
+        "score": 19.02
       },
       {
         "term": "sexual",
-        "score": 13.85
+        "score": 17.72
       },
       {
         "term": "chain reaction",
-        "score": 13.3
+        "score": 17.02
+      },
+      {
+        "term": "quot",
+        "score": 16.94
       },
       {
         "term": "relationship patterns",
-        "score": 12.52
+        "score": 16.02
       },
       {
         "term": "medusa",
-        "score": 12.04
+        "score": 15.4
       },
       {
         "term": "chain reaction injustice",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "relationship patterns compulsive",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "patterns compulsive repetition",
-        "score": 11.56
+        "score": 14.79
+      },
+      {
+        "term": "what panic attack",
+        "score": 14.79
+      },
+      {
+        "term": "panic attack its",
+        "score": 14.79
+      },
+      {
+        "term": "attack its distinction",
+        "score": 14.79
+      },
+      {
+        "term": "its distinction panic",
+        "score": 14.79
+      },
+      {
+        "term": "distinction panic disorder",
+        "score": 14.79
       },
       {
         "term": "interpreting sexual abuse",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "sexual abuse through",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "abuse through gaze",
-        "score": 11.56
+        "score": 14.79
       },
       {
         "term": "through gaze medusa",
-        "score": 11.56
+        "score": 14.79
+      },
+      {
+        "term": "understanding anxiety effects",
+        "score": 14.79
+      },
+      {
+        "term": "anxiety effects thoughts",
+        "score": 14.79
       },
       {
         "term": "patterns",
-        "score": 10.84
+        "score": 13.86
       },
       {
         "term": "repetition",
-        "score": 10.84
+        "score": 13.86
       },
       {
         "term": "chain",
-        "score": 10.23
-      },
-      {
-        "term": "reaction",
-        "score": 10.23
+        "score": 13.09
       },
       {
         "term": "psychology",
-        "score": 10.23
+        "score": 13.09
+      },
+      {
+        "term": "panic attack panic",
+        "score": 12.32
+      },
+      {
+        "term": "attack panic disorder",
+        "score": 12.32
       },
       {
         "term": "reaction injustice",
-        "score": 9.39
-      },
-      {
-        "term": "psychology self-esteem",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "patterns compulsive",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "compulsive repetition",
-        "score": 9.39
+        "score": 12.02
+      },
+      {
+        "term": "what panic",
+        "score": 12.02
+      },
+      {
+        "term": "attack its",
+        "score": 12.02
+      },
+      {
+        "term": "its distinction",
+        "score": 12.02
+      },
+      {
+        "term": "distinction panic",
+        "score": 12.02
+      },
+      {
+        "term": "psychology self-esteem",
+        "score": 12.02
       },
       {
         "term": "interpreting sexual",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "abuse through",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "through gaze",
-        "score": 9.39
+        "score": 12.02
       },
       {
         "term": "gaze medusa",
-        "score": 9.39
+        "score": 12.02
+      },
+      {
+        "term": "understanding anxiety",
+        "score": 12.02
+      },
+      {
+        "term": "anxiety effects",
+        "score": 12.02
+      },
+      {
+        "term": "effects thoughts",
+        "score": 12.02
+      },
+      {
+        "term": "panic attacks",
+        "score": 12.02
+      },
+      {
+        "term": "blood",
+        "score": 11.55
       },
       {
         "term": "wronged",
-        "score": 8.43
+        "score": 10.78
       },
       {
         "term": "love",
-        "score": 8.43
-      },
-      {
-        "term": "through",
-        "score": 8.43
+        "score": 10.78
       },
       {
         "term": "gaze",
-        "score": 8.43
+        "score": 10.78
       },
       {
-        "term": "compulsive",
-        "score": 7.22
+        "term": "understanding",
+        "score": 10.78
       },
       {
-        "term": "interpreting",
-        "score": 7.22
+        "term": "effects",
+        "score": 10.78
       },
       {
-        "term": "violence",
-        "score": 7.22
-      },
-      {
-        "term": "generalized negative reciprocity",
-        "score": 6.74
-      },
-      {
-        "term": "low self-esteem",
-        "score": 6.26
+        "term": "fear",
+        "score": 10.3
       },
       {
         "term": "themselves",
-        "score": 6.24
+        "score": 9.27
       },
       {
-        "term": "relationship",
-        "score": 6.24
-      },
-      {
-        "term": "compulsion",
-        "score": 6.02
-      },
-      {
-        "term": "free",
-        "score": 6.02
-      },
-      {
-        "term": "social",
-        "score": 6.02
-      },
-      {
-        "term": "women",
-        "score": 6.02
-      },
-      {
-        "term": "her",
-        "score": 6.02
-      },
-      {
-        "term": "generalized negative",
-        "score": 5.48
-      },
-      {
-        "term": "negative reciprocity",
-        "score": 5.48
-      },
-      {
-        "term": "what",
-        "score": 5.42
-      },
-      {
-        "term": "negative",
-        "score": 4.85
-      },
-      {
-        "term": "toward",
-        "score": 4.85
-      },
-      {
-        "term": "work",
-        "score": 4.82
-      },
-      {
-        "term": "sense injustice often",
-        "score": 4.82
-      },
-      {
-        "term": "injustice often triggers",
-        "score": 4.82
-      },
-      {
-        "term": "often triggers powerful",
-        "score": 4.82
-      },
-      {
-        "term": "triggers powerful negative",
-        "score": 4.82
-      },
-      {
-        "term": "powerful negative emotional",
-        "score": 4.82
-      },
-      {
-        "term": "negative emotional responses",
-        "score": 4.82
-      },
-      {
-        "term": "emotional responses influence",
-        "score": 4.82
-      },
-      {
-        "term": "personality",
-        "score": 4.82
-      },
-      {
-        "term": "term self-esteem psychology",
-        "score": 4.82
-      },
-      {
-        "term": "self-esteem psychology used",
-        "score": 4.82
+        "term": "compulsive",
+        "score": 9.24
       }
     ]
   }

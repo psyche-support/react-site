@@ -50,12 +50,57 @@
   </url>
 
   <url>
+    <loc>https://psyche.support/privacy</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/privacy?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/privacy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/privacy?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/terms</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/terms?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/terms?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/terms?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/cookies</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/cookies?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/cookies?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/cookies?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/accessibility</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/accessibility?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/accessibility?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/accessibility?lang=en" />
+  </url>
+
+  <url>
     <loc>https://psyche.support/articles/injustice-at-work</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/injustice-at-work?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/injustice-at-work?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/injustice-at-work?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles/panic-attacks-vs-panic-disorder</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/panic-attacks-vs-panic-disorder?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/panic-attacks-vs-panic-disorder?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/panic-attacks-vs-panic-disorder?lang=en" />
   </url>
 
   <url>
@@ -83,5 +128,14 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/sexual-abuse-medusa?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/sexual-abuse-medusa?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/sexual-abuse-medusa?lang=en" />
+  </url>
+
+  <url>
+    <loc>https://psyche.support/articles/understanding-anxiety</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://psyche.support/articles/understanding-anxiety?lang=el" /><xhtml:link rel="alternate" hreflang="en" href="https://psyche.support/articles/understanding-anxiety?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psyche.support/articles/understanding-anxiety?lang=en" />
   </url>
 </urlset>

@@ -158,41 +158,49 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0 0 3px rgba(42,157,143,0.2);
 }
 
-/* ===== Full-bleed Hero background ===== */
-.hero.hero--bg {
+/* ===== Hero (image as real <img> for LCP, no CLS) ===== */
+.hero {
   position: relative;
-  min-height: 40vh;
+  min-height: clamp(520px, var(--hero-min-h, 70vh), 900px);
+  isolation: isolate; /* safer stacking context */
   display: flex;
   align-items: center;
-
-  /* Full width background image */
-  --_img: var(--hero-bg, none);
-  background-image: var(--_img);
-  background-repeat: no-repeat;
-  background-size: cover;         /* <-- cover the whole section */
-  background-position: center;    /* <-- center the focus */
-  background-attachment: scroll;  /* set to 'fixed' if you want parallax */
 }
 
-.hero.hero--bg::before {
+/* Background layer (replaces background-image on .hero--bg) */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;              /* behind content */
+  overflow: hidden;
+}
+
+/* Actual LCP image fills the section like background-size: cover */
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;  /* adjust if you need a focal point */
+  display: block;
+}
+
+/* Dark overlay (replaces .hero.hero--bg::before) */
+.hero__bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* dark fade; adjust opacity */
+  background: rgba(0, 0, 0, 0.25); /* tweak opacity to taste */
   pointer-events: none;
-  z-index: 0;
 }
 
-/* Keep text centered/nicely spaced on top of bg */
+/* Inner content spacing */
 .hero__inner {
   position: relative;
-  z-index: 1;           /* above overlay */
-  padding: clamp(2rem, 6vw, 4rem) 0;
+  z-index: 1; /* above overlay/bg */
+  padding-block: clamp(2rem, 6vh, 4rem);
 }
 
-.hero__content {
-  max-width: 640px;
-}
+.hero__content { max-width: 640px; }
 
 .hero__title {
   font-size: clamp(2rem, 4.5vw, 3.25rem);
@@ -208,6 +216,7 @@ form input:focus, form textarea:focus {
   margin-top: .9rem;
 }
 
+/* Photo credit, bottom-right */
 .hero__credit {
   position: absolute;
   right: 1rem;
@@ -216,24 +225,19 @@ form input:focus, form textarea:focus {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.9);
   z-index: 2;
+  text-shadow: 0 1px 2px rgba(0,0,0,.35);
 }
 .hero__credit a {
-  color: rgba(255, 255, 255, 0.9);
+  color: inherit;
   text-decoration: underline;
 }
-.hero.hero--bg {
-  position: relative; /* ensure positioning context for credit */
-}
 
-
-/* Full-bleed behavior on small screens too */
+/* Small-screen min-height guard */
 @media (max-width: 960px) {
-  .hero.hero--bg {
-    background-position: center;
-    min-height: 60vh;
-  }
+  .hero { min-height: 60vh; }
 }
 
+/* Optional decorative card you had */
 .hero-art {
   height: 320px;
   border-radius: var(--radius);
