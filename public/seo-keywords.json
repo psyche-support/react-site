@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-27T17:14:13.460Z",
+  "generatedAt": "2025-08-27T19:29:08.416Z",
   "perDoc": [
     {
       "lang": "el",
@@ -182,192 +182,6 @@
         {
           "term": "responses influence way",
           "score": 6.16
-        }
-      ]
-    },
-    {
-      "lang": "el",
-      "slug": "panic-attacks-vs-panic-disorder",
-      "title": "Τι είναι η κρίση πανικού και ποια η διαφορά της από τη διαταραχή πανικού",
-      "tags": [
-        "κρίσεις-πανικού",
-        "άγχος",
-        "αγχώδης-διαταραχή",
-        "διαταραχές"
-      ],
-      "keywords": [
-        {
-          "term": "πανικου",
-          "score": 33.12
-        },
-        {
-          "term": "διαταραχη πανικου",
-          "score": 22.03
-        },
-        {
-          "term": "κριση πανικου",
-          "score": 21.03
-        },
-        {
-          "term": "διαταραχη",
-          "score": 16.94
-        },
-        {
-          "term": "κριση πανικου ποια",
-          "score": 14.79
-        },
-        {
-          "term": "πανικου ποια διαφορα",
-          "score": 14.79
-        },
-        {
-          "term": "ποια διαφορα της",
-          "score": 14.79
-        },
-        {
-          "term": "διαφορα της τη",
-          "score": 14.79
-        },
-        {
-          "term": "της τη διαταραχη",
-          "score": 14.79
-        },
-        {
-          "term": "τη διαταραχη πανικου",
-          "score": 14.79
-        },
-        {
-          "term": "διαφορα",
-          "score": 13.09
-        },
-        {
-          "term": "πανικου ποια",
-          "score": 12.02
-        },
-        {
-          "term": "ποια διαφορα",
-          "score": 12.02
-        },
-        {
-          "term": "διαφορα της",
-          "score": 12.02
-        },
-        {
-          "term": "της τη",
-          "score": 12.02
-        },
-        {
-          "term": "τη διαταραχη",
-          "score": 12.02
-        },
-        {
-          "term": "κριση",
-          "score": 10.81
-        },
-        {
-          "term": "πανικος",
-          "score": 9.24
-        },
-        {
-          "term": "λογικη σκεψη",
-          "score": 7.01
-        },
-        {
-          "term": "άγχος",
-          "score": 6.69
-        }
-      ]
-    },
-    {
-      "lang": "en",
-      "slug": "panic-attacks-vs-panic-disorder",
-      "title": "“What is a panic attack and its distinction from the panic disorder”",
-      "tags": [
-        "panic-attack",
-        "anxiety",
-        "anxiety-disorder",
-        "disorders"
-      ],
-      "keywords": [
-        {
-          "term": "panic",
-          "score": 70.86
-        },
-        {
-          "term": "panic attack",
-          "score": 36.05
-        },
-        {
-          "term": "panic disorder",
-          "score": 32.04
-        },
-        {
-          "term": "attack",
-          "score": 27.73
-        },
-        {
-          "term": "disorder",
-          "score": 24.65
-        },
-        {
-          "term": "quot",
-          "score": 16.94
-        },
-        {
-          "term": "what panic attack",
-          "score": 14.79
-        },
-        {
-          "term": "panic attack its",
-          "score": 14.79
-        },
-        {
-          "term": "attack its distinction",
-          "score": 14.79
-        },
-        {
-          "term": "its distinction panic",
-          "score": 14.79
-        },
-        {
-          "term": "distinction panic disorder",
-          "score": 14.79
-        },
-        {
-          "term": "panic attack panic",
-          "score": 12.32
-        },
-        {
-          "term": "attack panic disorder",
-          "score": 12.32
-        },
-        {
-          "term": "what panic",
-          "score": 12.02
-        },
-        {
-          "term": "attack its",
-          "score": 12.02
-        },
-        {
-          "term": "its distinction",
-          "score": 12.02
-        },
-        {
-          "term": "distinction panic",
-          "score": 12.02
-        },
-        {
-          "term": "panic attacks",
-          "score": 12.02
-        },
-        {
-          "term": "blood",
-          "score": 11.55
-        },
-        {
-          "term": "fear",
-          "score": 10.3
         }
       ]
     },
@@ -737,183 +551,187 @@
     },
     {
       "lang": "el",
-      "slug": "understanding-anxiety",
-      "title": "Κατανόηση του άγχους: Οι επιδράσεις των σκέψεών μας.",
+      "slug": "panic-attacks-vs-panic-disorder",
+      "title": "Τι είναι η κρίση πανικού και ποια η διαφορά της από τη διαταραχή πανικού",
       "tags": [
+        "κρίσεις-πανικού",
         "άγχος",
-        "αγχώδης-διαταραχή"
+        "αγχώδης-διαταραχή",
+        "διαταραχές"
       ],
       "keywords": [
         {
-          "term": "του αγχους",
-          "score": 16.02
+          "term": "πανικου",
+          "score": 33.12
         },
         {
-          "term": "κατανοηση του αγχους",
+          "term": "διαταραχη πανικου",
+          "score": 22.03
+        },
+        {
+          "term": "κριση πανικου",
+          "score": 21.03
+        },
+        {
+          "term": "διαταραχη",
+          "score": 16.94
+        },
+        {
+          "term": "κριση πανικου ποια",
           "score": 14.79
         },
         {
-          "term": "του αγχους επιδρασεις",
+          "term": "πανικου ποια διαφορα",
           "score": 14.79
         },
         {
-          "term": "αγχους επιδρασεις σκεψεων",
+          "term": "ποια διαφορα της",
           "score": 14.79
         },
         {
-          "term": "επιδρασεις σκεψεων μας",
+          "term": "διαφορα της τη",
           "score": 14.79
         },
         {
-          "term": "αγχους",
-          "score": 13.86
+          "term": "της τη διαταραχη",
+          "score": 14.79
         },
         {
-          "term": "κατανοηση του",
+          "term": "τη διαταραχη πανικου",
+          "score": 14.79
+        },
+        {
+          "term": "διαφορα",
+          "score": 13.09
+        },
+        {
+          "term": "πανικου ποια",
           "score": 12.02
         },
         {
-          "term": "αγχους επιδρασεις",
+          "term": "ποια διαφορα",
           "score": 12.02
         },
         {
-          "term": "επιδρασεις σκεψεων",
+          "term": "διαφορα της",
           "score": 12.02
         },
         {
-          "term": "σκεψεων μας",
+          "term": "της τη",
           "score": 12.02
+        },
+        {
+          "term": "τη διαταραχη",
+          "score": 12.02
+        },
+        {
+          "term": "κριση",
+          "score": 10.81
+        },
+        {
+          "term": "πανικος",
+          "score": 9.24
+        },
+        {
+          "term": "λογικη σκεψη",
+          "score": 7.01
         },
         {
           "term": "άγχος",
-          "score": 11.33
-        },
-        {
-          "term": "επιδρασεις",
-          "score": 10.78
-        },
-        {
-          "term": "κατανοηση",
-          "score": 9.24
-        },
-        {
-          "term": "σκεψεων",
-          "score": 9.24
-        },
-        {
-          "term": "άγχος μπορει οριστει",
-          "score": 6.16
-        },
-        {
-          "term": "μπορει οριστει ψυχολογικη",
-          "score": 6.16
-        },
-        {
-          "term": "οριστει ψυχολογικη κατασταση",
-          "score": 6.16
-        },
-        {
-          "term": "ψυχολογικη κατασταση αντιδραση",
-          "score": 6.16
-        },
-        {
-          "term": "κατασταση αντιδραση συγκεκριμενη",
-          "score": 6.16
-        },
-        {
-          "term": "αντιδραση συγκεκριμενη περισταση",
-          "score": 6.16
+          "score": 6.69
         }
       ]
     },
     {
       "lang": "en",
-      "slug": "understanding-anxiety",
-      "title": "Understanding anxiety: The effects of our thoughts.",
+      "slug": "panic-attacks-vs-panic-disorder",
+      "title": "“What is a panic attack and its distinction from the panic disorder”",
       "tags": [
+        "panic-attack",
         "anxiety",
-        "anxiety-disorder"
+        "anxiety-disorder",
+        "disorders"
       ],
       "keywords": [
         {
-          "term": "anxiety",
-          "score": 20.59
+          "term": "panic",
+          "score": 70.86
         },
         {
-          "term": "understanding anxiety effects",
+          "term": "panic attack",
+          "score": 36.05
+        },
+        {
+          "term": "panic disorder",
+          "score": 32.04
+        },
+        {
+          "term": "attack",
+          "score": 27.73
+        },
+        {
+          "term": "disorder",
+          "score": 24.65
+        },
+        {
+          "term": "quot",
+          "score": 16.94
+        },
+        {
+          "term": "what panic attack",
           "score": 14.79
         },
         {
-          "term": "anxiety effects thoughts",
+          "term": "panic attack its",
           "score": 14.79
         },
         {
-          "term": "understanding anxiety",
+          "term": "attack its distinction",
+          "score": 14.79
+        },
+        {
+          "term": "its distinction panic",
+          "score": 14.79
+        },
+        {
+          "term": "distinction panic disorder",
+          "score": 14.79
+        },
+        {
+          "term": "panic attack panic",
+          "score": 12.32
+        },
+        {
+          "term": "attack panic disorder",
+          "score": 12.32
+        },
+        {
+          "term": "what panic",
           "score": 12.02
         },
         {
-          "term": "anxiety effects",
+          "term": "attack its",
           "score": 12.02
         },
         {
-          "term": "effects thoughts",
+          "term": "its distinction",
           "score": 12.02
         },
         {
-          "term": "understanding",
-          "score": 10.78
+          "term": "distinction panic",
+          "score": 12.02
         },
         {
-          "term": "effects",
-          "score": 10.78
+          "term": "panic attacks",
+          "score": 12.02
         },
         {
-          "term": "situation",
-          "score": 7.72
+          "term": "blood",
+          "score": 11.55
         },
         {
-          "term": "intense stress",
-          "score": 7.01
-        },
-        {
-          "term": "stress",
-          "score": 6.69
-        },
-        {
-          "term": "definition anxiety consider",
-          "score": 6.16
-        },
-        {
-          "term": "anxiety consider psychological",
-          "score": 6.16
-        },
-        {
-          "term": "consider psychological state",
-          "score": 6.16
-        },
-        {
-          "term": "psychological state reaction",
-          "score": 6.16
-        },
-        {
-          "term": "state reaction specific",
-          "score": 6.16
-        },
-        {
-          "term": "reaction specific situation",
-          "score": 6.16
-        },
-        {
-          "term": "specific situation individual",
-          "score": 6.16
-        },
-        {
-          "term": "situation individual life",
-          "score": 6.16
-        },
-        {
-          "term": "individual life anxiety",
-          "score": 6.16
+          "term": "fear",
+          "score": 10.3
         }
       ]
     },
@@ -1098,6 +916,188 @@
           "score": 6.16
         }
       ]
+    },
+    {
+      "lang": "el",
+      "slug": "understanding-anxiety",
+      "title": "Κατανόηση του άγχους: Οι επιδράσεις των σκέψεών μας.",
+      "tags": [
+        "άγχος",
+        "αγχώδης-διαταραχή"
+      ],
+      "keywords": [
+        {
+          "term": "του αγχους",
+          "score": 16.02
+        },
+        {
+          "term": "κατανοηση του αγχους",
+          "score": 14.79
+        },
+        {
+          "term": "του αγχους επιδρασεις",
+          "score": 14.79
+        },
+        {
+          "term": "αγχους επιδρασεις σκεψεων",
+          "score": 14.79
+        },
+        {
+          "term": "επιδρασεις σκεψεων μας",
+          "score": 14.79
+        },
+        {
+          "term": "αγχους",
+          "score": 13.86
+        },
+        {
+          "term": "κατανοηση του",
+          "score": 12.02
+        },
+        {
+          "term": "αγχους επιδρασεις",
+          "score": 12.02
+        },
+        {
+          "term": "επιδρασεις σκεψεων",
+          "score": 12.02
+        },
+        {
+          "term": "σκεψεων μας",
+          "score": 12.02
+        },
+        {
+          "term": "άγχος",
+          "score": 11.33
+        },
+        {
+          "term": "επιδρασεις",
+          "score": 10.78
+        },
+        {
+          "term": "κατανοηση",
+          "score": 9.24
+        },
+        {
+          "term": "σκεψεων",
+          "score": 9.24
+        },
+        {
+          "term": "άγχος μπορει οριστει",
+          "score": 6.16
+        },
+        {
+          "term": "μπορει οριστει ψυχολογικη",
+          "score": 6.16
+        },
+        {
+          "term": "οριστει ψυχολογικη κατασταση",
+          "score": 6.16
+        },
+        {
+          "term": "ψυχολογικη κατασταση αντιδραση",
+          "score": 6.16
+        },
+        {
+          "term": "κατασταση αντιδραση συγκεκριμενη",
+          "score": 6.16
+        },
+        {
+          "term": "αντιδραση συγκεκριμενη περισταση",
+          "score": 6.16
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "understanding-anxiety",
+      "title": "Understanding anxiety: The effects of our thoughts.",
+      "tags": [
+        "anxiety",
+        "anxiety-disorder"
+      ],
+      "keywords": [
+        {
+          "term": "anxiety",
+          "score": 20.59
+        },
+        {
+          "term": "understanding anxiety effects",
+          "score": 14.79
+        },
+        {
+          "term": "anxiety effects thoughts",
+          "score": 14.79
+        },
+        {
+          "term": "understanding anxiety",
+          "score": 12.02
+        },
+        {
+          "term": "anxiety effects",
+          "score": 12.02
+        },
+        {
+          "term": "effects thoughts",
+          "score": 12.02
+        },
+        {
+          "term": "understanding",
+          "score": 10.78
+        },
+        {
+          "term": "effects",
+          "score": 10.78
+        },
+        {
+          "term": "situation",
+          "score": 7.72
+        },
+        {
+          "term": "intense stress",
+          "score": 7.01
+        },
+        {
+          "term": "stress",
+          "score": 6.69
+        },
+        {
+          "term": "definition anxiety consider",
+          "score": 6.16
+        },
+        {
+          "term": "anxiety consider psychological",
+          "score": 6.16
+        },
+        {
+          "term": "consider psychological state",
+          "score": 6.16
+        },
+        {
+          "term": "psychological state reaction",
+          "score": 6.16
+        },
+        {
+          "term": "state reaction specific",
+          "score": 6.16
+        },
+        {
+          "term": "reaction specific situation",
+          "score": 6.16
+        },
+        {
+          "term": "specific situation individual",
+          "score": 6.16
+        },
+        {
+          "term": "situation individual life",
+          "score": 6.16
+        },
+        {
+          "term": "individual life anxiety",
+          "score": 6.16
+        }
+      ]
     }
   ],
   "globalTop": {
@@ -1159,6 +1159,18 @@
         "score": 14.79
       },
       {
+        "term": "ψυχολογια της αυτοεκτιμησης",
+        "score": 14.79
+      },
+      {
+        "term": "μοτιβα σχεσεων καταναγκαστικη",
+        "score": 14.79
+      },
+      {
+        "term": "σχεσεων καταναγκαστικη επαναληψη",
+        "score": 14.79
+      },
+      {
         "term": "κριση πανικου ποια",
         "score": 14.79
       },
@@ -1180,34 +1192,6 @@
       },
       {
         "term": "τη διαταραχη πανικου",
-        "score": 14.79
-      },
-      {
-        "term": "ψυχολογια της αυτοεκτιμησης",
-        "score": 14.79
-      },
-      {
-        "term": "μοτιβα σχεσεων καταναγκαστικη",
-        "score": 14.79
-      },
-      {
-        "term": "σχεσεων καταναγκαστικη επαναληψη",
-        "score": 14.79
-      },
-      {
-        "term": "κατανοηση του αγχους",
-        "score": 14.79
-      },
-      {
-        "term": "του αγχους επιδρασεις",
-        "score": 14.79
-      },
-      {
-        "term": "αγχους επιδρασεις σκεψεων",
-        "score": 14.79
-      },
-      {
-        "term": "επιδρασεις σκεψεων μας",
         "score": 14.79
       },
       {
@@ -1235,6 +1219,22 @@
         "score": 14.79
       },
       {
+        "term": "κατανοηση του αγχους",
+        "score": 14.79
+      },
+      {
+        "term": "του αγχους επιδρασεις",
+        "score": 14.79
+      },
+      {
+        "term": "αγχους επιδρασεις σκεψεων",
+        "score": 14.79
+      },
+      {
+        "term": "επιδρασεις σκεψεων μας",
+        "score": 14.79
+      },
+      {
         "term": "της αυτοεκτιμησης",
         "score": 14.02
       },
@@ -1247,11 +1247,11 @@
         "score": 13.86
       },
       {
-        "term": "αγχους",
+        "term": "μεδουσας",
         "score": 13.86
       },
       {
-        "term": "μεδουσας",
+        "term": "αγχους",
         "score": 13.86
       },
       {
@@ -1259,11 +1259,11 @@
         "score": 13.09
       },
       {
-        "term": "διαφορα",
+        "term": "ψυχολογια",
         "score": 13.09
       },
       {
-        "term": "ψυχολογια",
+        "term": "διαφορα",
         "score": 13.09
       },
       {
@@ -1287,6 +1287,18 @@
         "score": 12.02
       },
       {
+        "term": "ψυχολογια της",
+        "score": 12.02
+      },
+      {
+        "term": "σχεσεων καταναγκαστικη",
+        "score": 12.02
+      },
+      {
+        "term": "καταναγκαστικη επαναληψη",
+        "score": 12.02
+      },
+      {
         "term": "πανικου ποια",
         "score": 12.02
       },
@@ -1307,39 +1319,27 @@
         "score": 12.02
       },
       {
-        "term": "ψυχολογια της",
-        "score": 12.02
-      },
-      {
-        "term": "σχεσεων καταναγκαστικη",
-        "score": 12.02
-      },
-      {
-        "term": "καταναγκαστικη επαναληψη",
-        "score": 12.02
-      },
-      {
-        "term": "κατανοηση του",
-        "score": 12.02
-      },
-      {
-        "term": "αγχους επιδρασεις",
-        "score": 12.02
-      },
-      {
-        "term": "επιδρασεις σκεψεων",
-        "score": 12.02
-      },
-      {
-        "term": "σκεψεων μας",
-        "score": 12.02
-      },
-      {
         "term": "ερμηνεια της",
         "score": 12.02
       },
       {
         "term": "της σεξουαλικης",
+        "score": 12.02
+      },
+      {
+        "term": "κακοποιησης μεσα",
+        "score": 12.02
+      },
+      {
+        "term": "μεσα βλεμμα",
+        "score": 12.02
+      },
+      {
+        "term": "βλεμμα της",
+        "score": 12.02
+      },
+      {
+        "term": "κατανοηση του",
         "score": 12.02
       }
     ],
@@ -1409,6 +1409,14 @@
         "score": 14.79
       },
       {
+        "term": "relationship patterns compulsive",
+        "score": 14.79
+      },
+      {
+        "term": "patterns compulsive repetition",
+        "score": 14.79
+      },
+      {
         "term": "what panic attack",
         "score": 14.79
       },
@@ -1429,22 +1437,6 @@
         "score": 14.79
       },
       {
-        "term": "relationship patterns compulsive",
-        "score": 14.79
-      },
-      {
-        "term": "patterns compulsive repetition",
-        "score": 14.79
-      },
-      {
-        "term": "understanding anxiety effects",
-        "score": 14.79
-      },
-      {
-        "term": "anxiety effects thoughts",
-        "score": 14.79
-      },
-      {
         "term": "interpreting sexual abuse",
         "score": 14.79
       },
@@ -1458,6 +1450,14 @@
       },
       {
         "term": "through gaze medusa",
+        "score": 14.79
+      },
+      {
+        "term": "understanding anxiety effects",
+        "score": 14.79
+      },
+      {
+        "term": "anxiety effects thoughts",
         "score": 14.79
       },
       {
@@ -1489,6 +1489,18 @@
         "score": 12.02
       },
       {
+        "term": "psychology self-esteem",
+        "score": 12.02
+      },
+      {
+        "term": "patterns compulsive",
+        "score": 12.02
+      },
+      {
+        "term": "compulsive repetition",
+        "score": 12.02
+      },
+      {
         "term": "what panic",
         "score": 12.02
       },
@@ -1502,30 +1514,6 @@
       },
       {
         "term": "distinction panic",
-        "score": 12.02
-      },
-      {
-        "term": "psychology self-esteem",
-        "score": 12.02
-      },
-      {
-        "term": "patterns compulsive",
-        "score": 12.02
-      },
-      {
-        "term": "compulsive repetition",
-        "score": 12.02
-      },
-      {
-        "term": "understanding anxiety",
-        "score": 12.02
-      },
-      {
-        "term": "anxiety effects",
-        "score": 12.02
-      },
-      {
-        "term": "effects thoughts",
         "score": 12.02
       },
       {
@@ -1545,6 +1533,18 @@
         "score": 12.02
       },
       {
+        "term": "understanding anxiety",
+        "score": 12.02
+      },
+      {
+        "term": "anxiety effects",
+        "score": 12.02
+      },
+      {
+        "term": "effects thoughts",
+        "score": 12.02
+      },
+      {
         "term": "panic attacks",
         "score": 12.02
       },
@@ -1561,15 +1561,15 @@
         "score": 10.78
       },
       {
+        "term": "gaze",
+        "score": 10.78
+      },
+      {
         "term": "understanding",
         "score": 10.78
       },
       {
         "term": "effects",
-        "score": 10.78
-      },
-      {
-        "term": "gaze",
         "score": 10.78
       },
       {

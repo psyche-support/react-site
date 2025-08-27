@@ -20,16 +20,16 @@ import Analytics from "./components/Analytics";
 import Seo from "./helpers/Seo";
 import { seoText } from "./i18n/seo";
 
-const SessionsPage = lazy(() => import("./pages/SessionsPage"));
-const ServicesPage = lazy(() => import("./pages/ServicesPage"));
-const AboutPage = lazy(() => import("./pages/AboutPage"));
+import SessionsPage from "./pages/SessionsPage";
+import ServicesPage from "./pages/ServicesPage";
+import AboutPage from "./pages/AboutPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
+import CookiePolicyPage from "./pages/CookiePolicyPage";
+import AccessibilityPage from "./pages/AccessibilityPage";
+import ContactPage from "./pages/ContactPage";
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
 const ArticlePage = lazy(() => import("./pages/ArticlePage"));
-const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
-const TermsPage = lazy(() => import("./pages/TermsPage"));
-const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage"));
-const AccessibilityPage = lazy(() => import("./pages/AccessibilityPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 
 const GA_ID = import.meta.env.VITE_GA_ID as string;

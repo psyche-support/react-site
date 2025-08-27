@@ -2,10 +2,9 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { getArticle } from "../helpers/articles";
-import { useI18n } from "../i18n/useI18n";
 import type { LangCode } from "../i18n/types";
 import Seo from "../helpers/Seo";
-import { getTopTermsForArticle } from "../helpers/seoKeywords"; // SEO-only extracted terms
+import { getTopTermsForArticle } from "../helpers/seoKeywords";
 
 type Props = { lang: LangCode };
 
@@ -17,10 +16,11 @@ function useQueryLang(fallback: LangCode): LangCode {
 }
 
 const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
+  // ---- URL params / lang (hooks at the very top) ----
   const { slug = "" } = useParams<{ slug: string }>();
   const lang = useQueryLang(fallbackLang);
 
-  // Load article async (no eager bundle of marked/DOMPurify)
+  // ---- Async article load (always called) ----
   const [article, setArticle] = React.useState<Awaited<ReturnType<typeof getArticle>> | null>(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -35,16 +35,34 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
     return () => { alive = false; };
   }, [lang, slug]);
 
-  // SEO-only keywords (don’t render them in UI)
+  // ---- SEO-only extracted terms (always called) ----
   const [extractedTerms, setExtractedTerms] = React.useState<string[]>([]);
   React.useEffect(() => {
     let alive = true;
-    getTopTermsForArticle(slug, (lang as "el" | "en") || "el", 8).then((terms) => {
-      if (alive) setExtractedTerms(terms);
-    });
+    getTopTermsForArticle(slug, (lang as "el" | "en") || "el", 8)
+      .then((terms) => { if (alive) setExtractedTerms(terms); });
     return () => { alive = false; };
   }, [slug, lang]);
 
+  // ---- SEO tags useMemo (always called; safe when article is null) ----
+  const seoTags = React.useMemo(() => {
+    if (!article) return [];
+    const fmTags = article.frontmatter.tags || [];
+    const seen = new Set<string>();
+    const out: string[] = [];
+    const push = (v?: string) => {
+      if (!v) return;
+      const k = v.trim().toLowerCase();
+      if (!k || seen.has(k)) return;
+      seen.add(k);
+      out.push(v);
+    };
+    fmTags.forEach(push);
+    extractedTerms.forEach(push);
+    return out.slice(0, 12);
+  }, [article, extractedTerms]);
+
+  // ---- Early returns AFTER all hooks ----
   if (loading) {
     return (
       <main className="container" style={{ padding: "2rem 0" }}>
@@ -62,27 +80,11 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
     );
   }
 
+  // ---- Plain variables (not hooks) ----
   const fm = article.frontmatter;
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
-  const t = translations[lang];
   const desc = fm.summary || (article.plain.slice(0, 180) + "…");
   const image = fm.banner;
-
-  // SEO-only tags: merge fm.tags + extractedTerms (not shown in hero chip list)
-  const seoTags = React.useMemo(() => {
-    const seen = new Set<string>();
-    const out: string[] = [];
-    const push = (v?: string) => {
-      if (!v) return;
-      const k = v.trim().toLowerCase();
-      if (!k || seen.has(k)) return;
-      seen.add(k);
-      out.push(v);
-    };
-    (fm.tags || []).forEach(push);
-    extractedTerms.forEach(push);
-    return out.slice(0, 12);
-  }, [fm.tags, extractedTerms]);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -97,7 +99,7 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
       "@type": "WebPage",
       "@id": `https://psyche.support/articles/${fm.slug}`,
     },
-    keywords: seoTags.join(", "), // SEO only
+    keywords: seoTags.join(", "),
   };
 
   return (
@@ -113,13 +115,12 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
           publishedTime: fm.date,
           author: fm.author,
           section: fm.tags?.[0],
-          tags: seoTags, // SEO-only
+          tags: seoTags, // SEO only (not shown in UI)
         }}
         jsonLd={jsonLd}
       />
 
       <article className="article">
-        {/* Full-bleed banner hero */}
         <header
           className="article-hero"
           style={
@@ -127,7 +128,6 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
           }
         >
           <div className="article-hero__overlay" />
-          {/* Photo credit bottom-right */}
           {fm.photoCreditText && (
             <span className="article-hero__credit">
               <a href={fm.photoCreditHref} target="_blank" rel="noopener noreferrer">
@@ -139,17 +139,13 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
             <div className="article-hero__meta">
               <time dateTime={fm.date}>
                 {new Date(fm.date).toLocaleDateString(lang, {
-                  year: "numeric",
-                  month: "short",
-                  day: "2-digit",
+                  year: "numeric", month: "short", day: "2-digit",
                 })}
               </time>
               {fm.author && <span>• {fm.author}</span>}
               <span>• {article.readMinutes} {lang === "el" ? "λεπτά" : "min"}</span>
             </div>
             <h1 className="article-hero__title">{fm.title}</h1>
-
-            {/* Visible tags: ONLY the ones from the MD file */}
             <div className="article-hero__tags">
               {(fm.tags || []).map((tag) => (
                 <span key={tag} className="tag">#{tag}</span>
@@ -158,11 +154,9 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
           </div>
         </header>
 
-        {/* Body */}
         <main className="container article-body">
           <div className="article-content" dangerouslySetInnerHTML={{ __html: article.html }} />
 
-          {/* Share row */}
           <div className="article-share">
             <span className="muted">{lang === "el" ? "Κοινοποίησε:" : "Share:"}</span>
             <div className="article-share__buttons">
@@ -179,14 +173,12 @@ const ArticlePage: React.FC<Props> = ({ lang: fallbackLang }) => {
             </div>
           </div>
 
-          {/* Disclaimer */}
           <p className="muted" style={{ marginTop: "1rem", fontSize: "0.95rem" }}>
             {lang === "el"
               ? "Το περιεχόμενο είναι ενημερωτικό και δεν αντικαθιστά την ψυχοθεραπεία ή ιατρική συμβουλή. Αν βρίσκεστε σε κρίση, αναζητήστε άμεσα επαγγελματική βοήθεια."
               : "Content is informational and not a substitute for therapy or medical advice. If you are in crisis, please seek immediate professional help."}
           </p>
 
-          {/* References (from MD only) */}
           {fm.references?.length ? (
             <section className="article-refs">
               <h3>{lang === "el" ? "Βιβλιογραφία" : "References"}</h3>
