@@ -7,11 +7,13 @@ export const aboutPage = {
     intro: {
       title: "Με εμένα",
       body:
-        `Τα τελευταία πέντε χρόνια δραστηριοποιούμαι ως σύμβουλος ψυχικής υγείας σε διάφορες πλατφόρμες παροχής υπηρεσιών. Έχω ολοκληρώσει μεταπτυχιακές σπουδές στη Συμβουλευτική Ψυχολογία στο Πανεπιστήμιο του Σέφιλντ, με πρακτική άσκηση διάρκειας ενάμιση έτους. Κατά την πρακτική μου εμπειρία παρείχα θεραπευτικές συνεδρίες τόσο δια ζώσης όσο και διαδικτυακά.
+        `Τα τελευταία πέντε χρόνια δραστηριοποιούμαι ως σύμβουλος ψυχικής υγείας σε διάφορες πλατφόρμες παροχής υπηρεσιών. Έχω ολοκληρώσει μεταπτυχιακές σπουδές στη Συμβουλευτική Ψυχολογία στο Πανεπιστήμιο του Σέφιλντ, με πρακτική άσκηση διάρκειας ενάμιση έτους, κατά την οποία παρείχα θεραπευτικές συνεδρίες τόσο δια ζώσης όσο και διαδικτυακά. Συνεχίζω την ακαδημαϊκή μου πορεία με προπτυχιακές σπουδές στην Ψυχολογία, με στόχο να εμβαθύνω ακόμη περισσότερο στις θεωρητικές και πρακτικές βάσεις του επαγγέλματος.
 
-Παράλληλα, έχω αναπτύξει έντονη εθελοντική δράση σε οργανισμούς όπως το ENTOS#EKTOS, όπου υπηρέτησα ως συντονιστής και εμψυχωτής δημιουργικών εργαστηρίων για ευάλωτες κοινωνικές ομάδες και ανήλικους παραβάτες. Μέσω πλατφορμών όπως τα “7cups”, “TheraPeer” και “BuddyHelp”, πρόσφερα συναισθηματική υποστήριξη σε ανθρώπους από όλο τον κόσμο. Επιπλέον, ως εθελοντής στο «Milamou.gr» παρείχα δωρεάν συνεδρίες σε Ουκρανούς που επλήγησαν από τον πόλεμο.
+        Κατέχω πτυχίο στη Θεολογία, το οποίο με έχει βοηθήσει να κατανοώ καλύτερα τις ανθρώπινες αξίες, τις πνευματικές αναζητήσεις και τα υπαρξιακά ζητήματα. Αυτή η γνώση εμπλουτίζει την προσέγγισή μου στην ψυχολογία και στη δουλειά μου ως ψυχοθεραπεύτρια, επιτρέποντάς μου να στηρίζω τους πελάτες μου με έναν πιο ολιστικό και ολοκληρωμένο τρόπο.
 
-Εργάζομαι διαδικτυακά στον τομέα της ψυχικής υγείας με άτομα όλων των ηλικιών και διαφορετικών πολιτισμικών υπόβαθρων. Παράλληλα, επενδύω συστηματικά στην προσωπική και επαγγελματική μου ανάπτυξη μέσω προσωπικής θεραπείας, ομαδικής και ατομικής εποπτείας, παρακολούθησης σεμιναρίων, συγγραφής άρθρων και ενεργής συμμετοχής στον ευρύτερο χώρο της ψυχικής υγείας.`
+        Παράλληλα, έχω αναπτύξει έντονη εθελοντική δράση σε οργανισμούς όπως το ENTOS#EKTOS, όπου υπηρέτησα ως συντονιστής και εμψυχωτής δημιουργικών εργαστηρίων για ευάλωτες κοινωνικές ομάδες και ανήλικους παραβάτες. Μέσω πλατφορμών όπως το It’s complicated, προσέφερα δωρεάν συνεδρίες σε Ουκρανούς που επλήγησαν από τον πόλεμο. Επιπλέον, ως εθελοντής στο Milamou.gr, παρέχω υποστήριξη σε ανθρώπους που έχουν ανάγκη.
+
+        Εργάζομαι διαδικτυακά στον τομέα της ψυχικής υγείας με άτομα όλων των ηλικιών και διαφορετικών πολιτισμικών υποβάθρων. Παράλληλα, επενδύω συστηματικά στην προσωπική και επαγγελματική μου ανάπτυξη μέσω προσωπικής θεραπείας, ατομικής και ομαδικής εποπτείας, παρακολούθησης σεμιναρίων, συγγραφής άρθρων και ενεργούς συμμετοχής στον ευρύτερο χώρο της ψυχικής υγείας.`
     },
     approach: {
       title: "Η προσέγγισή μου",
@@ -56,11 +58,13 @@ export const aboutPage = {
     intro: {
       title: "About me",
       body:
-        `For the past five years, I have been working as a mental health counselor across various platforms. I hold a Master’s degree in Counselling Psychology from the University of Sheffield, which included an eighteen-month supervised practicum. During this period, I conducted therapeutic sessions both in person and online.
-
-I have also been actively involved in volunteer work with organizations such as ENTOS#EKTOS, serving as a coordinator and facilitator of creative workshops for vulnerable social groups and juvenile offenders. Through platforms like “7cups,” “TheraPeer,” and “BuddyHelp,” I have provided emotional support to individuals worldwide. Additionally, as a volunteer with “Milamou.gr,” I have offered free sessions to Ukrainians affected by the war.
-
-My professional work in mental health primarily takes place online, supporting people of all ages and diverse cultural backgrounds. At the same time, I am deeply committed to my personal and professional development through individual therapy, group and one-to-one supervision, attending seminars, writing articles, and actively engaging in the field of mental health.`
+        `Over the past five years, I have been working as a mental health counselor across various service platforms. I hold a Master’s degree in Counseling Psychology from the University of Sheffield, during which I completed an 18-month practicum providing both in-person and online therapy sessions. I am currently continuing my academic journey with undergraduate studies in Psychology, aiming to deepen my theoretical and practical expertise in the field.
+        
+        I also hold a degree in Theology, which has broadened my understanding of human values, spiritual exploration, and existential questions. This knowledge enriches my therapeutic approach, allowing me to support clients in a more holistic and comprehensive way.
+        
+        In parallel, I have been actively engaged in volunteer work with organizations such as ENTOS#EKTOS, serving as a coordinator and facilitator of creative workshops for vulnerable groups and juvenile offenders. Through platforms like It’s complicated, I have provided free sessions to Ukrainians affected by the war. Additionally, as a volunteer with Milamou.gr, I offer support to those in need.
+        
+        I work online with individuals of all ages and diverse cultural backgrounds. At the same time, I invest consistently in my personal and professional growth through individual therapy, group and one-to-one supervision, attending seminars, writing articles, and actively participating in the broader field of mental health.`
     },
     approach: {
       title: "My approach",

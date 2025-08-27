@@ -24,7 +24,7 @@ export const servicesPage = {
     audience: {
       title: "Σε ποιους απευθύνομαι",
       text:
-        "Συνεργάζομαι με ανθρώπους από διαφορετικά πολιτισμικά και κοινωνικά υπόβαθρα, ανεξαρτήτως ηλικίας, εθνικότητας, φύλου ή σεξουαλικού προσανατολισμού."
+        "Η ψυχοθεραπεία απευθύνεται στον καθένα που αναζητά υποστήριξη, καθοδήγηση και ένα ασφαλές πλαίσιο να εξερευνήσει τις σκέψεις και τα συναισθήματά του."
     },
     details: {
       title: "Λεπτομέρειες συνεδριών",
@@ -70,9 +70,8 @@ export const servicesPage = {
       ]
     },
     audience: {
-      title: "Who I work with",
-      text:
-        "I work with people from diverse cultural and social backgrounds, regardless of age, nationality, gender, or sexual orientation."
+      title: "Who am I addressing",
+      text: "Psychotherapy is for  anyone who seeks support, guidance and a safe place to explore thoughts and feelings. "
     },
     details: {
       title: "Session details",

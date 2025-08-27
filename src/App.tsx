@@ -16,6 +16,7 @@ import type { LangCode } from "./i18n/translations";
 import Footer from "./components/Footer";
 import FloatingBookButton from "./components/FloatingBookButton";
 import { BookingModalProvider } from "./components/BookingModalProvider";
+import ScrollManager from "./components/ScrollManager";
 import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
 import ArticlesPage from "./pages/ArticlesPage";
@@ -42,9 +43,9 @@ const App: React.FC = () => {
       <Seo title={s.title} description={s.desc} path="/" lang={lang} />
       <BookingModalProvider lang={lang}>
         <div className="layout">{/* <-- flex column, full height */}
+          <ScrollManager /> 
           <NavHeader lang={lang} onChangeLang={setLang} />
           <FloatingBookButton lang={lang} />
-
           <Routes>
             <Route
               path="/"

@@ -49,6 +49,21 @@ html, body, #root {
   margin: 0;
 }
 
+/* set once, tweak the default to your header height */
+:root {
+  --header-h: 72px; /* or whatever your NavHeader height is */
+}
+
+/* any section with an id will stop this far from the top */
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+/* optional global smooth-scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 .layout {
   min-height: 100vh;        /* full viewport height */
   display: flex;
@@ -642,6 +657,60 @@ form input:focus, form textarea:focus {
 .services__actions {
   display: flex; gap: .6rem; flex-wrap: wrap;
   margin-top: .8rem;
+}
+
+.services__accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  background: transparent;
+  border: 0;
+  padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+  font: inherit;
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: left;
+}
+.services__accordionTrigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+.services__chevron {
+  inline-size: 1rem;
+  block-size: 1rem;
+  flex: 0 0 auto;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'><path d='M5 7.5L10 12.5L15 7.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat center / contain;
+  background: currentColor;
+  transition: transform .2s ease;
+}
+.services__accordionTrigger[aria-expanded="true"] .services__chevron {
+  transform: rotate(180deg);
+}
+.services__accordionPanel {
+  padding: 0 0.9rem 0.9rem 0.9rem;
+}
+
+.services__headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* flex-wrap: wrap; button will move below on narrow screens */
+  margin-bottom: 1rem;
+}
+
+/* Button row below intro, right-aligned */
+.services__controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 0 1rem;
+}
+
+.services__toggleAll {
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
 }
 
 /* Reuse existing sessions icon styles */
