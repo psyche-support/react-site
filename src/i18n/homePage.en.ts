@@ -69,12 +69,12 @@ const dict = {
         {
           "label": "Individual session (online)",
           "length": "50′",
-          "fee": "30 €"
+          "fee": "35 €"
         },
         {
           "label": "Individual session (in-person)",
           "length": "50′",
-          "fee": "38 €"
+          "fee": "40 €"
         },
         {
           "label": "Introductory meeting",
