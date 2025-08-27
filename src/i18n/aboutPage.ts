@@ -1,11 +1,11 @@
 export const aboutPage = {
   el: {
     pageTitle: "Σχετικά",
-    pageKicker: "Η φιλοσοφία μας και η πορεία μας",
+    pageKicker: "Η φιλοσοφία μου και η πορεία μου",
     pageDescription:
-      "Σχετικά με τη θεραπευτική προσέγγιση, τις αξίες και την εκπαίδευση της ομάδας.",
+      "Σχετικά με εμένα",
     intro: {
-      title: "Ποιοι είμαστε",
+      title: "Με εμένα",
       body:
         `Τα τελευταία πέντε χρόνια δραστηριοποιούμαι ως σύμβουλος ψυχικής υγείας σε διάφορες πλατφόρμες παροχής υπηρεσιών. Έχω ολοκληρώσει μεταπτυχιακές σπουδές στη Συμβουλευτική Ψυχολογία στο Πανεπιστήμιο του Σέφιλντ, με πρακτική άσκηση διάρκειας ενάμιση έτους. Κατά την πρακτική μου εμπειρία παρείχα θεραπευτικές συνεδρίες τόσο δια ζώσης όσο και διαδικτυακά.
 
@@ -14,10 +14,10 @@ export const aboutPage = {
 Εργάζομαι διαδικτυακά στον τομέα της ψυχικής υγείας με άτομα όλων των ηλικιών και διαφορετικών πολιτισμικών υπόβαθρων. Παράλληλα, επενδύω συστηματικά στην προσωπική και επαγγελματική μου ανάπτυξη μέσω προσωπικής θεραπείας, ομαδικής και ατομικής εποπτείας, παρακολούθησης σεμιναρίων, συγγραφής άρθρων και ενεργής συμμετοχής στον ευρύτερο χώρο της ψυχικής υγείας.`
     },
     approach: {
-      title: "Η προσέγγισή μας",
+      title: "Η προσέγγισή μου",
       paragraphs: [
-        "Η μεθοδολογία μας αντλεί στοιχεία από την ψυχοδυναμική, την προσωποκεντρική, την υπαρξιακή, τη Gestalt και τη γνωσιακή-συμπεριφορική θεραπεία.",
-        "Σεβόμαστε την μοναδικότητα κάθε ανθρώπου και διαμορφώνουμε τις συνεδρίες ανάλογα με τις ανάγκες του."
+        "Η μεθοδολογία μου αντλεί στοιχεία από την ψυχοδυναμική, την προσωποκεντρική, την υπαρξιακή, τη Gestalt και τη γνωσιακή-συμπεριφορική θεραπεία.",
+        "Σέβομαι την μοναδικότητα κάθε ανθρώπου και διαμορφώνω τις συνεδρίες ανάλογα με τις ανάγκες του."
       ],
       bullets: [
         "Ατομικές συνεδρίες για ενήλικες",
@@ -42,19 +42,19 @@ export const aboutPage = {
       ]
     },
     closing: {
-      title: "Γιατί να μας επιλέξετε",
+      title: "Γιατί να με επιλέξετε",
       body:
-        "Στόχος μας είναι να σας στηρίξουμε σε κάθε βήμα, προσφέροντας ένα ασφαλές και υποστηρικτικό περιβάλλον για προσωπική ανάπτυξη και αλλαγή."
+        "Στόχος μου είναι να σας στηρίξω σε κάθε βήμα, προσφέροντας ένα ασφαλές και υποστηρικτικό περιβάλλον για προσωπική ανάπτυξη και αλλαγή."
     }
   },
 
   en: {
     pageTitle: "About",
-    pageKicker: "Our philosophy and journey",
+    pageKicker: "My philosophy and jmyney",
     pageDescription:
-      "Learn about our therapeutic approach, values, and training.",
+      "Learn about my therapeutic approach, values, and training.",
     intro: {
-      title: "Who we are",
+      title: "About me",
       body:
         `For the past five years, I have been working as a mental health counselor across various platforms. I hold a Master’s degree in Counselling Psychology from the University of Sheffield, which included an eighteen-month supervised practicum. During this period, I conducted therapeutic sessions both in person and online.
 
@@ -63,10 +63,10 @@ I have also been actively involved in volunteer work with organizations such as 
 My professional work in mental health primarily takes place online, supporting people of all ages and diverse cultural backgrounds. At the same time, I am deeply committed to my personal and professional development through individual therapy, group and one-to-one supervision, attending seminars, writing articles, and actively engaging in the field of mental health.`
     },
     approach: {
-      title: "Our approach",
+      title: "My approach",
       paragraphs: [
-        "Our methodology is inspired by psychodynamic, person-centered, existential, Gestalt, and cognitive-behavioral therapies.",
-        "We respect each person’s uniqueness and shape sessions according to their needs."
+        "My methodology is inspired by psychodynamic, person-centered, existential, Gestalt, and cognitive-behavioral therapies.",
+        "I respect each person’s uniqueness and shape sessions according to their needs."
       ],
       bullets: [
         "Individual sessions for adults",
@@ -91,9 +91,9 @@ My professional work in mental health primarily takes place online, supporting p
       ]
     },
     closing: {
-      title: "Why choose us",
+      title: "Why choose me",
       body:
-        "Our goal is to support you every step of the way, providing a safe and supportive environment for personal growth and change."
+        "My goal is to support you every step of the way, providing a safe and supportive environment for personal growth and change."
     }
   }
 } as const;

@@ -8,7 +8,7 @@ export const homePage = {
     spotlight: {
       title: "Προσέγγιση",
       text:
-        "Πιστεύω στην ασφαλή, ζεστή και ειλικρινή θεραπευτική σχέση. Προσφέρω ατομικές ψυχοθεραπευτικές συνεδρίες για ενήλικες που αναζητούν στήριξη, κατανόηση και προσωπική εξέλιξη. Η προσέγγισή μου είναι εμπνευσμένη από τη ψυχοδυναμική, την προσωποκεντρική, την υπαρξιακή, την Gestalt και την γνωσιακή-συμπεριφορική θεραπεία, όπου προσαρμόζεται με σεβασμό στις ιδιαίτερες ανάγκες του κάθε ανθρώπου. Είτε αντιμετωπίζεις μια παρούσα δυσκολία είτε θέλεις να εμβαθύνεις στα εσωτερικά σου βιώματα, η θεραπεία είναι ένας χώρος για να αφουγκραστείς και να επανασυνδεθείς με τον εαυτό σου.",
+        `Πιστεύω πως η θεραπευτική σχέση είναι θεμελιώδης στην διαδικασία της επούλωσης. Δημιουργώντας ένα ασφαλές, υποστηρικτικό περιβάλλον, όπου οι θεραπευόμενοι νιώθουν ότι ακούγονται και συνδέονται αυθεντικά, τους δίνει τον “χώρο” να εξερευνήσουν, να θεραπευτούν και να εξελιχθούν. Η προσέγγισή μου είναι εμπνευσμένη από τη Ψυχοδυναμική, την Προσωποκεντρική, την Υπαρξιακή, την Γκεστάλτ και την Γνωσιακή-Συμπεριφορική Θεραπεία, όπου προσαρμόζεται με σεβασμό στις ιδιαίτερες ανάγκες του κάθε ανθρώπου. Είτε αντιμετωπίζεις μια παρούσα δυσκολία είτε θέλεις να εμβαθύνεις στα εσωτερικά σου βιώματα, η θεραπεία είναι ένας χώρος για να αφουγκραστείς και να επανασυνδεθείς με τον εαυτό σου.`,
       authorName: "Δήμητρα Μαλάκη",
       authorRole: "Σύμβουλος Ψυχικής Υγείας",
       photoAlt: "Φωτογραφία",
@@ -73,20 +73,22 @@ export const homePage = {
     },
     services: {
       title: 'Υπηρεσίες',
-      intro: 'Συνεργάζομαι με ανθρώπους από διαφορετικά πολιτισμικά και κοινωνικά υπόβαθρα, ανεξαρτήτως ηλικίας, εθνικότητας, φύλου ή σεξουαλικού προσανατολισμού. Ο καθένας φέρει τη δική του μοναδική ιστορία, και αυτός είναι ένας χώρος όπου μπορεί να την εκφράσει χωρίς φόβο και χωρίς κριτική.',
+      intro: `Προσφέρω ατομικές ψυχοθεραπευτικές συνεδρίες εξ αποστάσεως (online) για ενήλικες που αναζητούν στήριξη, κατανόηση και προσωπική εξέλιξη.
+Συνεργάζομαι με ανθρώπους από διαφορετικά πολιτισμικά και κοινωνικά υπόβαθρα, ανεξαρτήτως ηλικίας, εθνικότητας, φύλου ή σεξουαλικού προσανατολισμού. Ο καθένας φέρει τη δική του μοναδική ιστορία, και αυτός είναι ένας χώρος όπου μπορεί να την μοιραστεί.
+Είτε αντιμετωπίζεις μια παρούσα δυσκολία είτε θέλεις να εμβαθύνεις στα εσωτερικά σου βιώματα, η θεραπεία είναι ένας χώρος για να σύνδεσης, κατανόησης του εαυτού και προσωπικής εξέλιξης.
+`,
       list: [
-        { title: "Άγχος, υπερανάλυση, συναισθηματική υπερένταση", text: "κρίσεις πανικού" },
-        { title: "Συναισθηματική ρύθμιση", text: "δυσκολίες στην επεξεργασία συναισθημάτων και στη διαχείρηση (άγχος, θυμός, φόβος, λύπη, ντροπή, ζήλεια, ενοχή, απογοήτευση)" },
-        { title: "Διατροφικές διαταραχές", text: "υπερφαγικά επεισόδια, βουλιμία, ανορεξία" },
-        { title: "Διαταραχές προσωπικότητας", text: "χρόνιες και δυσλειτουργικές συμπεριφορές" },
-        { title: "Τραύματα ή συναισθηματικά φορτισμένες εμπειρίες", text: "τραυματικές εμπειρίες και συναισθηματικά αποτυπώματα" },
-        { title: "Αναβλητικότητα, φόβος αποτυχίας, δυσκολία στη λήψη αποφάσεων", text: "εσωτερική σύγκρουση" },
-        { title: "Καταθλιπτική διάθεση / κατάθλιψη", text: "κατανόηση των αιτιών, ανάπτυξη στρατηγικών" },
-        { title: "Επαγγελματικό άγχος", text: "εξουθένωση (burnout), συγκρούσεις στο χώρο εργασίας" },
-        { title: "Χαμηλή αυτοεκτίμηση", text: "θέματα εικόνας εαυτού" },
-        { title: "Διερεύνηση ταυτότητας", text: "Διερεύνηση ταυτότητας και ανάγκης για ανήκειν, με ιδιαίτερη στήριξη προς την LGBTQ+ κοινότητα" },
-        { title: "Ζητήματα σχέσεων", text: "προσωπικών, φιλικών, οικογενειακών, επαγγελματικών, τοξικών" },
-        { title: "Μεταβάσεις ζωής", text: "υπαρξιακά ερωτήματα, αναζήτηση νοήματος" },
+        { title: "Άγχος, υπερανάλυση, κρίσεις πανικού", text: "Το άγχος, η υπερανάλυση και οι κρίσεις πανικού μπορούν να είναι εξουθενωτικά και να επηρεάζουν τη διάθεσή, τη δουλειά, ακόμα και τις προσωπικές σχέσεις. Στις έντονες στιγμές άγχους και ξαφνικά, μπορεί να εμφανιστούν κρίσεις πανικού προκαλώντας σωματικά και συναισθηματικά συμπτώματα. " },
+        { title: "Συναισθηματική ρύθμιση και δυσκολίες στην αναγνώριση συναισθημάτων", text: "Η δυσκολία να αναγνωρίσει και να εκφράσει κανείς τα συναισθήματά του με υγιή τρόπο μπορεί να οδηγήσει σε αίσθημα αναστάτωσης ή ακόμη και σύγχυσης (άγχος, θυμός, φόβος, λύπη, ντροπή, ζήλια, ενοχή, απογοήτευση)" },
+        { title: "Τραύματα ή συναισθηματικά φορτισμένες εμπειρίες", text: "Οι τραυματικές εμπειρίες  συχνά αφήνουν συναισθηματικά αποτυπώματα που επηρεάζουν την καθημερινότητα και τις σχέσεις με τους άλλους." },
+        { title: "Καταθλιπτική διάθεση", text: "Η κατάθλιψη επηρεάζει τη διάθεση, την ενέργεια και τη γενική ποιότητα της ζωής." },
+        { title: "Αναβλητικότητα, φόβος αποτυχίας, δυσκολία στη λήψη αποφάσεων", text: "Ο φόβος της αποτυχίας ή οι ανασφάλειες μπορεί να γίνουν εμπόδιο από το να προχωρήσουμε μπροστά και να πετύχουμε τους στόχους μας. Η αναβλητικότητα συχνά προκύπτει από αυτή την εσωτερική σύγκρουση και μπορεί να δημιουργήσει έναν φαύλο κύκλο." },
+        { title: "Επαγγελματικό άγχος, εξουθένωση (burnout)", text: "Η συνεχής πίεση στον επαγγελματικό χώρο, οι υπερβολικές ώρες εργασίας και οι συγκρούσεις με συναδέλφους ή προϊσταμένους μπορεί να οδηγήσουν σε εξουθένωση (burnout)." },
+        { title: "Χαμηλή αυτοεκτίμηση και θέματα εικόνας εαυτού", text: "Τα θέματα εικόνας εαυτού επηρεάζουν όχι μόνο την προσωπική ευημερία, αλλά και τις σχέσεις με τους άλλους." },
+        { title: "Διερεύνηση ταυτότητας και ανάγκης για ανήκειν, με ιδιαίτερη στήριξη προς την LGBTQ+ κοινότητα", text: "Οι σχέσεις που δεν λειτουργούν όπως θα θέλαμε, μπορούν να προκαλέσουν άγχος, σύγχυση και συναισθηματική φόρτιση." },
+        { title: "Ζητήματα σχέσεων (προσωπικών, φιλικών, οικογενειακών, επαγγελματικών)", text: "Οι σχέσεις που δεν λειτουργούν όπως θα θέλαμε, μπορούν να προκαλέσουν άγχος, σύγχυση και συναισθηματική φόρτιση." },
+        { title: "Μεταβάσεις ζωής, υπαρξιακά ερωτήματα, αναζήτηση νοήματος", text: "Οι μεγάλες αλλαγές στη ζωή μας, όπως η αλλαγή καριέρας, ο θάνατος ενός αγαπημένου προσώπου ή η μετάβαση από μια φάση ζωής στην άλλη, μπορεί να μας προκαλέσουν ερωτήματα για το ποιο είναι το νόημα της ζωής μας και ποια είναι η κατεύθυνσή μας." },
+        { title: "Διατροφικές διαταραχές και ανησυχίες εικόνας του σώματος", text: "Οι διατροφικές διαταραχές είναι σοβαρές ψυχολογικές καταστάσεις που επηρεάζουν την υγεία, την ψυχική ευημερία και τη συνολική ποιότητα ζωής. Οι πιο κοινές διατροφικές διαταραχές περιλαμβάνουν τα υπερφαγικά επεισόδια την βουλιμία και την ανορεξία" },
       ]
     }
   },
@@ -98,7 +100,7 @@ export const homePage = {
     },
     spotlight: {
       title: "Approach",
-      text: "I believe in a safe, warm, and genuine therapeutic relationship. I offer individual psychotherapy sessions for adults seeking support, understanding, and personal growth. My approach is inspired by psychodynamic, person-centered, existential, Gestalt, and cognitive-behavioral therapy, and is adapted with respect to each person’s unique needs. Whether you are facing a present difficulty or wish to delve deeper into your inner experiences, therapy is a space to listen and reconnect with yourself.",
+      text: `I believe that the therapeutic relationship is fundamental to the healing process. Creating a safe, supportive environment where clients feel heard and genuinely connected allows them the space to explore, heal, and grow. My approach is inspired by Psychodynamic, Person-Centered, Existential, Gestalt, and Cognitive-Behavioral Therapy, and is adapted with respect to each person’s unique needs. Whether you are facing a present difficulty or wish to delve deeper into your inner experiences, therapy is a space to listen and reconnect with yourself.`,
       authorName: "Dimitra Malaki",
       authorRole: "Mental Health Counselor",
       photoAlt: "Counselor portrait",
@@ -163,20 +165,22 @@ export const homePage = {
     },
     services: {
       title: 'Services',
-      intro: 'I work with people from diverse cultural and social backgrounds, regardless of age, nationality, gender, or sexual orientation. Everyone carries their own unique story, and this is a space where they can share it without fear or judgment.',
+      intro: `I offer individual online psychotherapy sessions for adults seeking support, understanding, and personal growth.
+I work with people from diverse cultural and social backgrounds, regardless of age, nationality, gender, or sexual orientation. Each person brings their own unique story—and this is a safe space to share it.
+Whether you're facing a current challenge or wish to explore your inner world more deeply, therapy can be a space for connection, self-understanding, and personal development.
+`,
       list: [
-        { title: "Anxiety, Overthinking, Emotional Overload", text: "panic attacks" },
-        { title: "Emotional Regulation", text: "difficulties processing and managing emotions (anxiety, anger, fear, sadness, shame, jealousy, guilt, disappointment)" },
-        { title: "Eating Disorders", text: "binge eating episodes, bulimia, anorexia" },
-        { title: "Personality Disorders", text: "chronic and maladaptive behavior patterns" },
-        { title: "Trauma or Emotionally Charged Experiences", text: "traumatic events and emotional imprints" },
-        { title: "Procrastination, Fear of Failure, Difficulty Making Decisions", text: "inner conflict" },
-        { title: "Depressed Mood / Depression", text: "understanding root causes, developing coping strategies" },
-        { title: "Work-Related Stress", text: "burnout, workplace conflicts" },
-        { title: "Low Self-Esteem", text: "self-image issues" },
-        { title: "Identity Exploration", text: "exploring identity and the need to belong, with particular support for the LGBTQ+ community" },
-        { title: "Relationship Challenges", text: "personal, friendships, family, workplace, toxic relationships" },
-        { title: "Life Transitions", text: "existential questions, search for meaning" },
+        { title: "Anxiety, overthinking, panic attacks", text: "Anxiety, overthinking, and panic attacks can be exhausting and affect mood, work, and even personal relationships. In moments of intense stress and suddenly, panic attacks may occur, causing physical and emotional symptoms." },
+        { title: "Emotional regulation and difficulties in recognizing emotions", text: "The difficulty of recognizing and expressing one’s emotions in a healthy way can lead to feelings of distress or even confusion. (anxiety, anger, fear, sadness, shame, jealousy, guilt, disappointment)" },
+        { title: "Trauma or emotionally charged experiences", text: "ΟTraumatic experiences often leave emotional imprints that affect daily life and relationships with others" },
+        { title: "Depressive mood", text: "Depression affects mood, energy, and overall quality of life." },
+        { title: "Procrastination, fear of failure, difficulty making decisions", text: "The fear of failure or insecurities can become obstacles that prevent us from moving forward and achieving our goals. Procrastination often arises from this inner conflict and can create a vicious cycle." },
+        { title: "Work-related stress, burnout", text: "Constant pressure in the workplace, excessive working hours, and conflicts with colleagues or supervisors can lead to burnout." },
+        { title: "Low self-esteem and self-image issues", text: "Self-image issues affect not only personal well-being but also relationships with others." },
+        { title: "Exploring identity and the need to belong, with particular support for the LGBTQ+ community", text: "The search for identity and the need for acceptance are fundamental aspects of human existence. For members of the LGBTQ+ community, this process can be a particular challenge due to social pressures and prejudices." },
+        { title: "Relationship issues (personal, friendships, family, professional)", text: "Relationships that do not function as we wish can cause stress, confusion, and emotional strain." },
+        { title: "Life transitions, existential questions, search for meaning", text: "Major life changes, such as a career shift, the loss of a loved one, or the transition from one stage of life to another, may lead us to question the meaning of our lives and our direction." },
+        { title: "Eating disorders and body image concerns", text: "Eating disorders are serious psychological conditions that affect health, mental well-being, and overall quality of life. The most common eating disorders include binge eating, bulimia, and anorexia." },
       ]
     }
   }
