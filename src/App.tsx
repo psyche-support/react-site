@@ -20,11 +20,20 @@ import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
 import ArticlesPage from "./pages/ArticlesPage";
 import ArticlePage from "./pages/ArticlePage";
+import Seo from "./helpers/Seo";
+import { seoText } from "./i18n/seo";
 
 const App: React.FC = () => {
   const { lang, setLang } = useLanguage("el"); // default to Greek
-
+  const s = seoText[lang].home;
   return (
+    <>
+    <Seo
+      title={s.title}
+      description={s.desc}
+      path="/"
+      lang={lang}
+    />
     <BookingModalProvider lang={lang}>
       <NavHeader lang={lang} onChangeLang={setLang} />
       <FloatingBookButton lang={lang} />
@@ -73,6 +82,7 @@ const App: React.FC = () => {
       <Analytics gaId="G-F4FF69N6NX" />
       <ConsentBanner lang={lang} position="right" />
     </BookingModalProvider>
+    </>
   );
 };
 

@@ -1,0 +1,1221 @@
+{
+  "generatedAt": "2025-08-27T02:53:23.557Z",
+  "perDoc": [
+    {
+      "lang": "el",
+      "slug": "injustice-at-work",
+      "title": "Η αλυσιδωτή εξάπλωση της αδικίας",
+      "tags": [
+        "εργασία",
+        "έρευνα",
+        "αδικία"
+      ],
+      "keywords": [
+        {
+          "term": "της αδικιας",
+          "score": 18.78
+        },
+        {
+          "term": "αδικιας",
+          "score": 14.45
+        },
+        {
+          "term": "αλυσιδωτη εξαπλωση της",
+          "score": 11.56
+        },
+        {
+          "term": "εξαπλωση της αδικιας",
+          "score": 11.56
+        },
+        {
+          "term": "αλυσιδωτη",
+          "score": 10.23
+        },
+        {
+          "term": "αδικια",
+          "score": 9.63
+        },
+        {
+          "term": "αλυσιδωτη εξαπλωση",
+          "score": 9.39
+        },
+        {
+          "term": "εξαπλωση της",
+          "score": 9.39
+        },
+        {
+          "term": "μελη",
+          "score": 8.43
+        },
+        {
+          "term": "του δικτατορα",
+          "score": 7.83
+        },
+        {
+          "term": "εξαπλωση",
+          "score": 7.22
+        },
+        {
+          "term": "αδικημενοι",
+          "score": 7.22
+        },
+        {
+          "term": "δικτατορα",
+          "score": 7.22
+        },
+        {
+          "term": "παιχνιδι του δικτατορα",
+          "score": 5.78
+        },
+        {
+          "term": "μελη της ομαδας",
+          "score": 5.78
+        },
+        {
+          "term": "εργασια",
+          "score": 4.82
+        },
+        {
+          "term": "αισθημα της αδικιας",
+          "score": 4.82
+        },
+        {
+          "term": "της αδικιας προκαλει",
+          "score": 4.82
+        },
+        {
+          "term": "αδικιας προκαλει αρνητικες",
+          "score": 4.82
+        },
+        {
+          "term": "προκαλει αρνητικες συναισθηματικες",
+          "score": 4.82
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "injustice-at-work",
+      "title": "The chain reaction of injustice",
+      "tags": [
+        "work",
+        "research",
+        "injustice"
+      ],
+      "keywords": [
+        {
+          "term": "injustice",
+          "score": 16.25
+        },
+        {
+          "term": "chain reaction",
+          "score": 13.3
+        },
+        {
+          "term": "chain reaction injustice",
+          "score": 11.56
+        },
+        {
+          "term": "chain",
+          "score": 10.23
+        },
+        {
+          "term": "reaction",
+          "score": 10.23
+        },
+        {
+          "term": "reaction injustice",
+          "score": 9.39
+        },
+        {
+          "term": "wronged",
+          "score": 8.43
+        },
+        {
+          "term": "generalized negative reciprocity",
+          "score": 6.74
+        },
+        {
+          "term": "generalized negative",
+          "score": 5.48
+        },
+        {
+          "term": "negative reciprocity",
+          "score": 5.48
+        },
+        {
+          "term": "negative",
+          "score": 4.85
+        },
+        {
+          "term": "toward",
+          "score": 4.85
+        },
+        {
+          "term": "work",
+          "score": 4.82
+        },
+        {
+          "term": "sense injustice often",
+          "score": 4.82
+        },
+        {
+          "term": "injustice often triggers",
+          "score": 4.82
+        },
+        {
+          "term": "often triggers powerful",
+          "score": 4.82
+        },
+        {
+          "term": "triggers powerful negative",
+          "score": 4.82
+        },
+        {
+          "term": "powerful negative emotional",
+          "score": 4.82
+        },
+        {
+          "term": "negative emotional responses",
+          "score": 4.82
+        },
+        {
+          "term": "emotional responses influence",
+          "score": 4.82
+        }
+      ]
+    },
+    {
+      "lang": "el",
+      "slug": "self-esteem-psychology",
+      "title": "Η ψυχολογία της αυτοεκτίμησης",
+      "tags": [
+        "προσωπικότητα",
+        "αυτοεκτίμηση"
+      ],
+      "keywords": [
+        {
+          "term": "αυτοεκτιμηση",
+          "score": 15.05
+        },
+        {
+          "term": "ψυχολογια της αυτοεκτιμησης",
+          "score": 11.56
+        },
+        {
+          "term": "της αυτοεκτιμησης",
+          "score": 10.96
+        },
+        {
+          "term": "αυτοεκτιμησης",
+          "score": 10.84
+        },
+        {
+          "term": "ψυχολογια",
+          "score": 10.23
+        },
+        {
+          "term": "ψυχολογια της",
+          "score": 9.39
+        },
+        {
+          "term": "εαυτο μας",
+          "score": 7.83
+        },
+        {
+          "term": "εαυτο του",
+          "score": 7.04
+        },
+        {
+          "term": "οτι αξιζει",
+          "score": 7.04
+        },
+        {
+          "term": "πιστευει οτι αξιζει",
+          "score": 6.74
+        },
+        {
+          "term": "του εαυτου του",
+          "score": 6.74
+        },
+        {
+          "term": "αξιζει",
+          "score": 6.62
+        },
+        {
+          "term": "εαυτο",
+          "score": 6.58
+        },
+        {
+          "term": "πιστευει οτι",
+          "score": 5.48
+        },
+        {
+          "term": "του εαυτου",
+          "score": 5.48
+        },
+        {
+          "term": "εαυτου του",
+          "score": 5.48
+        },
+        {
+          "term": "προσωπικοτητα",
+          "score": 4.82
+        },
+        {
+          "term": "ορος αυτοεκτιμηση ψυχολογια",
+          "score": 4.82
+        },
+        {
+          "term": "αυτοεκτιμηση ψυχολογια χρησιμοποιειται",
+          "score": 4.82
+        },
+        {
+          "term": "ψυχολογια χρησιμοποιειται περιγραψει",
+          "score": 4.82
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "self-esteem-psychology",
+      "title": "The psychology of self-esteem",
+      "tags": [
+        "personality",
+        "self-esteem"
+      ],
+      "keywords": [
+        {
+          "term": "self-esteem",
+          "score": 24.68
+        },
+        {
+          "term": "psychology",
+          "score": 10.23
+        },
+        {
+          "term": "psychology self-esteem",
+          "score": 9.39
+        },
+        {
+          "term": "low self-esteem",
+          "score": 6.26
+        },
+        {
+          "term": "themselves",
+          "score": 6.24
+        },
+        {
+          "term": "personality",
+          "score": 4.82
+        },
+        {
+          "term": "term self-esteem psychology",
+          "score": 4.82
+        },
+        {
+          "term": "self-esteem psychology used",
+          "score": 4.82
+        },
+        {
+          "term": "psychology used describe",
+          "score": 4.82
+        },
+        {
+          "term": "used describe person",
+          "score": 4.82
+        },
+        {
+          "term": "describe person subjective",
+          "score": 4.82
+        },
+        {
+          "term": "person subjective perception",
+          "score": 4.82
+        },
+        {
+          "term": "subjective perception own",
+          "score": 4.82
+        },
+        {
+          "term": "perception own worth",
+          "score": 4.82
+        },
+        {
+          "term": "own worth simply",
+          "score": 4.82
+        },
+        {
+          "term": "worth simply put",
+          "score": 4.82
+        },
+        {
+          "term": "simply put reflects",
+          "score": 4.82
+        },
+        {
+          "term": "put reflects how",
+          "score": 4.82
+        },
+        {
+          "term": "reflects how much",
+          "score": 4.82
+        },
+        {
+          "term": "how much someone",
+          "score": 4.82
+        }
+      ]
+    },
+    {
+      "lang": "el",
+      "slug": "relationship-patterns",
+      "title": "Τα μοτίβα σχέσεων ως μία “καταναγκαστική επανάληψη”",
+      "tags": [
+        "σχέσεις",
+        "καταναγκασμός"
+      ],
+      "keywords": [
+        {
+          "term": "μοτιβα σχεσεων",
+          "score": 12.52
+        },
+        {
+          "term": "μοτιβα σχεσεων καταναγκαστικη",
+          "score": 11.56
+        },
+        {
+          "term": "σχεσεων καταναγκαστικη επαναληψη",
+          "score": 11.56
+        },
+        {
+          "term": "μοτιβα",
+          "score": 9.63
+        },
+        {
+          "term": "σχεσεων",
+          "score": 9.63
+        },
+        {
+          "term": "σχεσεων καταναγκαστικη",
+          "score": 9.39
+        },
+        {
+          "term": "καταναγκαστικη επαναληψη",
+          "score": 9.39
+        },
+        {
+          "term": "καταναγκαστικη",
+          "score": 7.22
+        },
+        {
+          "term": "ελευθεροι",
+          "score": 6.02
+        },
+        {
+          "term": "επαναληψη",
+          "score": 5.55
+        },
+        {
+          "term": "καταναγκασμος",
+          "score": 4.82
+        },
+        {
+          "term": "μυθος της αγαπης",
+          "score": 4.82
+        },
+        {
+          "term": "της αγαπης αποτελει",
+          "score": 4.82
+        },
+        {
+          "term": "αγαπης αποτελει πεποιθηση",
+          "score": 4.82
+        },
+        {
+          "term": "αποτελει πεποιθηση οτι",
+          "score": 4.82
+        },
+        {
+          "term": "πεποιθηση οτι ειμαστε",
+          "score": 4.82
+        },
+        {
+          "term": "οτι ειμαστε ελευθεροι",
+          "score": 4.82
+        },
+        {
+          "term": "ειμαστε ελευθεροι αγαπησουμε",
+          "score": 4.82
+        },
+        {
+          "term": "ελευθεροι αγαπησουμε οποιον",
+          "score": 4.82
+        },
+        {
+          "term": "αγαπησουμε οποιον επιθυμουμε",
+          "score": 4.82
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "relationship-patterns",
+      "title": "“Relationship patterns as a ‘compulsive repetition’”",
+      "tags": [
+        "relationships",
+        "compulsion"
+      ],
+      "keywords": [
+        {
+          "term": "relationship patterns",
+          "score": 12.52
+        },
+        {
+          "term": "relationship patterns compulsive",
+          "score": 11.56
+        },
+        {
+          "term": "patterns compulsive repetition",
+          "score": 11.56
+        },
+        {
+          "term": "patterns",
+          "score": 10.84
+        },
+        {
+          "term": "repetition",
+          "score": 10.84
+        },
+        {
+          "term": "patterns compulsive",
+          "score": 9.39
+        },
+        {
+          "term": "compulsive repetition",
+          "score": 9.39
+        },
+        {
+          "term": "love",
+          "score": 8.43
+        },
+        {
+          "term": "compulsive",
+          "score": 7.22
+        },
+        {
+          "term": "relationship",
+          "score": 6.24
+        },
+        {
+          "term": "compulsion",
+          "score": 6.02
+        },
+        {
+          "term": "free",
+          "score": 6.02
+        },
+        {
+          "term": "what",
+          "score": 5.42
+        },
+        {
+          "term": "myth love belief",
+          "score": 4.82
+        },
+        {
+          "term": "love belief free",
+          "score": 4.82
+        },
+        {
+          "term": "belief free love",
+          "score": 4.82
+        },
+        {
+          "term": "free love whomever",
+          "score": 4.82
+        },
+        {
+          "term": "love whomever wish",
+          "score": 4.82
+        },
+        {
+          "term": "whomever wish question",
+          "score": 4.82
+        },
+        {
+          "term": "wish question arises",
+          "score": 4.82
+        }
+      ]
+    },
+    {
+      "lang": "el",
+      "slug": "sexual-abuse-medusa",
+      "title": "Η ερμηνεια της σεξουαλικής κακοποίησης μέσα από \"το βλέμμα της Μέδουσας\"",
+      "tags": [
+        "σχέσεις",
+        "κακοποίηση"
+      ],
+      "keywords": [
+        {
+          "term": "της μεδουσας",
+          "score": 14.09
+        },
+        {
+          "term": "κακοποιησης",
+          "score": 12.64
+        },
+        {
+          "term": "ερμηνεια της σεξουαλικης",
+          "score": 11.56
+        },
+        {
+          "term": "της σεξουαλικης κακοποιησης",
+          "score": 11.56
+        },
+        {
+          "term": "σεξουαλικης κακοποιησης μεσα",
+          "score": 11.56
+        },
+        {
+          "term": "κακοποιησης μεσα βλεμμα",
+          "score": 11.56
+        },
+        {
+          "term": "μεσα βλεμμα της",
+          "score": 11.56
+        },
+        {
+          "term": "βλεμμα της μεδουσας",
+          "score": 11.56
+        },
+        {
+          "term": "σεξουαλικης κακοποιησης",
+          "score": 10.96
+        },
+        {
+          "term": "μεδουσας",
+          "score": 10.84
+        },
+        {
+          "term": "ερμηνεια της",
+          "score": 9.39
+        },
+        {
+          "term": "της σεξουαλικης",
+          "score": 9.39
+        },
+        {
+          "term": "κακοποιησης μεσα",
+          "score": 9.39
+        },
+        {
+          "term": "μεσα βλεμμα",
+          "score": 9.39
+        },
+        {
+          "term": "βλεμμα της",
+          "score": 9.39
+        },
+        {
+          "term": "κακοποιηση",
+          "score": 9.03
+        },
+        {
+          "term": "σεξουαλικης",
+          "score": 8.43
+        },
+        {
+          "term": "ερμηνεια",
+          "score": 7.22
+        },
+        {
+          "term": "βλεμμα",
+          "score": 7.22
+        },
+        {
+          "term": "γυναικων",
+          "score": 6.02
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "slug": "sexual-abuse-medusa",
+      "title": "Interpreting sexual abuse through the \"Gaze of Medusa\"",
+      "tags": [
+        "relationships",
+        "abuse"
+      ],
+      "keywords": [
+        {
+          "term": "abuse",
+          "score": 16.25
+        },
+        {
+          "term": "sexual abuse",
+          "score": 14.87
+        },
+        {
+          "term": "sexual",
+          "score": 13.85
+        },
+        {
+          "term": "medusa",
+          "score": 12.04
+        },
+        {
+          "term": "interpreting sexual abuse",
+          "score": 11.56
+        },
+        {
+          "term": "sexual abuse through",
+          "score": 11.56
+        },
+        {
+          "term": "abuse through gaze",
+          "score": 11.56
+        },
+        {
+          "term": "through gaze medusa",
+          "score": 11.56
+        },
+        {
+          "term": "interpreting sexual",
+          "score": 9.39
+        },
+        {
+          "term": "abuse through",
+          "score": 9.39
+        },
+        {
+          "term": "through gaze",
+          "score": 9.39
+        },
+        {
+          "term": "gaze medusa",
+          "score": 9.39
+        },
+        {
+          "term": "through",
+          "score": 8.43
+        },
+        {
+          "term": "gaze",
+          "score": 8.43
+        },
+        {
+          "term": "interpreting",
+          "score": 7.22
+        },
+        {
+          "term": "violence",
+          "score": 7.22
+        },
+        {
+          "term": "social",
+          "score": 6.02
+        },
+        {
+          "term": "women",
+          "score": 6.02
+        },
+        {
+          "term": "her",
+          "score": 6.02
+        },
+        {
+          "term": "sexual abuse growing",
+          "score": 4.82
+        }
+      ]
+    }
+  ],
+  "globalTop": {
+    "el": [
+      {
+        "term": "της αδικιας",
+        "score": 18.78
+      },
+      {
+        "term": "αυτοεκτιμηση",
+        "score": 15.05
+      },
+      {
+        "term": "αδικιας",
+        "score": 14.45
+      },
+      {
+        "term": "της μεδουσας",
+        "score": 14.09
+      },
+      {
+        "term": "κακοποιησης",
+        "score": 12.64
+      },
+      {
+        "term": "μοτιβα σχεσεων",
+        "score": 12.52
+      },
+      {
+        "term": "αλυσιδωτη εξαπλωση της",
+        "score": 11.56
+      },
+      {
+        "term": "εξαπλωση της αδικιας",
+        "score": 11.56
+      },
+      {
+        "term": "ψυχολογια της αυτοεκτιμησης",
+        "score": 11.56
+      },
+      {
+        "term": "μοτιβα σχεσεων καταναγκαστικη",
+        "score": 11.56
+      },
+      {
+        "term": "σχεσεων καταναγκαστικη επαναληψη",
+        "score": 11.56
+      },
+      {
+        "term": "ερμηνεια της σεξουαλικης",
+        "score": 11.56
+      },
+      {
+        "term": "της σεξουαλικης κακοποιησης",
+        "score": 11.56
+      },
+      {
+        "term": "σεξουαλικης κακοποιησης μεσα",
+        "score": 11.56
+      },
+      {
+        "term": "κακοποιησης μεσα βλεμμα",
+        "score": 11.56
+      },
+      {
+        "term": "μεσα βλεμμα της",
+        "score": 11.56
+      },
+      {
+        "term": "βλεμμα της μεδουσας",
+        "score": 11.56
+      },
+      {
+        "term": "της αυτοεκτιμησης",
+        "score": 10.96
+      },
+      {
+        "term": "σεξουαλικης κακοποιησης",
+        "score": 10.96
+      },
+      {
+        "term": "αυτοεκτιμησης",
+        "score": 10.84
+      },
+      {
+        "term": "μεδουσας",
+        "score": 10.84
+      },
+      {
+        "term": "αλυσιδωτη",
+        "score": 10.23
+      },
+      {
+        "term": "ψυχολογια",
+        "score": 10.23
+      },
+      {
+        "term": "αδικια",
+        "score": 9.63
+      },
+      {
+        "term": "μοτιβα",
+        "score": 9.63
+      },
+      {
+        "term": "σχεσεων",
+        "score": 9.63
+      },
+      {
+        "term": "αλυσιδωτη εξαπλωση",
+        "score": 9.39
+      },
+      {
+        "term": "εξαπλωση της",
+        "score": 9.39
+      },
+      {
+        "term": "ψυχολογια της",
+        "score": 9.39
+      },
+      {
+        "term": "σχεσεων καταναγκαστικη",
+        "score": 9.39
+      },
+      {
+        "term": "καταναγκαστικη επαναληψη",
+        "score": 9.39
+      },
+      {
+        "term": "ερμηνεια της",
+        "score": 9.39
+      },
+      {
+        "term": "της σεξουαλικης",
+        "score": 9.39
+      },
+      {
+        "term": "κακοποιησης μεσα",
+        "score": 9.39
+      },
+      {
+        "term": "μεσα βλεμμα",
+        "score": 9.39
+      },
+      {
+        "term": "βλεμμα της",
+        "score": 9.39
+      },
+      {
+        "term": "κακοποιηση",
+        "score": 9.03
+      },
+      {
+        "term": "μελη",
+        "score": 8.43
+      },
+      {
+        "term": "σεξουαλικης",
+        "score": 8.43
+      },
+      {
+        "term": "του δικτατορα",
+        "score": 7.83
+      },
+      {
+        "term": "εαυτο μας",
+        "score": 7.83
+      },
+      {
+        "term": "εξαπλωση",
+        "score": 7.22
+      },
+      {
+        "term": "αδικημενοι",
+        "score": 7.22
+      },
+      {
+        "term": "δικτατορα",
+        "score": 7.22
+      },
+      {
+        "term": "καταναγκαστικη",
+        "score": 7.22
+      },
+      {
+        "term": "ερμηνεια",
+        "score": 7.22
+      },
+      {
+        "term": "βλεμμα",
+        "score": 7.22
+      },
+      {
+        "term": "εαυτο του",
+        "score": 7.04
+      },
+      {
+        "term": "οτι αξιζει",
+        "score": 7.04
+      },
+      {
+        "term": "πιστευει οτι αξιζει",
+        "score": 6.74
+      },
+      {
+        "term": "του εαυτου του",
+        "score": 6.74
+      },
+      {
+        "term": "αξιζει",
+        "score": 6.62
+      },
+      {
+        "term": "εαυτο",
+        "score": 6.58
+      },
+      {
+        "term": "ελευθεροι",
+        "score": 6.02
+      },
+      {
+        "term": "γυναικων",
+        "score": 6.02
+      },
+      {
+        "term": "παιχνιδι του δικτατορα",
+        "score": 5.78
+      },
+      {
+        "term": "μελη της ομαδας",
+        "score": 5.78
+      },
+      {
+        "term": "επαναληψη",
+        "score": 5.55
+      },
+      {
+        "term": "πιστευει οτι",
+        "score": 5.48
+      },
+      {
+        "term": "του εαυτου",
+        "score": 5.48
+      }
+    ],
+    "en": [
+      {
+        "term": "self-esteem",
+        "score": 24.68
+      },
+      {
+        "term": "injustice",
+        "score": 16.25
+      },
+      {
+        "term": "abuse",
+        "score": 16.25
+      },
+      {
+        "term": "sexual abuse",
+        "score": 14.87
+      },
+      {
+        "term": "sexual",
+        "score": 13.85
+      },
+      {
+        "term": "chain reaction",
+        "score": 13.3
+      },
+      {
+        "term": "relationship patterns",
+        "score": 12.52
+      },
+      {
+        "term": "medusa",
+        "score": 12.04
+      },
+      {
+        "term": "chain reaction injustice",
+        "score": 11.56
+      },
+      {
+        "term": "relationship patterns compulsive",
+        "score": 11.56
+      },
+      {
+        "term": "patterns compulsive repetition",
+        "score": 11.56
+      },
+      {
+        "term": "interpreting sexual abuse",
+        "score": 11.56
+      },
+      {
+        "term": "sexual abuse through",
+        "score": 11.56
+      },
+      {
+        "term": "abuse through gaze",
+        "score": 11.56
+      },
+      {
+        "term": "through gaze medusa",
+        "score": 11.56
+      },
+      {
+        "term": "patterns",
+        "score": 10.84
+      },
+      {
+        "term": "repetition",
+        "score": 10.84
+      },
+      {
+        "term": "chain",
+        "score": 10.23
+      },
+      {
+        "term": "reaction",
+        "score": 10.23
+      },
+      {
+        "term": "psychology",
+        "score": 10.23
+      },
+      {
+        "term": "reaction injustice",
+        "score": 9.39
+      },
+      {
+        "term": "psychology self-esteem",
+        "score": 9.39
+      },
+      {
+        "term": "patterns compulsive",
+        "score": 9.39
+      },
+      {
+        "term": "compulsive repetition",
+        "score": 9.39
+      },
+      {
+        "term": "interpreting sexual",
+        "score": 9.39
+      },
+      {
+        "term": "abuse through",
+        "score": 9.39
+      },
+      {
+        "term": "through gaze",
+        "score": 9.39
+      },
+      {
+        "term": "gaze medusa",
+        "score": 9.39
+      },
+      {
+        "term": "wronged",
+        "score": 8.43
+      },
+      {
+        "term": "love",
+        "score": 8.43
+      },
+      {
+        "term": "through",
+        "score": 8.43
+      },
+      {
+        "term": "gaze",
+        "score": 8.43
+      },
+      {
+        "term": "compulsive",
+        "score": 7.22
+      },
+      {
+        "term": "interpreting",
+        "score": 7.22
+      },
+      {
+        "term": "violence",
+        "score": 7.22
+      },
+      {
+        "term": "generalized negative reciprocity",
+        "score": 6.74
+      },
+      {
+        "term": "low self-esteem",
+        "score": 6.26
+      },
+      {
+        "term": "themselves",
+        "score": 6.24
+      },
+      {
+        "term": "relationship",
+        "score": 6.24
+      },
+      {
+        "term": "compulsion",
+        "score": 6.02
+      },
+      {
+        "term": "free",
+        "score": 6.02
+      },
+      {
+        "term": "social",
+        "score": 6.02
+      },
+      {
+        "term": "women",
+        "score": 6.02
+      },
+      {
+        "term": "her",
+        "score": 6.02
+      },
+      {
+        "term": "generalized negative",
+        "score": 5.48
+      },
+      {
+        "term": "negative reciprocity",
+        "score": 5.48
+      },
+      {
+        "term": "what",
+        "score": 5.42
+      },
+      {
+        "term": "negative",
+        "score": 4.85
+      },
+      {
+        "term": "toward",
+        "score": 4.85
+      },
+      {
+        "term": "work",
+        "score": 4.82
+      },
+      {
+        "term": "sense injustice often",
+        "score": 4.82
+      },
+      {
+        "term": "injustice often triggers",
+        "score": 4.82
+      },
+      {
+        "term": "often triggers powerful",
+        "score": 4.82
+      },
+      {
+        "term": "triggers powerful negative",
+        "score": 4.82
+      },
+      {
+        "term": "powerful negative emotional",
+        "score": 4.82
+      },
+      {
+        "term": "negative emotional responses",
+        "score": 4.82
+      },
+      {
+        "term": "emotional responses influence",
+        "score": 4.82
+      },
+      {
+        "term": "personality",
+        "score": 4.82
+      },
+      {
+        "term": "term self-esteem psychology",
+        "score": 4.82
+      },
+      {
+        "term": "self-esteem psychology used",
+        "score": 4.82
+      }
+    ]
+  }
+}
