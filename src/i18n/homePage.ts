@@ -74,21 +74,19 @@ export const homePage = {
     services: {
       title: 'Υπηρεσίες',
       intro: `Προσφέρω ατομικές ψυχοθεραπευτικές συνεδρίες εξ αποστάσεως (online) για ενήλικες που αναζητούν στήριξη, κατανόηση και προσωπική εξέλιξη.
-Συνεργάζομαι με ανθρώπους από διαφορετικά πολιτισμικά και κοινωνικά υπόβαθρα, ανεξαρτήτως ηλικίας, εθνικότητας, φύλου ή σεξουαλικού προσανατολισμού. Ο καθένας φέρει τη δική του μοναδική ιστορία, και αυτός είναι ένας χώρος όπου μπορεί να την μοιραστεί.
-Είτε αντιμετωπίζεις μια παρούσα δυσκολία είτε θέλεις να εμβαθύνεις στα εσωτερικά σου βιώματα, η θεραπεία είναι ένας χώρος για να σύνδεσης, κατανόησης του εαυτού και προσωπικής εξέλιξης.
-`,
+Συνεργάζομαι με ανθρώπους από διαφορετικά πολιτισμικά και κοινωνικά υπόβαθρα, ανεξαρτήτως ηλικίας, εθνικότητας, φύλου ή σεξουαλικού προσανατολισμού. Ο καθένας φέρει τη δική του μοναδική ιστορία, και αυτός είναι ένας χώρος όπου μπορεί να την μοιραστεί.`,
       list: [
-        { title: "Άγχος, υπερανάλυση, κρίσεις πανικού", text: "Το άγχος, η υπερανάλυση και οι κρίσεις πανικού μπορούν να είναι εξουθενωτικά και να επηρεάζουν τη διάθεσή, τη δουλειά, ακόμα και τις προσωπικές σχέσεις. Στις έντονες στιγμές άγχους και ξαφνικά, μπορεί να εμφανιστούν κρίσεις πανικού προκαλώντας σωματικά και συναισθηματικά συμπτώματα. " },
-        { title: "Συναισθηματική ρύθμιση και δυσκολίες στην αναγνώριση συναισθημάτων", text: "Η δυσκολία να αναγνωρίσει και να εκφράσει κανείς τα συναισθήματά του με υγιή τρόπο μπορεί να οδηγήσει σε αίσθημα αναστάτωσης ή ακόμη και σύγχυσης (άγχος, θυμός, φόβος, λύπη, ντροπή, ζήλια, ενοχή, απογοήτευση)" },
+        { title: "Άγχος, υπερανάλυση, κρίσεις πανικού", text: "Το άγχος, η υπερανάλυση και οι κρίσεις πανικού μπορούν να είναι εξουθενωτικά και να επηρεάζουν τη διάθεση, τη δουλειά, ακόμα και τις προσωπικές σχέσεις. Στις έντονες στιγμές άγχους και ξαφνικά, μπορεί να εμφανιστούν κρίσεις πανικού προκαλώντας σωματικά και συναισθηματικά συμπτώματα. " },
+        { title: "Συναισθηματική ρύθμιση και δυσκολίες στην αναγνώριση συναισθημάτων", text: "Η δυσκολία να αναγνωρίσει και να εκφράσει κανείς τα συναισθήματά του με υγιή τρόπο μπορεί να οδηγήσει σε αίσθημα αναστάτωσης ή ακόμη και σύγχυσης (άγχος, θυμός, φόβος, λύπη, ντροπή, ζήλια, ενοχή, απογοήτευση)." },
         { title: "Τραύματα ή συναισθηματικά φορτισμένες εμπειρίες", text: "Οι τραυματικές εμπειρίες  συχνά αφήνουν συναισθηματικά αποτυπώματα που επηρεάζουν την καθημερινότητα και τις σχέσεις με τους άλλους." },
         { title: "Καταθλιπτική διάθεση", text: "Η κατάθλιψη επηρεάζει τη διάθεση, την ενέργεια και τη γενική ποιότητα της ζωής." },
         { title: "Αναβλητικότητα, φόβος αποτυχίας, δυσκολία στη λήψη αποφάσεων", text: "Ο φόβος της αποτυχίας ή οι ανασφάλειες μπορεί να γίνουν εμπόδιο από το να προχωρήσουμε μπροστά και να πετύχουμε τους στόχους μας. Η αναβλητικότητα συχνά προκύπτει από αυτή την εσωτερική σύγκρουση και μπορεί να δημιουργήσει έναν φαύλο κύκλο." },
         { title: "Επαγγελματικό άγχος, εξουθένωση (burnout)", text: "Η συνεχής πίεση στον επαγγελματικό χώρο, οι υπερβολικές ώρες εργασίας και οι συγκρούσεις με συναδέλφους ή προϊσταμένους μπορεί να οδηγήσουν σε εξουθένωση (burnout)." },
         { title: "Χαμηλή αυτοεκτίμηση και θέματα εικόνας εαυτού", text: "Τα θέματα εικόνας εαυτού επηρεάζουν όχι μόνο την προσωπική ευημερία, αλλά και τις σχέσεις με τους άλλους." },
-        { title: "Διερεύνηση ταυτότητας και ανάγκης για ανήκειν, με ιδιαίτερη στήριξη προς την LGBTQ+ κοινότητα", text: "Οι σχέσεις που δεν λειτουργούν όπως θα θέλαμε, μπορούν να προκαλέσουν άγχος, σύγχυση και συναισθηματική φόρτιση." },
+        { title: "Διερεύνηση ταυτότητας, με ιδιαίτερη στήριξη προς την LGBTQ+ κοινότητα", text: "Η αναζήτηση ταυτότητας και η ανάγκη για αποδοχή είναι θεμελιώδη στοιχεία της ανθρώπινης ύπαρξης. Για τα μέλη της LGBTQ+ κοινότητας, αυτή η διαδικασία μπορεί να είναι μια ιδιαίτερη πρόκληση, λόγω κοινωνικών πιέσεων και προκαταλήψεων." },
         { title: "Ζητήματα σχέσεων (προσωπικών, φιλικών, οικογενειακών, επαγγελματικών)", text: "Οι σχέσεις που δεν λειτουργούν όπως θα θέλαμε, μπορούν να προκαλέσουν άγχος, σύγχυση και συναισθηματική φόρτιση." },
         { title: "Μεταβάσεις ζωής, υπαρξιακά ερωτήματα, αναζήτηση νοήματος", text: "Οι μεγάλες αλλαγές στη ζωή μας, όπως η αλλαγή καριέρας, ο θάνατος ενός αγαπημένου προσώπου ή η μετάβαση από μια φάση ζωής στην άλλη, μπορεί να μας προκαλέσουν ερωτήματα για το ποιο είναι το νόημα της ζωής μας και ποια είναι η κατεύθυνσή μας." },
-        { title: "Διατροφικές διαταραχές και ανησυχίες εικόνας του σώματος", text: "Οι διατροφικές διαταραχές είναι σοβαρές ψυχολογικές καταστάσεις που επηρεάζουν την υγεία, την ψυχική ευημερία και τη συνολική ποιότητα ζωής. Οι πιο κοινές διατροφικές διαταραχές περιλαμβάνουν τα υπερφαγικά επεισόδια την βουλιμία και την ανορεξία" },
+        { title: "Διατροφικές διαταραχές και ανησυχίες εικόνας του σώματος", text: "Οι διατροφικές διαταραχές είναι σοβαρές ψυχολογικές καταστάσεις που επηρεάζουν την υγεία, την ψυχική ευημερία και τη συνολική ποιότητα ζωής. Οι πιο κοινές διατροφικές διαταραχές περιλαμβάνουν τα υπερφαγικά επεισόδια την βουλιμία και την ανορεξία." },
       ]
     }
   },
@@ -166,18 +164,16 @@ export const homePage = {
     services: {
       title: 'Services',
       intro: `I offer individual online psychotherapy sessions for adults seeking support, understanding, and personal growth.
-I work with people from diverse cultural and social backgrounds, regardless of age, nationality, gender, or sexual orientation. Each person brings their own unique story—and this is a safe space to share it.
-Whether you're facing a current challenge or wish to explore your inner world more deeply, therapy can be a space for connection, self-understanding, and personal development.
-`,
+I work with people from diverse cultural and social backgrounds, regardless of age, nationality, gender, or sexual orientation. Each person brings their own unique story—and this is a safe space to share it.`,
       list: [
         { title: "Anxiety, overthinking, panic attacks", text: "Anxiety, overthinking, and panic attacks can be exhausting and affect mood, work, and even personal relationships. In moments of intense stress and suddenly, panic attacks may occur, causing physical and emotional symptoms." },
-        { title: "Emotional regulation and difficulties in recognizing emotions", text: "The difficulty of recognizing and expressing one’s emotions in a healthy way can lead to feelings of distress or even confusion. (anxiety, anger, fear, sadness, shame, jealousy, guilt, disappointment)" },
-        { title: "Trauma or emotionally charged experiences", text: "ΟTraumatic experiences often leave emotional imprints that affect daily life and relationships with others" },
+        { title: "Emotional regulation and difficulties in recognizing emotions", text: "The difficulty of recognizing and expressing one’s emotions in a healthy way can lead to feelings of distress or even confusion (anxiety, anger, fear, sadness, shame, jealousy, guilt, disappointment)." },
+        { title: "Trauma or emotionally charged experiences", text: "Traumatic experiences often leave emotional imprints that affect daily life and relationships with others." },
         { title: "Depressive mood", text: "Depression affects mood, energy, and overall quality of life." },
         { title: "Procrastination, fear of failure, difficulty making decisions", text: "The fear of failure or insecurities can become obstacles that prevent us from moving forward and achieving our goals. Procrastination often arises from this inner conflict and can create a vicious cycle." },
         { title: "Work-related stress, burnout", text: "Constant pressure in the workplace, excessive working hours, and conflicts with colleagues or supervisors can lead to burnout." },
         { title: "Low self-esteem and self-image issues", text: "Self-image issues affect not only personal well-being but also relationships with others." },
-        { title: "Exploring identity and the need to belong, with particular support for the LGBTQ+ community", text: "The search for identity and the need for acceptance are fundamental aspects of human existence. For members of the LGBTQ+ community, this process can be a particular challenge due to social pressures and prejudices." },
+        { title: "Exploring identity, with particular support for the LGBTQ+ community", text: "The search for identity and the need for acceptance are fundamental aspects of human existence. For members of the LGBTQ+ community, this process can be a particular challenge due to social pressures and prejudices." },
         { title: "Relationship issues (personal, friendships, family, professional)", text: "Relationships that do not function as we wish can cause stress, confusion, and emotional strain." },
         { title: "Life transitions, existential questions, search for meaning", text: "Major life changes, such as a career shift, the loss of a loved one, or the transition from one stage of life to another, may lead us to question the meaning of our lives and our direction." },
         { title: "Eating disorders and body image concerns", text: "Eating disorders are serious psychological conditions that affect health, mental well-being, and overall quality of life. The most common eating disorders include binge eating, bulimia, and anorexia." },
