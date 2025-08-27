@@ -40,7 +40,6 @@ const Hero: React.FC<Props> = ({
       <div className="hero__bg" aria-hidden="true">
         <picture>
           {/* Modern format first (optional) */}
-          <source srcSet={`${imageSrc}&fm=webp`} type="image/webp" />
           <img
             src={imageSrc}
             alt=""                  // decorative; headline conveys context
@@ -57,9 +56,9 @@ const Hero: React.FC<Props> = ({
 
       <div className="container hero__inner">
         <div className="hero__content">
-          <p className="muted hero__overtitle">{t.hero.title}</p>
+          <p className="hero__overtitle">{t.hero.title}</p>
           <h1 className="hero__title">{t.hero.subtitle}</h1>
-          <p className="muted hero__note">{t.hero.note}</p>
+          <p className="hero__note">{t.hero.note}</p>
 
           <div className="hero__actions">
             <Button href={t.cta.href} className="ps-btn ps-btn--primary">
