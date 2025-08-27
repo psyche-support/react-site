@@ -812,9 +812,40 @@ form input:focus, form textarea:focus {
   padding: .6rem .8rem; background: var(--color-card-bg); color: var(--color-text);
 }
 .articles__tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+/* Base tag (light theme) */
 .tag {
-  display: inline-block; padding: .25rem .6rem; border: 1px solid var(--color-border);
-  border-radius: 999px; font-size: .9rem; background: var(--color-card-bg); cursor: pointer;
+  display: inline-block;
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  line-height: 1;
+  border: 1px solid var(--color-border);
+  background: var(--color-card-bg);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Dark theme override (use whichever selector your app uses) */
+[data-theme="dark"] .tag,
+.dark .tag {
+  color: #e5e7eb;                          /* light grey text */
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);        /* subtle pill */
+}
+
+/* Hover/active (both themes) */
+.tag:hover {
+  text-decoration: none;
+  border-color: var(--color-accent);
+}
+
+/* If tags are links */
+.tag a { color: inherit; }
+.tag a:hover { text-decoration: none; }
+
+/* Optional: tighten spacing in the article hero tag row */
+.article-hero__tags {
+  display: flex; flex-wrap: wrap; gap: .4rem;
 }
 .tag.is-active { border-color: var(--color-accent); color: var(--color-accent); }
 
@@ -908,6 +939,7 @@ form input:focus, form textarea:focus {
 }
 .articles__search { text-transform: none; }
 
+/* Existing styles remain unchanged */
 .articles__pagination {
   display: flex; align-items: center; justify-content: center;
   gap: .6rem; margin: 1rem 0;
@@ -916,7 +948,42 @@ form input:focus, form textarea:focus {
 .pager-page, .pager-btn {
   padding: .4rem .7rem; border: 1px solid var(--color-border);
   background: var(--color-card-bg); border-radius: 8px; cursor: pointer;
+  color: var(--color-text);
 }
 .pager-page.is-active { border-color: var(--color-accent); color: var(--color-accent); }
 .pager-gap { padding: .4rem .3rem; color: var(--color-subtext); }
 .pager-btn:disabled, .pager-page:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Dark mode overrides */
+[data-theme="dark"] .pager-page,
+[data-theme="dark"] .pager-btn,
+.dark .pager-page,
+.dark .pager-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .pager-page.is-active,
+.dark .pager-page.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+[data-theme="dark"] .pager-gap,
+.dark .pager-gap {
+  color: rgba(229, 231, 235, 0.7);
+}
+
+/* Don’t show focus rings on mouse/touch; do show on keyboard */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* If you had a custom focus class earlier, you can remove it or keep it: */
+.focus-ring :focus { outline: none; }
+.focus-ring :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
