@@ -101,6 +101,18 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
         className={`ps-nav-panel ${open ? "is-open" : ""}`}
         aria-label={lang === "el" ? "Μενού κινητού" : "Mobile menu"}
       >
+        <div className="ps-nav-panel__brand">
+          <Link
+            to="/"
+            onClick={() => setOpen(false)}
+            aria-label={t.brand}
+            className="ps-nav-panel__brandLink"
+          >
+            <PsycheLogo size={60} />
+            <span className="ps-nav-panel__brandName">{t.brand}</span>
+          </Link>
+        </div>
+        
         <ul className="ps-nav-panel__list">
           {t.nav.map((item) => (
             <li key={item.href} className="ps-nav-panel__item">
@@ -113,17 +125,26 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
               </Link>
             </li>
           ))}
-          <li className="ps-nav-panel__item">
-            {/* ✅ Dense variant for mobile */}
-            <LangSwitch
-              value={lang}
-              onChange={(l) => { onChangeLang(l); setOpen(false); }}
-              ariaLabel={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
-              dense
-            />
-          </li>
-          <li className="ps-nav-panel__item">
-            <ThemeToggle />
+
+          {/* Language + Theme in one row */}
+          <li className="ps-nav-panel__item ps-nav-panel__langs">
+            <div className="ps-nav-panel__langsRow">
+              <div className="lang-switch">
+                <button
+                  onClick={() => { onChangeLang("el"); setOpen(false); }}
+                  className={`lang-switch__btn ${lang === "el" ? "is-active" : ""}`}
+                >
+                  Ελληνικά
+                </button>
+                <button
+                  onClick={() => { onChangeLang("en"); setOpen(false); }}
+                  className={`lang-switch__btn ${lang === "en" ? "is-active" : ""}`}
+                >
+                  English
+                </button>
+              </div>
+              <ThemeToggle />
+            </div>
           </li>
         </ul>
       </nav>

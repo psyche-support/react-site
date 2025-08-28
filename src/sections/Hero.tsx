@@ -6,50 +6,92 @@ import type { LangCode } from "../i18n/types";
 
 type Props = {
   lang: LangCode;
-  imageSrc?: string; // overrides time-based pick when provided
+  imageSrc?: string;          // optional override (keeps credit fallback)
   imageAlt?: string;
-  photoCreditLabel?: string;
-  photoCreditText?: string;
-  photoCreditHref?: string;
-  minHeight?: string | number; // e.g., "70vh"
+  photoCreditLabel?: string;  // default "Photo:"
+  photoCreditText?: string;   // overrides per-image credit
+  photoCreditHref?: string;   // overrides per-image credit link
+  minHeight?: string | number;
 };
 
-/** Decide which /public/home/hero-*.jpg to use by local time.
- *  Slots (local):
- *  00:00–04:29 → hero-1 (lone tree)
- *  04:30–08:59 → hero-3 (birds/dawn)
- *  09:00–14:29 → hero-5 (bright arches)  +1h
- *  14:30–19:59 → hero-2 (forest road)    +1h
- *  20:00–01:29 → hero-4 (flowers)        +1h
+/** Local-time slots:
+ *  00:00–04:29 → hero.jpeg (tree)
+ *  04:30–08:59 → hero-3.jpeg (birds / dawn)
+ *  09:00–15:29 → hero-5.jpeg (bright arches)   (+1h vs original)
+ *  15:30–21:59 → hero-2.jpeg (forest road)     (+1h vs original)
+ *  22:00–01:29 → hero-4.jpeg (painted flowers) (+1h vs original)
  */
 function pickHeroByMinute(totalMinutes: number): string {
   const m = ((totalMinutes % 1440) + 1440) % 1440;
-  if (m < 270) return "/home/hero-1.jpg";                 // 00:00–04:29
-  if (m < 540) return "/home/hero-3.jpg";                 // 04:30–08:59
-  if (m < 870) return "/home/hero-5.jpg";                 // 09:00–14:29 (+1h)
-  if (m < 1200) return "/home/hero-2.jpg";                // 14:30–19:59 (+1h)
-  if (m >= 1200 || m < 90) return "/home/hero-4.jpg";     // 20:00–01:29 (+1h)
-  return "/home/hero-1.jpg";
+  if (m < 270) return "/home/hero-1.jpg";        // 00:00–04:29
+  if (m < 540) return "/home/hero-3.jpg";      // 04:30–08:59
+  if (m < 930) return "/home/hero-5.jpg";      // 09:00–15:29 (+1h)
+  if (m < 1320) return "/home/hero-2.jpg";     // 15:30–21:59 (+1h)
+  // 22:00–23:59 or 00:00–01:29
+  return "/home/hero-4.jpg";                   // (+1h)
 }
+
+/** Per-file alt + credit (Unsplash) */
+const HERO_META: Record<
+  string,
+  { alt: string; creditText: string; creditHref: string }
+> = {
+  "/home/hero-1.jpg": {
+    alt: "Lone evergreen tree standing in a snowy field",
+    creditText: "Unsplash",
+    creditHref: "https://unsplash.com/photos/4L-AyDJM-yM",
+  },
+  "/home/hero-2.jpg": {
+    alt: "Curving forest road on a misty day",
+    creditText: "Unsplash",
+    creditHref: "https://unsplash.com/photos/qZQriezeRcc",
+  },
+  "/home/hero-3.jpg": {
+    alt: "Birds flying across a soft dawn sky",
+    creditText: "Unsplash",
+    creditHref: "https://unsplash.com/photos/UQaht0LBiYc",
+  },
+  "/home/hero-4.jpg": {
+    alt: "Whimsical watercolor painting of flowers",
+    creditText: "Unsplash",
+    creditHref: "https://unsplash.com/photos/6dY9cFY-qTo",
+  },
+  "/home/hero-5.jpg": {
+    alt: "Bright white arches and steps in a minimal corridor",
+    creditText: "Unsplash",
+    creditHref: "https://unsplash.com/photos/7y4858E8PfA",
+  },
+};
 
 const Hero: React.FC<Props> = ({
   lang,
-  imageSrc, // optional override
-  imageAlt = "Counselling / therapy hero",
-  photoCreditLabel = "Photo credit:",
-  photoCreditText = "Unsplash",
-  photoCreditHref = "https://unsplash.com/photos/pine-tree-covered-with-snow-4L-AyDJM-yM",
+  imageSrc,
+  imageAlt,
+  photoCreditLabel = lang === "el" ? "Φωτογραφία:" : "Photo:",
+  photoCreditText,
+  photoCreditHref,
   minHeight = "70vh",
 }) => {
   const { dict: t } = useI18n("homePage", lang);
 
-  // Compute source only once on mount (no re-render loop)
-  const computedSrc = React.useMemo(() => {
-    if (imageSrc) return imageSrc;
+  // Decide dynamic hero based on current local time (minutes since midnight)
+  const chosenSrc = React.useMemo(() => {
+    if (imageSrc) return imageSrc; // explicit override
     const now = new Date();
     const minutes = now.getHours() * 60 + now.getMinutes();
     return pickHeroByMinute(minutes);
   }, [imageSrc]);
+
+  // Lookup per-image metadata (with safe fallbacks)
+  const meta = HERO_META[chosenSrc] || {
+    alt: imageAlt || "Hero background",
+    creditText: photoCreditText || "Unsplash",
+    creditHref: photoCreditHref || "https://unsplash.com/",
+  };
+
+  const finalAlt = meta.alt;
+  const finalCreditText = meta.creditText;
+  const finalCreditHref = meta.creditHref;
 
   return (
     <section
@@ -63,15 +105,16 @@ const Hero: React.FC<Props> = ({
         } as React.CSSProperties
       }
     >
-      {/* Visible LCP image placed behind content */}
+      {/* LCP image */}
       <div className="hero__bg" aria-hidden="true">
         <img
-          src={computedSrc}
-          alt=""                 // decorative; headline provides context
+          src={chosenSrc}
+          alt=""                 // decorative (title conveys context)
           width={1600}
-          height={900}           // reserves space -> avoids CLS
-          loading="eager"        // critical image
+          height={900}
+          loading="eager"
           decoding="async"
+          fetchpriority="high"
           sizes="100vw"
           style={{ display: "block" }}
         />
@@ -94,11 +137,11 @@ const Hero: React.FC<Props> = ({
         </div>
       </div>
 
-      {/* Photo credit bottom-right (static; optional to vary per image) */}
+      {/* Photo credit (linked) */}
       <p className="hero__credit">
         {photoCreditLabel}{" "}
-        <a href={photoCreditHref} target="_blank" rel="noopener noreferrer">
-          {photoCreditText}
+        <a href={finalCreditHref} target="_blank" rel="noopener noreferrer">
+          {finalCreditText}
         </a>
       </p>
     </section>

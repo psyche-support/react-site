@@ -289,3 +289,59 @@
     pointer-events: auto;
   }
 }
+
+/* Make lang switch buttons larger/more tappable on mobile */
+@media (max-width: 960px) {
+  .lang-switch__btn {
+    min-width: 72px;   /* wider touch target */
+    padding: 0 1rem;   /* more breathing room */
+    font-size: 1rem;   /* slightly bigger text */
+  }
+}
+
+/* Mobile panel: lang + theme row */
+.ps-nav-panel__langsRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Let the lang switch size to its buttons, not stretch */
+.ps-nav-panel__langsRow .lang-switch {
+  display: inline-flex;   /* intrinsic width */
+  width: auto;            /* ensure it doesn't expand */
+  margin-right: auto;     /* pushes ThemeToggle to the right */
+}
+
+/* Keep good tap targets */
+.ps-nav-panel__langsRow .lang-switch__btn {
+  min-width: 72px;
+}
+
+/* Mobile panel brand */
+.ps-nav-panel__brand {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.9rem 0.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 0.5rem;
+}
+
+.ps-nav-panel__brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.ps-nav-panel__brandLink:hover {
+  opacity: 0.9;
+}
+
+.ps-nav-panel__brandName {
+  font-weight: 700;
+  font-size: 1.05rem;
+}

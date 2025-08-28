@@ -35,8 +35,11 @@ const dict = {
     ]
   },
   "closing": {
-    "title": "Why choose me",
-    "body": "My goal is to support you every step of the way, providing a safe and supportive environment for personal growth and change."
+    "title": "Working together",
+    "body": `Whether you’re seeking support for personal growth, facing challenges in your relationships, or navigating difficult emotions, I would be honored to walk alongside you. Our sessions can be a safe space to share, reflect, and discover new ways of understanding yourself and your experiences.
+    
+    
+    If what you’ve read here resonates with you, I invite you to take the first step. Together, we can explore your needs, set meaningful goals, and create a path toward healing, clarity, and greater well-being.`,
   }
 } as const;
 export default dict;
