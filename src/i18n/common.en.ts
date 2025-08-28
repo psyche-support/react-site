@@ -24,6 +24,14 @@ const dict = {
   },
   "footer": {
     "tagline": "Mental health and psychotherapy",
+    "hours": {
+      "title": "Working hours",
+      "items": [
+        { "label": "Mon–Fri", "value": "09:00–21:00" },
+        { "label": "Saturday", "value": "Closed" },
+        { "label": "Sunday", "value": "Closed" }
+      ]
+    },
     "linksTitle": "Links",
     "follow": "Follow",
     "location": "Location",

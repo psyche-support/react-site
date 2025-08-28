@@ -224,3 +224,68 @@
 
 /* Optional: avoid content being hidden behind fixed panel when scrolled to the top link */
 .ps-nav-panel__list a { scroll-margin-top: calc(var(--header-h, 64px) + 10px); }
+
+/* Segmented language switch */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-switch--dense {
+  transform: scale(0.95);
+}
+
+.lang-switch__btn {
+  min-width: 46px;                 /* good mobile tap target */
+  height: 40px;                    /* 40–44px is ideal for touch */
+  padding: 0 .75rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lang-switch__btn:hover {
+  background: rgba(0,0,0,.04);
+}
+
+.lang-switch__btn.is-active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.dark .lang-switch {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.dark .lang-switch__btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* When burger is open, hide only the brand (logo+name). Keep header and burger visible. */
+@media (max-width: 960px) {
+  .ps-header--menuOpen .ps-brand {
+    visibility: hidden; /* preserves header height for a clean edge */
+  }
+
+  /* Drawer sits directly under the header line (so the burger stays visible) */
+  .ps-nav-panel {
+    top: var(--header-h, 64px);    /* start below header */
+    z-index: 49;                   /* keep below header (header is 50) */
+  }
+  .ps-nav-panel.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

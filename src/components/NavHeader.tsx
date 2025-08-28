@@ -1,11 +1,12 @@
 // src/components/NavHeader.tsx
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import PsycheLogo from "./Logo"; // adjust path if needed
+import PsycheLogo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
-import "./nav-header.css";
+import "../styles/nav-header.css";
 import { useI18n } from "../i18n/useI18n";
 import type { LangCode } from "../i18n/types";
+import LangSwitch from "./LangSwitch";
 
 interface Props {
   lang: LangCode;
@@ -32,23 +33,26 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
     if (node) node.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [location.pathname, location.hash]);
 
-  const handleLangChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selected = e.target.value as LangCode;
-    onChangeLang(selected);
-    try { localStorage.setItem("lang", selected); } catch {}
-  };
-
   const resolveTo = (href: string) =>
     href.startsWith("#") ? ({ pathname: "/", hash: href }) : href;
 
+  const handleBrandClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
+    setOpen(false);
+    if (location.pathname === "/") {
+      // stay on the same route, just scroll up
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header
-      className={`ps-header ${elevated ? "ps-header--elevated" : ""}`}
-      style={{ ["--header-h" as any]: "64px" }}   // <— give CSS a reference height
+      className={`ps-header ${elevated ? "ps-header--elevated" : ""} ${open ? "ps-header--menuOpen" : ""}`}
+      style={{ ["--header-h" as any]: "64px" }}
     >
       <div className="ps-container ps-header__inner">
         {/* Brand */}
-        <Link className="ps-brand" to="/" onClick={() => setOpen(false)} aria-label={t.brand}>
+        <Link className="ps-brand" to="/" onClick={handleBrandClick} aria-label={t.brand}>
           <PsycheLogo size={80} />
           <span className="ps-brand__name">{t.brand}</span>
         </Link>
@@ -77,15 +81,12 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
               </li>
             ))}
             <li className="ps-nav__item">
-              <select
+              {/* ✅ Replaced <select> with LangSwitch */}
+              <LangSwitch
                 value={lang}
-                onChange={handleLangChange}
-                className="ps-lang-select"
-                aria-label={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
-              >
-                <option value="el">Ελληνικά</option>
-                <option value="en">English</option>
-              </select>
+                onChange={onChangeLang}
+                ariaLabel={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
+              />
             </li>
             <li className="ps-nav__item">
               <ThemeToggle />
@@ -113,15 +114,13 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
             </li>
           ))}
           <li className="ps-nav-panel__item">
-            <select
+            {/* ✅ Dense variant for mobile */}
+            <LangSwitch
               value={lang}
-              onChange={(e) => { handleLangChange(e); setOpen(false); }}
-              className="ps-lang-select ps-lang-select--panel"
-              aria-label={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
-            >
-              <option value="el">Ελληνικά</option>
-              <option value="en">English</option>
-            </select>
+              onChange={(l) => { onChangeLang(l); setOpen(false); }}
+              ariaLabel={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
+              dense
+            />
           </li>
           <li className="ps-nav-panel__item">
             <ThemeToggle />

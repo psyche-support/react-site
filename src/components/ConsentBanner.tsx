@@ -2,45 +2,20 @@
 import React from "react";
 import { useI18n } from "../i18n/useI18n";
 import type { LangCode } from "../i18n/types";
+import PsycheLogo from "./Logo";
+import "../styles/consent-banner.css";
 
-type Props = {
-  lang: LangCode;
-};
+type Props = { lang: LangCode };
 
 const ConsentBanner: React.FC<Props> = ({ lang }) => {
   const { dict: t } = useI18n("common", lang);
-  const barRef = React.useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = React.useState<boolean>(() => {
     try {
-      return localStorage.getItem("analytics_consent") == null; // show if not decided
+      return localStorage.getItem("analytics_consent") == null;
     } catch {
       return true;
     }
   });
-
-  // Helper: set CSS var with current bar height and toggle a root class
-  const setBarHeightVar = React.useCallback(() => {
-    const h = barRef.current?.offsetHeight ?? 0;
-    document.documentElement.style.setProperty("--consent-bar-h", `${h}px`);
-  }, []);
-
-  React.useEffect(() => {
-    if (!visible) {
-      document.documentElement.classList.remove("consent-open");
-      document.documentElement.style.removeProperty("--consent-bar-h");
-      return;
-    }
-    document.documentElement.classList.add("consent-open");
-    setBarHeightVar();
-    const ro = new ResizeObserver(setBarHeightVar);
-    if (barRef.current) ro.observe(barRef.current);
-    const onResize = () => setBarHeightVar();
-    window.addEventListener("resize", onResize);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", onResize);
-    };
-  }, [visible, setBarHeightVar]);
 
   const grant = () => {
     try { localStorage.setItem("analytics_consent", "granted"); } catch {}
@@ -57,12 +32,16 @@ const ConsentBanner: React.FC<Props> = ({ lang }) => {
 
   return (
     <div
-      ref={barRef}
       className="consent-bar"
       role="dialog"
       aria-live="polite"
       aria-label={t.consent?.title || (lang === "el" ? "Συναίνεση cookies" : "Cookie consent")}
     >
+      <div className="consent-bar__brand">
+        <PsycheLogo size={48} />
+        <span className="consent-bar__brandName">Psyche Support</span>
+      </div>
+
       <div className="consent-bar__content">
         <strong className="consent-bar__title">
           {t.consent?.title || (lang === "el" ? "Συναίνεση cookies" : "Cookie consent")}
@@ -72,27 +51,22 @@ const ConsentBanner: React.FC<Props> = ({ lang }) => {
             (lang === "el"
               ? "Χρησιμοποιούμε cookies για ανώνυμη ανάλυση επισκεψιμότητας (Google Analytics)."
               : "We use cookies for anonymous traffic analytics (Google Analytics).")}
-          {t.consent?.learnMoreHref && (
-            <>
-              {" "}
-              <a
-                className="consent-bar__link"
-                href={t.consent.learnMoreHref}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t.consent.learnMoreLabel || (lang === "el" ? "Περισσότερα" : "Learn more")}
-              </a>
-            </>
-          )}
         </p>
+        <div className="consent-bar__links">
+          <a href="/privacy" rel="noopener noreferrer">
+            {lang === "el" ? "Πολιτική Απορρήτου" : "Privacy Policy"}
+          </a>
+          <a href="/cookies" rel="noopener noreferrer">
+            {lang === "el" ? "Πολιτική Cookies" : "Cookies Policy"}
+          </a>
+        </div>
       </div>
 
       <div className="consent-bar__actions">
-        <button className="ps-btn ps-btn--ghost" onClick={deny}>
+        <button className="ps-btn ps-btn--ghost ps-btn--lg" onClick={deny}>
           {t.consent?.decline || (lang === "el" ? "Απόρριψη" : "Decline")}
         </button>
-        <button className="ps-btn ps-btn--primary" onClick={grant}>
+        <button className="ps-btn ps-btn--primary ps-btn--lg" onClick={grant}>
           {t.consent?.accept || (lang === "el" ? "Αποδοχή" : "Accept")}
         </button>
       </div>

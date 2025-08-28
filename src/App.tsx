@@ -91,6 +91,12 @@ const App: React.FC = () => {
                 href: "https://www.onlinetherapy.com/online-counsellor/?pdb=6338",
                 alt: "Certified Member",
               },
+              {
+                img: "https://www.milamou.gr/wp-content/uploads/2020/04/logo.png",
+                href: "https://www.milamou.gr/oi-ethelontes/",
+                alt: "Volunteer",
+              },
+              
             ]}
             showLogo={true}
           />
