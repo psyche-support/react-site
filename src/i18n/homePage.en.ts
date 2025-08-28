@@ -132,6 +132,10 @@ const dict = {
       {
         "title": "Eating disorders and body image concerns",
         "text": "Eating disorders are serious psychological conditions that affect health, mental well-being, and overall quality of life. The most common eating disorders include binge eating, bulimia, and anorexia."
+      },
+      {
+        "title": "Grief - loss",
+        "text": "Grief is not only about losing a person. It can appear after many kinds of losses—like the end of a relationship, changes in health, losing a job, moving away, or shifts in identity and life roles."
       }
     ]
   }

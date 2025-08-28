@@ -48,7 +48,11 @@ const dict = {
       {
         "title": "Eating disorders and body image concerns",
         "text": "Their consequences can be damaging to both physical and emotional health. Psychotherapy can help you explore the deeper causes of these behaviors and develop healthy strategies to restore your relationship with food and your body. By examining the emotional and psychological issues connected to eating disorders, you can begin the journey toward mental and physical well-being."
-      }
+      },
+      {
+        "title": "Grief - loss",
+        "text": "Therapy doesn’t try to make grief disappear. Instead, it offers a safe, compassionate space to work through it at your own pace. Each person’s grief is unique—there is no “right” way or timeline. What matters is that you don’t have to go through it alone."
+      },
     ]
   },
   "audience": {
