@@ -59,7 +59,7 @@ const App: React.FC = () => {
                     <Hero lang={lang} />
                     <Spotlight
                       lang={lang}
-                      photoSrc="/profile.jpeg"
+                      photoSrc="/home/profile.jpeg"
                       photoAlt="Portrait of the counselor"
                     />
                     <Services lang={lang} />
