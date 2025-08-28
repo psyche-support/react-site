@@ -87,16 +87,20 @@ const App: React.FC = () => {
             mapUrl={MAPS_URL}
             badges={[
               {
-                img: "https://www.onlinecounselling.com/members/certified-member-widget-white.jpg",
-                href: "https://www.onlinetherapy.com/online-counsellor/?pdb=6338",
-                alt: "Certified Member",
-              },
-              {
                 img: "https://www.milamou.gr/wp-content/uploads/2020/04/logo.png",
                 href: "https://www.milamou.gr/oi-ethelontes/",
                 alt: "Volunteer",
               },
-              
+              // {
+              //   img: "https://complicated.life/_next/static/media/logo_text.1120091a.svg",
+              //   href: "https://complicated.life/find-a-therapist/thessaloniki/accredited-mental-health-counselor-dimitra-malaki/",
+              //   alt: "Accredited Mental Health Counselor",
+              // },
+              {
+                img: "https://www.onlinecounselling.com/members/certified-member-widget-white.jpg",
+                href: "https://www.onlinetherapy.com/therapists/greece/",
+                alt: "Certified Member",
+              },
             ]}
             showLogo={true}
           />

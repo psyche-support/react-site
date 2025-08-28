@@ -185,3 +185,13 @@
   .social-icon { width: 34px; height: 34px; }
   .footer-hours__row { grid-template-columns: 1fr auto; }
 }
+
+.footer-badges {
+  margin-top: 1.2rem;  /* adjust to taste */
+}
+
+.footer-badges img {
+  display: block;
+  max-width: 150px;
+  height: auto;
+}
