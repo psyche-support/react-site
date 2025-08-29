@@ -1,23 +1,23 @@
+<!-- public/404.html -->
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Redirecting…</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>Redirecting…</title>
+  <meta name="robots" content="noindex" />
+  <style>html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}</style>
+  <body>
+    <p>Redirecting…</p>
     <script>
       (function () {
-        // Set this to '/my-repo/' if you deploy under a repo page. For custom domain/root, keep '/'.
-        var GH_BASE = '/';
+        // If we already redirected once, don't loop.
+        var sp = new URLSearchParams(location.search);
+        if (sp.has("__r")) return; // served as /404.html?__r=...
 
-        var path = window.location.pathname + window.location.search + window.location.hash;
-        var url =
-          window.location.protocol + '//' + window.location.host +
-          GH_BASE + '?p=' + encodeURIComponent(path);
-
-        // Preserve referrer flow and get a 200 on /
-        window.location.replace(url);
+        var original = location.pathname + location.search + location.hash;
+        // Send to index, preserving original path in __r
+        var target = "/index.html?__r=" + encodeURIComponent(original);
+        location.replace(target);
       })();
     </script>
-  </head>
-  <body>Redirecting…</body>
+  </body>
 </html>

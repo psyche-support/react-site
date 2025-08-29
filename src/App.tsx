@@ -6,11 +6,8 @@ import NavHeader from "./components/NavHeader";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Sessions from "./sections/Sessions";
-import Articles from "./sections/Articles";
+import RestoreDeepLink from "./RestoreDeepLink";
 import Spotlight from "./sections/Spotlight";
-import About from "./sections/About";
-import Contact from "./sections/Contact";
-import type { LangCode } from "../i18n/types";
 import Footer from "./components/Footer";
 import FloatingBookButton from "./components/FloatingBookButton";
 import { BookingModalProvider } from "./components/BookingModalProvider";
@@ -19,7 +16,6 @@ import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
 import Seo from "./helpers/Seo";
 import { seoText } from "./i18n/seo";
-
 import SessionsPage from "./pages/SessionsPage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
@@ -44,6 +40,7 @@ const App: React.FC = () => {
   const s = seoText[lang].home;
   return (
     <>
+      <RestoreDeepLink />
       <Seo title={s.title} description={s.desc} path="/" lang={lang} />
       <BookingModalProvider lang={lang}>
         <div className="layout">{/* <-- flex column, full height */}
