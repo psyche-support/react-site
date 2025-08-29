@@ -8,6 +8,7 @@
     "build:index": "node scripts/build-articles-index.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "seo:keywords": "node scripts/generate-keywords.mjs",
+    "prerender:articles": "node scripts/prerender-articles.mjs",
     "prebuild": "node scripts/generate-public.mjs && npm run sitemap && npm run seo:keywords && npm run build:index",
     "dev": "vite",
     "build": "vite build",

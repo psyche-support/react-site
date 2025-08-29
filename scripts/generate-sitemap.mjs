@@ -15,7 +15,10 @@ const OUT_FILE = path.join(PUBLIC_DIR, "sitemap.xml");
 const SITE_URL = (process.env.VITE_SITE_URL || "https://psyche.support").replace(/\/+$/, "");
 
 // ---- CONFIG ----
-// Static routes you want in the sitemap (without lang query)
+const DEFAULT_LANG = "el";               // <— change if your default is different
+const LANGS = ["el", "en"];              // all supported languages
+
+// Static routes (language-neutral canonical path)
 const STATIC_ROUTES = [
   { loc: "/", changefreq: "monthly", priority: 1.0 },
   { loc: "/services", changefreq: "monthly", priority: 0.8 },
@@ -31,10 +34,7 @@ const STATIC_ROUTES = [
 // Where to look for articles (en/el versions)
 const ARTICLES_GLOB = "src/content/articles/**/{en,el}.md";
 
-// Languages supported
-const LANGS = ["el", "en"];
-
-// Use the article front-matter date or file mtime if missing
+// Helpers
 function toISO(d) {
   try {
     return new Date(d).toISOString().slice(0, 10);
@@ -43,27 +43,37 @@ function toISO(d) {
   }
 }
 
-// Build an entry with `loc` (canonical without ?lang) + xhtml:link alternates with ?lang=
-// For articles, canonical is language-neutral path: /articles/<slug>
+function joinUrlPath(...parts) {
+  const p = parts
+    .filter(Boolean)
+    .map((s) => String(s).replace(/\/+$/,"").replace(/^\/+/, ""))
+    .join("/");
+  return "/" + p.replace(/^\/+/, "");
+}
+
+// Build the language-aware path:
+// - default lang: no prefix
+// - other langs: `/<lang><loc>` (except root: `/<lang>`)
+function langPath(loc, lang) {
+  if (lang === DEFAULT_LANG) return loc;
+  if (loc === "/") return `/${lang}`;
+  return `/${lang}${loc.startsWith("/") ? loc : `/${loc}`}`;
+}
+
+// One <url> XML block (for a specific language path) with alternate hreflangs
 function buildUrlXml({ loc, lastmod, changefreq, priority, alternates }) {
-  // Ensure absolute loc (no query)
-  const absLoc = `${SITE_URL}${loc.startsWith("/") ? loc : `/${loc}`}`;
+  const absLoc = `${SITE_URL}${loc}`;
   const last = lastmod ? `<lastmod>${lastmod}</lastmod>` : "";
   const cf = changefreq ? `<changefreq>${changefreq}</changefreq>` : "";
   const pr = priority != null ? `<priority>${priority}</priority>` : "";
 
-  const altLinks =
-    (alternates || [])
-      .map(
-        (a) =>
-          `<xhtml:link rel="alternate" hreflang="${a.lang}" href="${absLoc}${
-            a.lang ? `?lang=${a.lang}` : ""
-          }" />`
-      )
-      .join("");
+  const altLinks = (alternates || [])
+    .map(a => `<xhtml:link rel="alternate" hreflang="${a.lang}" href="${SITE_URL}${a.loc}" />`)
+    .join("");
 
-  // Also emit x-default (choose English as default if you prefer)
-  const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${absLoc}?lang=en" />`;
+  // x-default should point to the default-language path
+  const xDefaultLoc = alternates.find(a => a.lang === DEFAULT_LANG)?.loc || loc;
+  const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${xDefaultLoc}" />`;
 
   return `
   <url>
@@ -73,7 +83,7 @@ function buildUrlXml({ loc, lastmod, changefreq, priority, alternates }) {
     ${pr}
     ${altLinks}
     ${xDefault}
-  </url>`;
+  </url>`.trim();
 }
 
 async function collectArticles() {
@@ -87,9 +97,7 @@ async function collectArticles() {
     const slug = data.slug || "";
     if (!slug) continue;
 
-    // detect lang from filename
     const lang = /\/el\.md$/.test(file) ? "el" : "en";
-
     const stat = fs.statSync(file);
     const lastmod = toISO(data.date || stat.mtime);
 
@@ -103,57 +111,84 @@ async function collectArticles() {
   const items = [];
   for (const { slug, dates, langs } of bySlug.values()) {
     const lastmod = dates.sort().pop(); // latest date
-    const loc = `/articles/${slug}`;
-    const alternates = LANGS.filter((L) => langs.has(L)).map((L) => ({ lang: L }));
+    const canonical = `/articles/${slug}`;
+    const availableLangs = LANGS.filter(l => langs.has(l)); // only langs that actually exist
 
     items.push({
-      loc,
+      canonical,
       lastmod,
       changefreq: "yearly",
       priority: 0.6,
-      alternates,
+      languages: availableLangs
     });
   }
 
-  return items.sort((a, b) => (a.loc < b.loc ? -1 : 1));
+  // Sort stable
+  items.sort((a, b) => (a.canonical < b.canonical ? -1 : 1));
+  return items;
 }
 
 async function main() {
-  // Ensure /public exists
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
 
-  // Build static URLs
   const today = toISO(new Date());
-  const staticEntries = STATIC_ROUTES.map((r) =>
-    buildUrlXml({
-      loc: r.loc,
-      lastmod: today,
-      changefreq: r.changefreq,
-      priority: r.priority,
-      alternates: LANGS.map((lang) => ({ lang })),
-    })
-  );
 
-  // Build article URLs
+  // -------- Static routes --------
+  const staticBlocks = [];
+  for (const r of STATIC_ROUTES) {
+    // All languages for this route
+    const allLangPaths = LANGS.map(lang => ({
+      lang,
+      loc: langPath(r.loc, lang),
+    }));
+
+    // Emit one <url> per language, with alternates for all languages
+    for (const { lang, loc } of allLangPaths) {
+      const alternates = allLangPaths; // all langs
+      staticBlocks.push(
+        buildUrlXml({
+          loc,
+          lastmod: today,
+          changefreq: r.changefreq,
+          priority: r.priority,
+          alternates,
+        })
+      );
+    }
+  }
+
+  // -------- Articles --------
   const articles = await collectArticles();
-  const articleEntries = articles.map((a) =>
-    buildUrlXml({
-      loc: a.loc,
-      lastmod: a.lastmod,
-      changefreq: a.changefreq,
-      priority: a.priority,
-      alternates: a.alternates,
-    })
-  );
+  const articleBlocks = [];
+  for (const a of articles) {
+    // Only langs that exist for this slug
+    const langPaths = a.languages.map(lang => ({
+      lang,
+      loc: langPath(a.canonical, lang),
+    }));
+
+    for (const entry of langPaths) {
+      articleBlocks.push(
+        buildUrlXml({
+          loc: entry.loc,
+          lastmod: a.lastmod,
+          changefreq: a.changefreq,
+          priority: a.priority,
+          alternates: langPaths,
+        })
+      );
+    }
+  }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-${staticEntries.join("\n")}
-${articleEntries.join("\n")}
-</urlset>`.trim() + "\n";
+${staticBlocks.join("\n")}
+${articleBlocks.join("\n")}
+</urlset>
+`.trim() + "\n";
 
   fs.writeFileSync(OUT_FILE, xml, "utf8");
   console.log(`✅ sitemap.xml generated at ${path.relative(ROOT, OUT_FILE)}`);
