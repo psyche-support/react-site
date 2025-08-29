@@ -53,7 +53,7 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
       <div className="ps-container ps-header__inner">
         {/* Brand */}
         <Link className="ps-brand" to="/" onClick={handleBrandClick} aria-label={t.brand}>
-          <PsycheLogo size={80} />
+          <PsycheLogo size={80} letterSize={2000} />
           <span className="ps-brand__name">{t.brand}</span>
         </Link>
 

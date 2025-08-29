@@ -63,7 +63,7 @@ const Footer: React.FC<FooterProps> = ({
 
           {showLogo && (
             <div className="footer-logo">
-              <PsycheLogo size={90} aria-label={`${brandName} logo`} />
+              <PsycheLogo size={90} letterSize={2000} aria-label={`${brandName} logo`} />
             </div>
           )}
 

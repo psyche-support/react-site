@@ -38,7 +38,7 @@ const ConsentBanner: React.FC<Props> = ({ lang }) => {
       aria-label={t.consent?.title || (lang === "el" ? "Συναίνεση cookies" : "Cookie consent")}
     >
       <div className="consent-bar__brand">
-        <PsycheLogo size={48} />
+        <PsycheLogo size={80} letterSize={2000} />
         <span className="consent-bar__brandName">Psyche Support</span>
       </div>
 
