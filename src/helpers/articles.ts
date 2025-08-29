@@ -12,8 +12,9 @@ export type ArticleFrontmatter = {
   references?: string[];
   photoCreditText?: string | null;
   photoCreditHref?: string | null;
-  sourcePath: string;  // still in manifest
-  contentUrl: string;  // <-- fetch from here
+  sourcePath: string;   // still in manifest
+  contentUrl: string;   // fetch from here (can be absolute or relative)
+  lang: Lang;           // make sure your manifest includes this
 };
 
 export type Article = {
@@ -24,20 +25,55 @@ export type Article = {
   readMinutes: number;
 };
 
+/* ---------- URL + fetch helpers (fix base on GitHub Pages) ---------- */
+
+// Vite sets this correctly:
+// - custom domain (psyche.support)   -> "/"
+// - repo pages (user.github.io/repo) -> "/repo/"
+const BASE = (import.meta as any).env?.BASE_URL ?? "/";
+
+// Prefix a path with BASE safely; pass through absolute URLs.
+function withBase(pathOrUrl: string): string {
+  if (/^[a-z][a-z0-9+.-]*:/i.test(pathOrUrl)) {
+    // already absolute (http:, https:, data:, blob:, etc.)
+    return pathOrUrl;
+  }
+  const base = BASE.replace(/\/+$/, "");           // trim trailing slash
+  const rel  = String(pathOrUrl || "").replace(/^\/+/, ""); // trim leading slash
+  return `${base}/${rel}`;
+}
+
+// A tiny retry to smooth out first-hit 404s on GH Pages edges
+async function fetchRetry(url: string, init?: RequestInit, retries = 1, delayMs = 150) {
+  try {
+    const res = await fetch(url, init);
+    if (!res.ok) throw new Error(String(res.status));
+    return res;
+  } catch (e) {
+    if (retries <= 0) throw e;
+    await new Promise(r => setTimeout(r, delayMs));
+    return fetchRetry(url, init, retries - 1, delayMs * 2);
+  }
+}
+
+/* ---------- Caches ---------- */
+
 let manifestCache: ArticleFrontmatter[] | null = null;
 let indexCache: Record<string, string[]> | null = null;
 
 async function loadManifest() {
   if (!manifestCache) {
     const [m, idx] = await Promise.all([
-      fetch("/search/articles-manifest.json").then(r => r.json()),
-      fetch("/search/articles-index.json").then(r => r.json()),
+      fetchRetry(withBase("search/articles-manifest.json")).then(r => r.json()),
+      fetchRetry(withBase("search/articles-index.json")).then(r => r.json()),
     ]);
     manifestCache = m;
     indexCache = idx;
   }
   return { manifest: manifestCache!, index: indexCache! };
 }
+
+/* ---------- Public API ---------- */
 
 export async function listArticlesByLang(lang: Lang) {
   const { manifest } = await loadManifest();
@@ -95,6 +131,8 @@ export async function searchArticles(opts: SearchOptions) {
   return { total, items: results.slice(start, start + perPage) };
 }
 
+/* ---------- Markdown load/render ---------- */
+
 type FrontParse = { data: Record<string, any>, content: string };
 function parseFrontmatter(md: string): FrontParse {
   const m = md.match(/^---\s*([\s\S]*?)\s*---\s*/);
@@ -149,14 +187,14 @@ export async function getArticle(lang: Lang, slug: string): Promise<Article | un
   const fm = manifest.find(m => m.lang === lang && m.slug === slug);
   if (!fm) return undefined;
 
-  // Fetch markdown from public URL (no dynamic import)
-  const res = await fetch(fm.contentUrl);
+  // Resolve content URL with BASE (works for /, /repo/, or absolute)
+  const mdUrl = withBase(fm.contentUrl);
+  const res = await fetchRetry(mdUrl);
   if (!res.ok) return undefined;
   const raw = await res.text();
 
   const { content } = parseFrontmatter(raw);
 
-  // Load heavy libs only here
   const [{ marked }, DOMPurifyModule] = await Promise.all([
     import("marked"),
     import("dompurify"),
@@ -166,7 +204,6 @@ export async function getArticle(lang: Lang, slug: string): Promise<Article | un
   const htmlUnsafe = marked.parse(content) as string;
   const html = DOMPurify.sanitize(htmlUnsafe);
 
-  // derive plain + read time
   const tmp = document.createElement("div");
   tmp.innerHTML = html;
   const plain = (tmp.textContent || tmp.innerText || "").replace(/\s+/g, " ").trim();
