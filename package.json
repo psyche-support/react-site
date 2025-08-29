@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:i18n": "node scripts/build-i18n-json.mjs",
+    "predev": "node scripts/generate-public.mjs && npm run build:index",
     "build:index": "node scripts/build-articles-index.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "seo:keywords": "node scripts/generate-keywords.mjs",
-    "prebuild": "npm run sitemap && npm run seo:keywords && npm run build:index",
+    "prebuild": "node scripts/generate-public.mjs && npm run sitemap && npm run seo:keywords && npm run build:index",
     "dev": "vite",
     "build": "vite build",
     "postbuild": "cp dist/index.html dist/404.html",

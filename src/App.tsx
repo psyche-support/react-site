@@ -6,7 +6,7 @@ import NavHeader from "./components/NavHeader";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Sessions from "./sections/Sessions";
-import RestoreDeepLink from "./RestoreDeepLink";
+import { useNavigate } from "react-router-dom";
 import Spotlight from "./sections/Spotlight";
 import Footer from "./components/Footer";
 import FloatingBookButton from "./components/FloatingBookButton";
@@ -34,6 +34,22 @@ const LINKEDIN = import.meta.env.VITE_LINKEDIN as string;
 const TWITTER_X = import.meta.env.VITE_TWITTER_X as string;
 const EMAIL = import.meta.env.VITE_EMAIL as string;
 const MAPS_URL = import.meta.env.VITE_MAPS_URL as string;
+
+function RestoreDeepLink() {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const encoded = sp.get("__r");
+    if (!encoded) return;
+
+    const path = decodeURIComponent(encoded);
+    // Strip the ?__r=... from the URL and navigate internally
+    navigate(path, { replace: true });
+  }, [navigate]);
+
+  return null;
+}
 
 const App: React.FC = () => {
   const { lang, setLang } = useLanguage("el"); // default to Greek

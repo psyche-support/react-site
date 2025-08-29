@@ -1,0 +1,23 @@
+<!-- public/404.html -->
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>Redirecting…</title>
+  <meta name="robots" content="noindex" />
+  <style>html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}</style>
+  <body>
+    <p>Redirecting…</p>
+    <script>
+      (function () {
+        // If we already redirected once, don't loop.
+        var sp = new URLSearchParams(location.search);
+        if (sp.has("__r")) return; // served as /404.html?__r=...
+
+        var original = location.pathname + location.search + location.hash;
+        // Send to index, preserving original path in __r
+        var target = "/index.html?__r=" + encodeURIComponent(original);
+        location.replace(target);
+      })();
+    </script>
+  </body>
+</html>

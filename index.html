@@ -28,21 +28,20 @@
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   </head>
   <script>
-  (function () {
-    try {
-      var sp = new URLSearchParams(window.location.search);
-      var p = sp.get('p');
-      if (p) {
-        var newUrl = p;
-        // If you use a subpath base, also prefix here:
-        // const GH_BASE = '/'; // or '/my-repo/'
-        // newUrl = GH_BASE.replace(/\/$/, '') + p;
+    (function () {
+      try {
+        var sp = new URLSearchParams(window.location.search);
+        var p = sp.get('p');
+        if (!p) return;
 
-        window.history.replaceState(null, '', newUrl);
-      }
-    } catch (e) {}
-  })();
-</script>
+        // Optional: if you deploy under a subpath, prefix here:
+        // var GH_BASE = '/'; // or '/my-repo/'
+        // p = GH_BASE.replace(/\/$/, '') + p;
+
+        window.history.replaceState(null, '', p);
+      } catch (_) {}
+    })();
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
