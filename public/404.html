@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      (function () {
+        // Set this to '/my-repo/' if you deploy under a repo page. For custom domain/root, keep '/'.
+        var GH_BASE = '/';
+
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        var url =
+          window.location.protocol + '//' + window.location.host +
+          GH_BASE + '?p=' + encodeURIComponent(path);
+
+        // Preserve referrer flow and get a 200 on /
+        window.location.replace(url);
+      })();
+    </script>
+  </head>
+  <body>Redirecting…</body>
+</html>
