@@ -27,21 +27,6 @@
     <meta name="msapplication-TileImage" content="/favicons/favicon-144x144.png">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   </head>
-  <script>
-    (function () {
-      try {
-        var sp = new URLSearchParams(window.location.search);
-        var p = sp.get('p');
-        if (!p) return;
-
-        // Optional: if you deploy under a subpath, prefix here:
-        // var GH_BASE = '/'; // or '/my-repo/'
-        // p = GH_BASE.replace(/\/$/, '') + p;
-
-        window.history.replaceState(null, '', p);
-      } catch (_) {}
-    })();
-  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -4,8 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import App from './App'
 import './styles/global.css'
-import { registerSW } from 'virtual:pwa-register';
-const basename = import.meta.env.BASE_URL || "/";
+// import { registerSW } from 'virtual:pwa-register';
 
 // const updateSW = registerSW({
 //   immediate: true,
@@ -16,6 +15,8 @@ const basename = import.meta.env.BASE_URL || "/";
 //     console.error('[PWA] SW registration failed:', error);
 //   },
 // });
+
+const basename = import.meta.env.BASE_URL || "/";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

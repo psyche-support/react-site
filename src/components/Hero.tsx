@@ -1,6 +1,6 @@
 // src/sections/Hero.tsx
 import React from "react";
-import Button from "../components/Button";
+import Button from "./Button";
 import { useI18n } from "../i18n/useI18n";
 import type { LangCode } from "../i18n/types";
 

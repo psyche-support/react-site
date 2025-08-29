@@ -3,19 +3,19 @@ const dict = {
   "nav": [
     {
       "label": "Services",
-      "href": "/services"
+      "href": "/en/services"
     },
     {
       "label": "Sessions",
-      "href": "/sessions"
+      "href": "/en/sessions"
     },
     {
       "label": "Articles",
-      "href": "/articles"
+      "href": "/en/articles"
     },
     {
       "label": "About",
-      "href": "/about"
+      "href": "/en/about"
     }
   ],
   "floatingCta": {
@@ -40,35 +40,35 @@ const dict = {
     "links": [
       {
         "label": "Services",
-        "href": "/services"
+        "href": "/en/services"
       },
       {
         "label": "Sessions",
-        "href": "/sessions"
+        "href": "/en/sessions"
       },
       {
         "label": "Articles",
-        "href": "/articles"
+        "href": "/en/articles"
       },
       {
         "label": "Privacy Policy",
-        "href": "/privacy"
+        "href": "/en/privacy"
       },
       {
         "label": "Cookies",
-        "href": "/cookies"
+        "href": "/en/cookies"
       },
       {
         "label": "Terms of Service",
-        "href": "/terms"
+        "href": "/en/terms"
       },
       {
         "label": "Accessibility",
-        "href": "/accessibility"
+        "href": "/en/accessibility"
       },
       {
         "label": "Contact us",
-        "href": "/contact"
+        "href": "/en/contact"
       }
     ]
   },
@@ -78,7 +78,7 @@ const dict = {
     "accept": "Accept",
     "decline": "Decline",
     "learnMoreLabel": "Learn more",
-    "learnMoreHref": "/privacy"
+    "learnMoreHref": "/en/privacy"
   },
   "langToggle": [
     "GR",

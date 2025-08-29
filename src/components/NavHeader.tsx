@@ -1,23 +1,29 @@
 // src/components/NavHeader.tsx
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import PsycheLogo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 import "../styles/nav-header.css";
 import { useI18n } from "../i18n/useI18n";
 import type { LangCode } from "../i18n/types";
 import LangSwitch from "./LangSwitch";
+import { getLangFromPath, replaceLangInPath } from "../helpers/langPath";
 
 interface Props {
   lang: LangCode;
-  onChangeLang: (code: LangCode) => void;
+  onChangeLang: (code: LangCode) => void; // keep for app state if you use it elsewhere
 }
+
+const ALL_LANGS: LangCode[] = ["el", "en"];
+const DEFAULT_LANG: LangCode = "el";
 
 const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
   const { dict: t } = useI18n("common", lang);
   const [open, setOpen] = React.useState(false);
   const [elevated, setElevated] = React.useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const brandTo = lang === "el" ? "/" : `/${lang}`;
 
   React.useEffect(() => {
     const onScroll = () => setElevated(window.scrollY > 6);
@@ -36,13 +42,26 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
   const resolveTo = (href: string) =>
     href.startsWith("#") ? ({ pathname: "/", hash: href }) : href;
 
-  const handleBrandClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
+  const handleBrandClick = React.useCallback<React.MouseEventHandler<HTMLAnchorElement>>(
+    (e) => {
+      setOpen(false);
+      if (location.pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+    [location.pathname]
+  );
+
+  // 🔑 Canonical language setter: rewrite the URL deterministically.
+  const setLang = (target: LangCode) => {
+    if (target === lang) return; // no-op if same
+    const nextPath = replaceLangInPath(location.pathname + location.search + location.hash, target, DEFAULT_LANG, ALL_LANGS);
+    // If the current path already includes a lang, `replaceLangInPath` handles it.
+    navigate(nextPath, { replace: false });
+    onChangeLang(target); // update your app state if you still keep it
+    try { localStorage.setItem("lang", target); } catch {}
     setOpen(false);
-    if (location.pathname === "/") {
-      // stay on the same route, just scroll up
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
   };
 
   return (
@@ -52,7 +71,7 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
     >
       <div className="ps-container ps-header__inner">
         {/* Brand */}
-        <Link className="ps-brand" to="/" onClick={handleBrandClick} aria-label={t.brand}>
+        <Link className="ps-brand" to={brandTo} onClick={handleBrandClick} aria-label={t.brand}>
           <PsycheLogo size={80} letterSize={2000} />
           <span className="ps-brand__name">{t.brand}</span>
         </Link>
@@ -73,7 +92,7 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
         {/* Desktop nav row */}
         <nav className="ps-nav" aria-label={lang === "el" ? "Κύρια πλοήγηση" : "Primary navigation"}>
           <ul className="ps-nav__row">
-            {t.nav.map((item) => (
+            {t.nav.map((item: { href: string; label: string }) => (
               <li key={item.href} className="ps-nav__item">
                 <Link className="ps-nav__link" to={resolveTo(item.href) as any}>
                   {item.label}
@@ -81,10 +100,11 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
               </li>
             ))}
             <li className="ps-nav__item">
-              {/* ✅ Replaced <select> with LangSwitch */}
               <LangSwitch
                 value={lang}
-                onChange={onChangeLang}
+                langs={ALL_LANGS}
+                defaultLang={DEFAULT_LANG}
+                onChange={setLang}
                 ariaLabel={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
               />
             </li>
@@ -103,7 +123,7 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
       >
         <div className="ps-nav-panel__brand">
           <Link
-            to="/"
+            to={brandTo}
             onClick={() => setOpen(false)}
             aria-label={t.brand}
             className="ps-nav-panel__brandLink"
@@ -112,9 +132,9 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
             <span className="ps-nav-panel__brandName">{t.brand}</span>
           </Link>
         </div>
-        
+
         <ul className="ps-nav-panel__list">
-          {t.nav.map((item) => (
+          {t.nav.map((item: { href: string; label: string }) => (
             <li key={item.href} className="ps-nav-panel__item">
               <Link
                 to={resolveTo(item.href) as any}
@@ -126,24 +146,18 @@ const NavHeader: React.FC<Props> = ({ lang, onChangeLang }) => {
             </li>
           ))}
 
-          {/* Language + Theme in one row */}
           <li className="ps-nav-panel__item ps-nav-panel__langs">
             <div className="ps-nav-panel__langsRow">
-              <div className="lang-switch">
-                <button
-                  onClick={() => { onChangeLang("el"); setOpen(false); }}
-                  className={`lang-switch__btn ${lang === "el" ? "is-active" : ""}`}
-                >
-                  Ελληνικά
-                </button>
-                <button
-                  onClick={() => { onChangeLang("en"); setOpen(false); }}
-                  className={`lang-switch__btn ${lang === "en" ? "is-active" : ""}`}
-                >
-                  English
-                </button>
+              <LangSwitch
+                value={lang}
+                langs={ALL_LANGS}
+                defaultLang={DEFAULT_LANG}
+                onChange={(code) => setLang(code)}
+                ariaLabel={lang === "el" ? "Επιλογή γλώσσας" : "Select language"}
+              />
+              <div className="ps-nav-panel__theme">
+                <ThemeToggle />
               </div>
-              <ThemeToggle />
             </div>
           </li>
         </ul>

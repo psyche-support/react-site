@@ -3,11 +3,6 @@ import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useLanguage } from "./hooks/useLanguage";
 import NavHeader from "./components/NavHeader";
-import Hero from "./sections/Hero";
-import Services from "./sections/Services";
-import Sessions from "./sections/Sessions";
-import { useNavigate } from "react-router-dom";
-import Spotlight from "./sections/Spotlight";
 import Footer from "./components/Footer";
 import FloatingBookButton from "./components/FloatingBookButton";
 import { BookingModalProvider } from "./components/BookingModalProvider";
@@ -16,6 +11,7 @@ import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
 import Seo from "./helpers/Seo";
 import { seoText } from "./i18n/seo";
+import HomePage from "./pages/HomePage";
 import SessionsPage from "./pages/SessionsPage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
@@ -24,6 +20,7 @@ import TermsPage from "./pages/TermsPage";
 import CookiePolicyPage from "./pages/CookiePolicyPage";
 import AccessibilityPage from "./pages/AccessibilityPage";
 import ContactPage from "./pages/ContactPage";
+import { makeLangRouteElements } from "./helpers/localizedRoutes";
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
 const ArticlePage = lazy(() => import("./pages/ArticlePage"));
 
@@ -35,28 +32,26 @@ const TWITTER_X = import.meta.env.VITE_TWITTER_X as string;
 const EMAIL = import.meta.env.VITE_EMAIL as string;
 const MAPS_URL = import.meta.env.VITE_MAPS_URL as string;
 
-function RestoreDeepLink() {
-  const navigate = useNavigate();
-
-  React.useEffect(() => {
-    const sp = new URLSearchParams(window.location.search);
-    const encoded = sp.get("__r");
-    if (!encoded) return;
-
-    const path = decodeURIComponent(encoded);
-    // Strip the ?__r=... from the URL and navigate internally
-    navigate(path, { replace: true });
-  }, [navigate]);
-
-  return null;
-}
+const baseRoutes = [
+  { path: "/",            render: (lang:string) => <HomePage lang={lang as any} /> },
+  { path: "/services",    render: (lang:string) => <main className="site-main"><ServicesPage lang={lang as any} /></main> },
+  { path: "/sessions",    render: (lang:string) => <main className="site-main"><SessionsPage lang={lang as any} showOnlineIcons={false} /></main> },
+  { path: "/articles",    render: (lang:string) => <main className="site-main"><ArticlesPage lang={lang as any} /></main> },
+  { path: "/articles/:slug", render: (lang:string) => <main className="site-main"><ArticlePage lang={lang as any} /></main> },
+  { path: "/about",       render: (lang:string) => <main className="site-main"><AboutPage lang={lang as any} /></main> },
+  { path: "/privacy",     render: (lang:string) => <main className="site-main"><PrivacyPage lang={lang as any} /></main> },
+  { path: "/terms",       render: (lang:string) => <main className="site-main"><TermsPage lang={lang as any} /></main> },
+  { path: "/cookies",     render: (lang:string) => <main className="site-main"><CookiePolicyPage lang={lang as any} /></main> },
+  { path: "/accessibility", render: (lang:string) => <main className="site-main"><AccessibilityPage lang={lang as any} /></main> },
+  { path: "/contact",     render: (lang:string) => <main className="site-main"><ContactPage lang={lang as any} /></main> },
+];
 
 const App: React.FC = () => {
   const { lang, setLang } = useLanguage("el"); // default to Greek
   const s = seoText[lang].home;
+  const routes = makeLangRouteElements(baseRoutes, "el", ["el","en"]);
   return (
     <>
-      <RestoreDeepLink />
       <Seo title={s.title} description={s.desc} path="/" lang={lang} />
       <BookingModalProvider lang={lang}>
         <div className="layout">{/* <-- flex column, full height */}
@@ -65,31 +60,7 @@ const App: React.FC = () => {
           <FloatingBookButton lang={lang} />
           <Suspense fallback={<div style={{padding: '2rem'}}>Loading…</div>}>
             <Routes>
-              <Route
-                path="/"
-                element={
-                  <main className="site-main">
-                    <Hero lang={lang} />
-                    <Spotlight
-                      lang={lang}
-                      photoSrc="/home/profile.jpeg"
-                      photoAlt="Portrait of the counselor"
-                    />
-                    <Services lang={lang} />
-                    <Sessions lang={lang} />
-                  </main>
-                }
-              />
-              <Route path="/services" element={<main className="site-main"><ServicesPage lang={lang} /></main>} />
-              <Route path="/sessions" element={<main className="site-main"><SessionsPage lang={lang} showOnlineIcons={false} /></main>} />
-              <Route path="/articles" element={<main className="site-main"><ArticlesPage lang={lang} /></main>} />
-              <Route path="/articles/:slug" element={<main className="site-main"><ArticlePage lang={lang} /></main>} />
-              <Route path="/about" element={<main className="site-main"><AboutPage lang={lang} /></main>} />
-              <Route path="/privacy" element={<main className="site-main"><PrivacyPage lang={lang} /></main>} />
-              <Route path="/terms" element={<main className="site-main"><TermsPage lang={lang} /></main>} />
-              <Route path="/cookies" element={<main className="site-main"><CookiePolicyPage lang={lang} /></main>} />
-              <Route path="/accessibility" element={<main className="site-main"><AccessibilityPage lang={lang} /></main>} />
-              <Route path="/contact" element={<main className="site-main"><ContactPage lang={lang} /></main>} />
+              {routes}
             </Routes>
           </Suspense>
           <Footer
