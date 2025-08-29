@@ -1,6 +1,6 @@
 import React from "react";
 import { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { useLanguage } from "./hooks/useLanguage";
 import NavHeader from "./components/NavHeader";
 import Footer from "./components/Footer";
@@ -9,8 +9,6 @@ import { BookingModalProvider } from "./components/BookingModalProvider";
 import ScrollManager from "./components/ScrollManager";
 import ConsentBanner from "./components/ConsentBanner";
 import Analytics from "./components/Analytics";
-import Seo from "./helpers/Seo";
-import { seoText } from "./i18n/seo";
 import HomePage from "./pages/HomePage";
 import SessionsPage from "./pages/SessionsPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -48,11 +46,9 @@ const baseRoutes = [
 
 const App: React.FC = () => {
   const { lang, setLang } = useLanguage("el"); // default to Greek
-  const s = seoText[lang].home;
   const routes = makeLangRouteElements(baseRoutes, "el", ["el","en"]);
   return (
     <>
-      <Seo title={s.title} description={s.desc} path="/" lang={lang} />
       <BookingModalProvider lang={lang}>
         <div className="layout">{/* <-- flex column, full height */}
           <ScrollManager /> 
